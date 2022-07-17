@@ -13,7 +13,7 @@ import (
 	cdktf      "github.com/hashicorp/terraform-cdk-go/cdktf/jsii"
 )
 
-//go:embed cdktf-provider-tfe-0.5.4.tgz
+//go:embed cdktf-provider-tfe-0.5.5.tgz
 var tarball []byte
 
 // Initialize loads the necessary packages in the @jsii/kernel to support the enclosing module.
@@ -24,5 +24,5 @@ func Initialize() {
 	constructs.Initialize()
 
 	// Load this library into the kernel
-	_jsii_.Load("@cdktf/provider-tfe", "0.5.4", tarball)
+	_jsii_.Load("@cdktf/provider-tfe", "0.5.5", tarball)
 }
