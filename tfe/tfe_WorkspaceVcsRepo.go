@@ -11,5 +11,7 @@ type WorkspaceVcsRepo struct {
 	Branch *string `field:"optional" json:"branch" yaml:"branch"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#ingress_submodules Workspace#ingress_submodules}.
 	IngressSubmodules interface{} `field:"optional" json:"ingressSubmodules" yaml:"ingressSubmodules"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#tags_regex Workspace#tags_regex}.
+	TagsRegex *string `field:"optional" json:"tagsRegex" yaml:"tagsRegex"`
 }
 

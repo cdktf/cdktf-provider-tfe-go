@@ -42,6 +42,9 @@ type WorkspaceVcsRepoOutputReference interface {
 	OauthTokenId() *string
 	SetOauthTokenId(val *string)
 	OauthTokenIdInput() *string
+	TagsRegex() *string
+	SetTagsRegex(val *string)
+	TagsRegexInput() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -76,6 +79,7 @@ type WorkspaceVcsRepoOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBranch()
 	ResetIngressSubmodules()
+	ResetTagsRegex()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -221,6 +225,26 @@ func (j *jsiiProxy_WorkspaceVcsRepoOutputReference) OauthTokenIdInput() *string 
 	return returns
 }
 
+func (j *jsiiProxy_WorkspaceVcsRepoOutputReference) TagsRegex() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tagsRegex",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceVcsRepoOutputReference) TagsRegexInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tagsRegexInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_WorkspaceVcsRepoOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -318,6 +342,14 @@ func (j *jsiiProxy_WorkspaceVcsRepoOutputReference) SetOauthTokenId(val *string)
 	_jsii_.Set(
 		j,
 		"oauthTokenId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspaceVcsRepoOutputReference) SetTagsRegex(val *string) {
+	_jsii_.Set(
+		j,
+		"tagsRegex",
 		val,
 	)
 }
@@ -506,6 +538,14 @@ func (w *jsiiProxy_WorkspaceVcsRepoOutputReference) ResetIngressSubmodules() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetIngressSubmodules",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WorkspaceVcsRepoOutputReference) ResetTagsRegex() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetTagsRegex",
 		nil, // no parameters
 	)
 }

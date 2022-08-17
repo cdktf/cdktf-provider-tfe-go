@@ -26,6 +26,8 @@ type DataTfeOrganizationRunTaskConfig struct {
 	Organization *string `field:"required" json:"organization" yaml:"organization"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/d/organization_run_task#category DataTfeOrganizationRunTask#category}.
 	Category *string `field:"optional" json:"category" yaml:"category"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/d/organization_run_task#description DataTfeOrganizationRunTask#description}.
+	Description *string `field:"optional" json:"description" yaml:"description"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/d/organization_run_task#enabled DataTfeOrganizationRunTask#enabled}.
 	Enabled interface{} `field:"optional" json:"enabled" yaml:"enabled"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/d/organization_run_task#id DataTfeOrganizationRunTask#id}.

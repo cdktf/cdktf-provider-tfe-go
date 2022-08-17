@@ -32,6 +32,9 @@ type OrganizationRunTask interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	Description() *string
+	SetDescription(val *string)
+	DescriptionInput() *string
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
@@ -106,6 +109,7 @@ type OrganizationRunTask interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetCategory()
+	ResetDescription()
 	ResetEnabled()
 	ResetHmacKey()
 	ResetId()
@@ -192,6 +196,26 @@ func (j *jsiiProxy_OrganizationRunTask) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OrganizationRunTask) Description() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OrganizationRunTask) DescriptionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"descriptionInput",
 		&returns,
 	)
 	return returns
@@ -486,6 +510,14 @@ func (j *jsiiProxy_OrganizationRunTask) SetDependsOn(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_OrganizationRunTask) SetDescription(val *string) {
+	_jsii_.Set(
+		j,
+		"description",
+		val,
+	)
+}
+
 func (j *jsiiProxy_OrganizationRunTask) SetEnabled(val interface{}) {
 	_jsii_.Set(
 		j,
@@ -759,6 +791,14 @@ func (o *jsiiProxy_OrganizationRunTask) ResetCategory() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetCategory",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OrganizationRunTask) ResetDescription() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetDescription",
 		nil, // no parameters
 	)
 }

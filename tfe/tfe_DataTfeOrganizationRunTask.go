@@ -28,6 +28,9 @@ type DataTfeOrganizationRunTask interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	Description() *string
+	SetDescription(val *string)
+	DescriptionInput() *string
 	Enabled() interface{}
 	SetEnabled(val interface{})
 	EnabledInput() interface{}
@@ -95,6 +98,7 @@ type DataTfeOrganizationRunTask interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetCategory()
+	ResetDescription()
 	ResetEnabled()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -171,6 +175,26 @@ func (j *jsiiProxy_DataTfeOrganizationRunTask) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOrganizationRunTask) Description() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOrganizationRunTask) DescriptionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"descriptionInput",
 		&returns,
 	)
 	return returns
@@ -423,6 +447,14 @@ func (j *jsiiProxy_DataTfeOrganizationRunTask) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataTfeOrganizationRunTask) SetDescription(val *string) {
+	_jsii_.Set(
+		j,
+		"description",
 		val,
 	)
 }
@@ -684,6 +716,14 @@ func (d *jsiiProxy_DataTfeOrganizationRunTask) ResetCategory() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetCategory",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeOrganizationRunTask) ResetDescription() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetDescription",
 		nil, // no parameters
 	)
 }

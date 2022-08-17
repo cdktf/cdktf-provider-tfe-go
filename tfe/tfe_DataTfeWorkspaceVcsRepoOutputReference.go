@@ -34,6 +34,7 @@ type DataTfeWorkspaceVcsRepoOutputReference interface {
 	InternalValue() *DataTfeWorkspaceVcsRepo
 	SetInternalValue(val *DataTfeWorkspaceVcsRepo)
 	OauthTokenId() *string
+	TagsRegex() *string
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -166,6 +167,16 @@ func (j *jsiiProxy_DataTfeWorkspaceVcsRepoOutputReference) OauthTokenId() *strin
 	_jsii_.Get(
 		j,
 		"oauthTokenId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspaceVcsRepoOutputReference) TagsRegex() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tagsRegex",
 		&returns,
 	)
 	return returns

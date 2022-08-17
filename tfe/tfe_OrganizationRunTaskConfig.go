@@ -28,6 +28,8 @@ type OrganizationRunTaskConfig struct {
 	Url *string `field:"required" json:"url" yaml:"url"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/organization_run_task#category OrganizationRunTask#category}.
 	Category *string `field:"optional" json:"category" yaml:"category"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/organization_run_task#description OrganizationRunTask#description}.
+	Description *string `field:"optional" json:"description" yaml:"description"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/organization_run_task#enabled OrganizationRunTask#enabled}.
 	Enabled interface{} `field:"optional" json:"enabled" yaml:"enabled"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/organization_run_task#hmac_key OrganizationRunTask#hmac_key}.
