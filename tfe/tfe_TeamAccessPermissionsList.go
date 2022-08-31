@@ -111,6 +111,9 @@ func (j *jsiiProxy_TeamAccessPermissionsList) WrapsSet() *bool {
 func NewTeamAccessPermissionsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) TeamAccessPermissionsList {
 	_init_.Initialize()
 
+	if err := validateNewTeamAccessPermissionsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_TeamAccessPermissionsList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewTeamAccessPermissionsList_Override(t TeamAccessPermissionsList, terrafor
 	)
 }
 
-func (j *jsiiProxy_TeamAccessPermissionsList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_TeamAccessPermissionsList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_TeamAccessPermissionsList) SetInternalValue(val interface{}) 
 	)
 }
 
-func (j *jsiiProxy_TeamAccessPermissionsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_TeamAccessPermissionsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_TeamAccessPermissionsList) SetTerraformAttribute(val *string)
 	)
 }
 
-func (j *jsiiProxy_TeamAccessPermissionsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_TeamAccessPermissionsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_TeamAccessPermissionsList) SetTerraformResource(val cdktf.IIn
 	)
 }
 
-func (j *jsiiProxy_TeamAccessPermissionsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_TeamAccessPermissionsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (t *jsiiProxy_TeamAccessPermissionsList) ComputeFqn() *string {
 }
 
 func (t *jsiiProxy_TeamAccessPermissionsList) Get(index *float64) TeamAccessPermissionsOutputReference {
+	if err := t.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns TeamAccessPermissionsOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (t *jsiiProxy_TeamAccessPermissionsList) Get(index *float64) TeamAccessPerm
 }
 
 func (t *jsiiProxy_TeamAccessPermissionsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := t.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

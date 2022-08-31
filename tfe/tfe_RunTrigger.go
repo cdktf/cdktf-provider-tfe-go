@@ -337,6 +337,9 @@ func (j *jsiiProxy_RunTrigger) WorkspaceIdInput() *string {
 func NewRunTrigger(scope constructs.Construct, id *string, config *RunTriggerConfig) RunTrigger {
 	_init_.Initialize()
 
+	if err := validateNewRunTriggerParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RunTrigger{}
 
 	_jsii_.Create(
@@ -359,7 +362,10 @@ func NewRunTrigger_Override(r RunTrigger, scope constructs.Construct, id *string
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetConnection(val interface{}) {
+func (j *jsiiProxy_RunTrigger)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -367,7 +373,7 @@ func (j *jsiiProxy_RunTrigger) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetCount(val *float64) {
+func (j *jsiiProxy_RunTrigger)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -375,7 +381,7 @@ func (j *jsiiProxy_RunTrigger) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_RunTrigger)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -383,7 +389,7 @@ func (j *jsiiProxy_RunTrigger) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_RunTrigger)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -391,7 +397,10 @@ func (j *jsiiProxy_RunTrigger) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetId(val *string) {
+func (j *jsiiProxy_RunTrigger)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -399,7 +408,10 @@ func (j *jsiiProxy_RunTrigger) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_RunTrigger)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -407,7 +419,7 @@ func (j *jsiiProxy_RunTrigger) SetLifecycle(val *cdktf.TerraformResourceLifecycl
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_RunTrigger)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -415,7 +427,10 @@ func (j *jsiiProxy_RunTrigger) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_RunTrigger)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -423,7 +438,10 @@ func (j *jsiiProxy_RunTrigger) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetSourceableId(val *string) {
+func (j *jsiiProxy_RunTrigger)SetSourceableId(val *string) {
+	if err := j.validateSetSourceableIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sourceableId",
@@ -431,7 +449,10 @@ func (j *jsiiProxy_RunTrigger) SetSourceableId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RunTrigger) SetWorkspaceId(val *string) {
+func (j *jsiiProxy_RunTrigger)SetWorkspaceId(val *string) {
+	if err := j.validateSetWorkspaceIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"workspaceId",
@@ -459,6 +480,9 @@ func (j *jsiiProxy_RunTrigger) SetWorkspaceId(val *string) {
 func RunTrigger_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateRunTrigger_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -483,6 +507,9 @@ func RunTrigger_TfResourceType() *string {
 }
 
 func (r *jsiiProxy_RunTrigger) AddOverride(path *string, value interface{}) {
+	if err := r.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"addOverride",
@@ -491,6 +518,9 @@ func (r *jsiiProxy_RunTrigger) AddOverride(path *string, value interface{}) {
 }
 
 func (r *jsiiProxy_RunTrigger) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := r.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -504,6 +534,9 @@ func (r *jsiiProxy_RunTrigger) GetAnyMapAttribute(terraformAttribute *string) *m
 }
 
 func (r *jsiiProxy_RunTrigger) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -517,6 +550,9 @@ func (r *jsiiProxy_RunTrigger) GetBooleanAttribute(terraformAttribute *string) c
 }
 
 func (r *jsiiProxy_RunTrigger) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := r.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -530,6 +566,9 @@ func (r *jsiiProxy_RunTrigger) GetBooleanMapAttribute(terraformAttribute *string
 }
 
 func (r *jsiiProxy_RunTrigger) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := r.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -543,6 +582,9 @@ func (r *jsiiProxy_RunTrigger) GetListAttribute(terraformAttribute *string) *[]*
 }
 
 func (r *jsiiProxy_RunTrigger) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := r.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -556,6 +598,9 @@ func (r *jsiiProxy_RunTrigger) GetNumberAttribute(terraformAttribute *string) *f
 }
 
 func (r *jsiiProxy_RunTrigger) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := r.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -569,6 +614,9 @@ func (r *jsiiProxy_RunTrigger) GetNumberListAttribute(terraformAttribute *string
 }
 
 func (r *jsiiProxy_RunTrigger) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := r.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -582,6 +630,9 @@ func (r *jsiiProxy_RunTrigger) GetNumberMapAttribute(terraformAttribute *string)
 }
 
 func (r *jsiiProxy_RunTrigger) GetStringAttribute(terraformAttribute *string) *string {
+	if err := r.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -595,6 +646,9 @@ func (r *jsiiProxy_RunTrigger) GetStringAttribute(terraformAttribute *string) *s
 }
 
 func (r *jsiiProxy_RunTrigger) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := r.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -608,6 +662,9 @@ func (r *jsiiProxy_RunTrigger) GetStringMapAttribute(terraformAttribute *string)
 }
 
 func (r *jsiiProxy_RunTrigger) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -621,6 +678,9 @@ func (r *jsiiProxy_RunTrigger) InterpolationForAttribute(terraformAttribute *str
 }
 
 func (r *jsiiProxy_RunTrigger) OverrideLogicalId(newLogicalId *string) {
+	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"overrideLogicalId",

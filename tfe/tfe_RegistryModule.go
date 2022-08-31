@@ -435,6 +435,9 @@ func (j *jsiiProxy_RegistryModule) VcsRepoInput() *RegistryModuleVcsRepo {
 func NewRegistryModule(scope constructs.Construct, id *string, config *RegistryModuleConfig) RegistryModule {
 	_init_.Initialize()
 
+	if err := validateNewRegistryModuleParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_RegistryModule{}
 
 	_jsii_.Create(
@@ -457,7 +460,10 @@ func NewRegistryModule_Override(r RegistryModule, scope constructs.Construct, id
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetConnection(val interface{}) {
+func (j *jsiiProxy_RegistryModule)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -465,7 +471,7 @@ func (j *jsiiProxy_RegistryModule) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetCount(val *float64) {
+func (j *jsiiProxy_RegistryModule)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -473,7 +479,7 @@ func (j *jsiiProxy_RegistryModule) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_RegistryModule)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -481,7 +487,7 @@ func (j *jsiiProxy_RegistryModule) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_RegistryModule)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -489,7 +495,10 @@ func (j *jsiiProxy_RegistryModule) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetId(val *string) {
+func (j *jsiiProxy_RegistryModule)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -497,7 +506,10 @@ func (j *jsiiProxy_RegistryModule) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_RegistryModule)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -505,7 +517,10 @@ func (j *jsiiProxy_RegistryModule) SetLifecycle(val *cdktf.TerraformResourceLife
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetModuleProvider(val *string) {
+func (j *jsiiProxy_RegistryModule)SetModuleProvider(val *string) {
+	if err := j.validateSetModuleProviderParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"moduleProvider",
@@ -513,7 +528,10 @@ func (j *jsiiProxy_RegistryModule) SetModuleProvider(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetName(val *string) {
+func (j *jsiiProxy_RegistryModule)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -521,7 +539,10 @@ func (j *jsiiProxy_RegistryModule) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetNamespace(val *string) {
+func (j *jsiiProxy_RegistryModule)SetNamespace(val *string) {
+	if err := j.validateSetNamespaceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"namespace",
@@ -529,7 +550,10 @@ func (j *jsiiProxy_RegistryModule) SetNamespace(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetOrganization(val *string) {
+func (j *jsiiProxy_RegistryModule)SetOrganization(val *string) {
+	if err := j.validateSetOrganizationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"organization",
@@ -537,7 +561,7 @@ func (j *jsiiProxy_RegistryModule) SetOrganization(val *string) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_RegistryModule)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -545,7 +569,10 @@ func (j *jsiiProxy_RegistryModule) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_RegistryModule)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -553,7 +580,10 @@ func (j *jsiiProxy_RegistryModule) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule) SetRegistryName(val *string) {
+func (j *jsiiProxy_RegistryModule)SetRegistryName(val *string) {
+	if err := j.validateSetRegistryNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"registryName",
@@ -581,6 +611,9 @@ func (j *jsiiProxy_RegistryModule) SetRegistryName(val *string) {
 func RegistryModule_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateRegistryModule_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -605,6 +638,9 @@ func RegistryModule_TfResourceType() *string {
 }
 
 func (r *jsiiProxy_RegistryModule) AddOverride(path *string, value interface{}) {
+	if err := r.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"addOverride",
@@ -613,6 +649,9 @@ func (r *jsiiProxy_RegistryModule) AddOverride(path *string, value interface{}) 
 }
 
 func (r *jsiiProxy_RegistryModule) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := r.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -626,6 +665,9 @@ func (r *jsiiProxy_RegistryModule) GetAnyMapAttribute(terraformAttribute *string
 }
 
 func (r *jsiiProxy_RegistryModule) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -639,6 +681,9 @@ func (r *jsiiProxy_RegistryModule) GetBooleanAttribute(terraformAttribute *strin
 }
 
 func (r *jsiiProxy_RegistryModule) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := r.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -652,6 +697,9 @@ func (r *jsiiProxy_RegistryModule) GetBooleanMapAttribute(terraformAttribute *st
 }
 
 func (r *jsiiProxy_RegistryModule) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := r.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -665,6 +713,9 @@ func (r *jsiiProxy_RegistryModule) GetListAttribute(terraformAttribute *string) 
 }
 
 func (r *jsiiProxy_RegistryModule) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := r.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -678,6 +729,9 @@ func (r *jsiiProxy_RegistryModule) GetNumberAttribute(terraformAttribute *string
 }
 
 func (r *jsiiProxy_RegistryModule) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := r.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -691,6 +745,9 @@ func (r *jsiiProxy_RegistryModule) GetNumberListAttribute(terraformAttribute *st
 }
 
 func (r *jsiiProxy_RegistryModule) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := r.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -704,6 +761,9 @@ func (r *jsiiProxy_RegistryModule) GetNumberMapAttribute(terraformAttribute *str
 }
 
 func (r *jsiiProxy_RegistryModule) GetStringAttribute(terraformAttribute *string) *string {
+	if err := r.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -717,6 +777,9 @@ func (r *jsiiProxy_RegistryModule) GetStringAttribute(terraformAttribute *string
 }
 
 func (r *jsiiProxy_RegistryModule) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := r.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -730,6 +793,9 @@ func (r *jsiiProxy_RegistryModule) GetStringMapAttribute(terraformAttribute *str
 }
 
 func (r *jsiiProxy_RegistryModule) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -743,6 +809,9 @@ func (r *jsiiProxy_RegistryModule) InterpolationForAttribute(terraformAttribute 
 }
 
 func (r *jsiiProxy_RegistryModule) OverrideLogicalId(newLogicalId *string) {
+	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"overrideLogicalId",
@@ -751,6 +820,9 @@ func (r *jsiiProxy_RegistryModule) OverrideLogicalId(newLogicalId *string) {
 }
 
 func (r *jsiiProxy_RegistryModule) PutVcsRepo(value *RegistryModuleVcsRepo) {
+	if err := r.validatePutVcsRepoParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		r,
 		"putVcsRepo",

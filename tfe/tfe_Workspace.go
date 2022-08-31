@@ -793,6 +793,9 @@ func (j *jsiiProxy_Workspace) WorkingDirectoryInput() *string {
 func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfig) Workspace {
 	_init_.Initialize()
 
+	if err := validateNewWorkspaceParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_Workspace{}
 
 	_jsii_.Create(
@@ -815,7 +818,10 @@ func NewWorkspace_Override(w Workspace, scope constructs.Construct, id *string, 
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetAgentPoolId(val *string) {
+func (j *jsiiProxy_Workspace)SetAgentPoolId(val *string) {
+	if err := j.validateSetAgentPoolIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"agentPoolId",
@@ -823,7 +829,10 @@ func (j *jsiiProxy_Workspace) SetAgentPoolId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetAllowDestroyPlan(val interface{}) {
+func (j *jsiiProxy_Workspace)SetAllowDestroyPlan(val interface{}) {
+	if err := j.validateSetAllowDestroyPlanParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"allowDestroyPlan",
@@ -831,7 +840,10 @@ func (j *jsiiProxy_Workspace) SetAllowDestroyPlan(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetAutoApply(val interface{}) {
+func (j *jsiiProxy_Workspace)SetAutoApply(val interface{}) {
+	if err := j.validateSetAutoApplyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"autoApply",
@@ -839,7 +851,10 @@ func (j *jsiiProxy_Workspace) SetAutoApply(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetConnection(val interface{}) {
+func (j *jsiiProxy_Workspace)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -847,7 +862,7 @@ func (j *jsiiProxy_Workspace) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetCount(val *float64) {
+func (j *jsiiProxy_Workspace)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -855,7 +870,7 @@ func (j *jsiiProxy_Workspace) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_Workspace)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -863,7 +878,10 @@ func (j *jsiiProxy_Workspace) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetDescription(val *string) {
+func (j *jsiiProxy_Workspace)SetDescription(val *string) {
+	if err := j.validateSetDescriptionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"description",
@@ -871,7 +889,10 @@ func (j *jsiiProxy_Workspace) SetDescription(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetExecutionMode(val *string) {
+func (j *jsiiProxy_Workspace)SetExecutionMode(val *string) {
+	if err := j.validateSetExecutionModeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"executionMode",
@@ -879,7 +900,10 @@ func (j *jsiiProxy_Workspace) SetExecutionMode(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetFileTriggersEnabled(val interface{}) {
+func (j *jsiiProxy_Workspace)SetFileTriggersEnabled(val interface{}) {
+	if err := j.validateSetFileTriggersEnabledParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"fileTriggersEnabled",
@@ -887,7 +911,7 @@ func (j *jsiiProxy_Workspace) SetFileTriggersEnabled(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_Workspace)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -895,7 +919,10 @@ func (j *jsiiProxy_Workspace) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetGlobalRemoteState(val interface{}) {
+func (j *jsiiProxy_Workspace)SetGlobalRemoteState(val interface{}) {
+	if err := j.validateSetGlobalRemoteStateParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"globalRemoteState",
@@ -903,7 +930,10 @@ func (j *jsiiProxy_Workspace) SetGlobalRemoteState(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetId(val *string) {
+func (j *jsiiProxy_Workspace)SetId(val *string) {
+	if err := j.validateSetIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"id",
@@ -911,7 +941,10 @@ func (j *jsiiProxy_Workspace) SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_Workspace)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -919,7 +952,10 @@ func (j *jsiiProxy_Workspace) SetLifecycle(val *cdktf.TerraformResourceLifecycle
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetName(val *string) {
+func (j *jsiiProxy_Workspace)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"name",
@@ -927,7 +963,10 @@ func (j *jsiiProxy_Workspace) SetName(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetOperations(val interface{}) {
+func (j *jsiiProxy_Workspace)SetOperations(val interface{}) {
+	if err := j.validateSetOperationsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"operations",
@@ -935,7 +974,10 @@ func (j *jsiiProxy_Workspace) SetOperations(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetOrganization(val *string) {
+func (j *jsiiProxy_Workspace)SetOrganization(val *string) {
+	if err := j.validateSetOrganizationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"organization",
@@ -943,7 +985,7 @@ func (j *jsiiProxy_Workspace) SetOrganization(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_Workspace)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -951,7 +993,10 @@ func (j *jsiiProxy_Workspace) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_Workspace)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -959,7 +1004,10 @@ func (j *jsiiProxy_Workspace) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetQueueAllRuns(val interface{}) {
+func (j *jsiiProxy_Workspace)SetQueueAllRuns(val interface{}) {
+	if err := j.validateSetQueueAllRunsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"queueAllRuns",
@@ -967,7 +1015,10 @@ func (j *jsiiProxy_Workspace) SetQueueAllRuns(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetRemoteStateConsumerIds(val *[]*string) {
+func (j *jsiiProxy_Workspace)SetRemoteStateConsumerIds(val *[]*string) {
+	if err := j.validateSetRemoteStateConsumerIdsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"remoteStateConsumerIds",
@@ -975,7 +1026,10 @@ func (j *jsiiProxy_Workspace) SetRemoteStateConsumerIds(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetSpeculativeEnabled(val interface{}) {
+func (j *jsiiProxy_Workspace)SetSpeculativeEnabled(val interface{}) {
+	if err := j.validateSetSpeculativeEnabledParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"speculativeEnabled",
@@ -983,7 +1037,10 @@ func (j *jsiiProxy_Workspace) SetSpeculativeEnabled(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetSshKeyId(val *string) {
+func (j *jsiiProxy_Workspace)SetSshKeyId(val *string) {
+	if err := j.validateSetSshKeyIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sshKeyId",
@@ -991,7 +1048,10 @@ func (j *jsiiProxy_Workspace) SetSshKeyId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetStructuredRunOutputEnabled(val interface{}) {
+func (j *jsiiProxy_Workspace)SetStructuredRunOutputEnabled(val interface{}) {
+	if err := j.validateSetStructuredRunOutputEnabledParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"structuredRunOutputEnabled",
@@ -999,7 +1059,10 @@ func (j *jsiiProxy_Workspace) SetStructuredRunOutputEnabled(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetTagNames(val *[]*string) {
+func (j *jsiiProxy_Workspace)SetTagNames(val *[]*string) {
+	if err := j.validateSetTagNamesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"tagNames",
@@ -1007,7 +1070,10 @@ func (j *jsiiProxy_Workspace) SetTagNames(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetTerraformVersion(val *string) {
+func (j *jsiiProxy_Workspace)SetTerraformVersion(val *string) {
+	if err := j.validateSetTerraformVersionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformVersion",
@@ -1015,7 +1081,10 @@ func (j *jsiiProxy_Workspace) SetTerraformVersion(val *string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetTriggerPatterns(val *[]*string) {
+func (j *jsiiProxy_Workspace)SetTriggerPatterns(val *[]*string) {
+	if err := j.validateSetTriggerPatternsParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"triggerPatterns",
@@ -1023,7 +1092,10 @@ func (j *jsiiProxy_Workspace) SetTriggerPatterns(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetTriggerPrefixes(val *[]*string) {
+func (j *jsiiProxy_Workspace)SetTriggerPrefixes(val *[]*string) {
+	if err := j.validateSetTriggerPrefixesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"triggerPrefixes",
@@ -1031,7 +1103,10 @@ func (j *jsiiProxy_Workspace) SetTriggerPrefixes(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_Workspace) SetWorkingDirectory(val *string) {
+func (j *jsiiProxy_Workspace)SetWorkingDirectory(val *string) {
+	if err := j.validateSetWorkingDirectoryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"workingDirectory",
@@ -1059,6 +1134,9 @@ func (j *jsiiProxy_Workspace) SetWorkingDirectory(val *string) {
 func Workspace_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateWorkspace_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -1083,6 +1161,9 @@ func Workspace_TfResourceType() *string {
 }
 
 func (w *jsiiProxy_Workspace) AddOverride(path *string, value interface{}) {
+	if err := w.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		w,
 		"addOverride",
@@ -1091,6 +1172,9 @@ func (w *jsiiProxy_Workspace) AddOverride(path *string, value interface{}) {
 }
 
 func (w *jsiiProxy_Workspace) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := w.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -1104,6 +1188,9 @@ func (w *jsiiProxy_Workspace) GetAnyMapAttribute(terraformAttribute *string) *ma
 }
 
 func (w *jsiiProxy_Workspace) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := w.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1117,6 +1204,9 @@ func (w *jsiiProxy_Workspace) GetBooleanAttribute(terraformAttribute *string) cd
 }
 
 func (w *jsiiProxy_Workspace) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := w.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -1130,6 +1220,9 @@ func (w *jsiiProxy_Workspace) GetBooleanMapAttribute(terraformAttribute *string)
 }
 
 func (w *jsiiProxy_Workspace) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := w.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -1143,6 +1236,9 @@ func (w *jsiiProxy_Workspace) GetListAttribute(terraformAttribute *string) *[]*s
 }
 
 func (w *jsiiProxy_Workspace) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := w.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -1156,6 +1252,9 @@ func (w *jsiiProxy_Workspace) GetNumberAttribute(terraformAttribute *string) *fl
 }
 
 func (w *jsiiProxy_Workspace) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := w.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -1169,6 +1268,9 @@ func (w *jsiiProxy_Workspace) GetNumberListAttribute(terraformAttribute *string)
 }
 
 func (w *jsiiProxy_Workspace) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := w.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -1182,6 +1284,9 @@ func (w *jsiiProxy_Workspace) GetNumberMapAttribute(terraformAttribute *string) 
 }
 
 func (w *jsiiProxy_Workspace) GetStringAttribute(terraformAttribute *string) *string {
+	if err := w.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -1195,6 +1300,9 @@ func (w *jsiiProxy_Workspace) GetStringAttribute(terraformAttribute *string) *st
 }
 
 func (w *jsiiProxy_Workspace) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := w.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -1208,6 +1316,9 @@ func (w *jsiiProxy_Workspace) GetStringMapAttribute(terraformAttribute *string) 
 }
 
 func (w *jsiiProxy_Workspace) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := w.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -1221,6 +1332,9 @@ func (w *jsiiProxy_Workspace) InterpolationForAttribute(terraformAttribute *stri
 }
 
 func (w *jsiiProxy_Workspace) OverrideLogicalId(newLogicalId *string) {
+	if err := w.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		w,
 		"overrideLogicalId",
@@ -1229,6 +1343,9 @@ func (w *jsiiProxy_Workspace) OverrideLogicalId(newLogicalId *string) {
 }
 
 func (w *jsiiProxy_Workspace) PutVcsRepo(value *WorkspaceVcsRepo) {
+	if err := w.validatePutVcsRepoParameters(value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		w,
 		"putVcsRepo",

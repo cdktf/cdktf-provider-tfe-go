@@ -257,6 +257,9 @@ func (j *jsiiProxy_TfeProvider) TokenInput() *string {
 func NewTfeProvider(scope constructs.Construct, id *string, config *TfeProviderConfig) TfeProvider {
 	_init_.Initialize()
 
+	if err := validateNewTfeProviderParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_TfeProvider{}
 
 	_jsii_.Create(
@@ -279,7 +282,7 @@ func NewTfeProvider_Override(t TfeProvider, scope constructs.Construct, id *stri
 	)
 }
 
-func (j *jsiiProxy_TfeProvider) SetAlias(val *string) {
+func (j *jsiiProxy_TfeProvider)SetAlias(val *string) {
 	_jsii_.Set(
 		j,
 		"alias",
@@ -287,7 +290,7 @@ func (j *jsiiProxy_TfeProvider) SetAlias(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TfeProvider) SetHostname(val *string) {
+func (j *jsiiProxy_TfeProvider)SetHostname(val *string) {
 	_jsii_.Set(
 		j,
 		"hostname",
@@ -295,7 +298,10 @@ func (j *jsiiProxy_TfeProvider) SetHostname(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TfeProvider) SetSslSkipVerify(val interface{}) {
+func (j *jsiiProxy_TfeProvider)SetSslSkipVerify(val interface{}) {
+	if err := j.validateSetSslSkipVerifyParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"sslSkipVerify",
@@ -303,7 +309,7 @@ func (j *jsiiProxy_TfeProvider) SetSslSkipVerify(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_TfeProvider) SetToken(val *string) {
+func (j *jsiiProxy_TfeProvider)SetToken(val *string) {
 	_jsii_.Set(
 		j,
 		"token",
@@ -331,6 +337,9 @@ func (j *jsiiProxy_TfeProvider) SetToken(val *string) {
 func TfeProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateTfeProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -355,6 +364,9 @@ func TfeProvider_TfResourceType() *string {
 }
 
 func (t *jsiiProxy_TfeProvider) AddOverride(path *string, value interface{}) {
+	if err := t.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		t,
 		"addOverride",
@@ -363,6 +375,9 @@ func (t *jsiiProxy_TfeProvider) AddOverride(path *string, value interface{}) {
 }
 
 func (t *jsiiProxy_TfeProvider) OverrideLogicalId(newLogicalId *string) {
+	if err := t.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		t,
 		"overrideLogicalId",

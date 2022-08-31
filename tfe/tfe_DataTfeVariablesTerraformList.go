@@ -99,6 +99,9 @@ func (j *jsiiProxy_DataTfeVariablesTerraformList) WrapsSet() *bool {
 func NewDataTfeVariablesTerraformList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataTfeVariablesTerraformList {
 	_init_.Initialize()
 
+	if err := validateNewDataTfeVariablesTerraformListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataTfeVariablesTerraformList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewDataTfeVariablesTerraformList_Override(d DataTfeVariablesTerraformList, 
 	)
 }
 
-func (j *jsiiProxy_DataTfeVariablesTerraformList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataTfeVariablesTerraformList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_DataTfeVariablesTerraformList) SetTerraformAttribute(val *str
 	)
 }
 
-func (j *jsiiProxy_DataTfeVariablesTerraformList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataTfeVariablesTerraformList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_DataTfeVariablesTerraformList) SetTerraformResource(val cdktf
 	)
 }
 
-func (j *jsiiProxy_DataTfeVariablesTerraformList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataTfeVariablesTerraformList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (d *jsiiProxy_DataTfeVariablesTerraformList) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataTfeVariablesTerraformList) Get(index *float64) DataTfeVariablesTerraformOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataTfeVariablesTerraformOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (d *jsiiProxy_DataTfeVariablesTerraformList) Get(index *float64) DataTfeVar
 }
 
 func (d *jsiiProxy_DataTfeVariablesTerraformList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

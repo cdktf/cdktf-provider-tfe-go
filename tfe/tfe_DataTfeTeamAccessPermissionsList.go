@@ -99,6 +99,9 @@ func (j *jsiiProxy_DataTfeTeamAccessPermissionsList) WrapsSet() *bool {
 func NewDataTfeTeamAccessPermissionsList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataTfeTeamAccessPermissionsList {
 	_init_.Initialize()
 
+	if err := validateNewDataTfeTeamAccessPermissionsListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataTfeTeamAccessPermissionsList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewDataTfeTeamAccessPermissionsList_Override(d DataTfeTeamAccessPermissions
 	)
 }
 
-func (j *jsiiProxy_DataTfeTeamAccessPermissionsList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataTfeTeamAccessPermissionsList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_DataTfeTeamAccessPermissionsList) SetTerraformAttribute(val *
 	)
 }
 
-func (j *jsiiProxy_DataTfeTeamAccessPermissionsList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataTfeTeamAccessPermissionsList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_DataTfeTeamAccessPermissionsList) SetTerraformResource(val cd
 	)
 }
 
-func (j *jsiiProxy_DataTfeTeamAccessPermissionsList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataTfeTeamAccessPermissionsList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (d *jsiiProxy_DataTfeTeamAccessPermissionsList) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataTfeTeamAccessPermissionsList) Get(index *float64) DataTfeTeamAccessPermissionsOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataTfeTeamAccessPermissionsOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (d *jsiiProxy_DataTfeTeamAccessPermissionsList) Get(index *float64) DataTfe
 }
 
 func (d *jsiiProxy_DataTfeTeamAccessPermissionsList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(
