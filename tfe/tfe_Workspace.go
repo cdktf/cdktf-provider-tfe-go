@@ -19,6 +19,9 @@ type Workspace interface {
 	AllowDestroyPlan() interface{}
 	SetAllowDestroyPlan(val interface{})
 	AllowDestroyPlanInput() interface{}
+	AssessmentsEnabled() interface{}
+	SetAssessmentsEnabled(val interface{})
+	AssessmentsEnabledInput() interface{}
 	AutoApply() interface{}
 	SetAutoApply(val interface{})
 	AutoApplyInput() interface{}
@@ -152,6 +155,7 @@ type Workspace interface {
 	PutVcsRepo(value *WorkspaceVcsRepo)
 	ResetAgentPoolId()
 	ResetAllowDestroyPlan()
+	ResetAssessmentsEnabled()
 	ResetAutoApply()
 	ResetDescription()
 	ResetExecutionMode()
@@ -223,6 +227,26 @@ func (j *jsiiProxy_Workspace) AllowDestroyPlanInput() interface{} {
 	_jsii_.Get(
 		j,
 		"allowDestroyPlanInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) AssessmentsEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"assessmentsEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) AssessmentsEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"assessmentsEnabledInput",
 		&returns,
 	)
 	return returns
@@ -840,6 +864,17 @@ func (j *jsiiProxy_Workspace)SetAllowDestroyPlan(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Workspace)SetAssessmentsEnabled(val interface{}) {
+	if err := j.validateSetAssessmentsEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"assessmentsEnabled",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Workspace)SetAutoApply(val interface{}) {
 	if err := j.validateSetAutoApplyParameters(val); err != nil {
 		panic(err)
@@ -1365,6 +1400,14 @@ func (w *jsiiProxy_Workspace) ResetAllowDestroyPlan() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetAllowDestroyPlan",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Workspace) ResetAssessmentsEnabled() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetAssessmentsEnabled",
 		nil, // no parameters
 	)
 }

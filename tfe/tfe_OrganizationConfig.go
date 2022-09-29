@@ -24,6 +24,8 @@ type OrganizationConfig struct {
 	Email *string `field:"required" json:"email" yaml:"email"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/organization#name Organization#name}.
 	Name *string `field:"required" json:"name" yaml:"name"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/organization#assessments_enforced Organization#assessments_enforced}.
+	AssessmentsEnforced interface{} `field:"optional" json:"assessmentsEnforced" yaml:"assessmentsEnforced"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/organization#collaborator_auth_policy Organization#collaborator_auth_policy}.
 	CollaboratorAuthPolicy *string `field:"optional" json:"collaboratorAuthPolicy" yaml:"collaboratorAuthPolicy"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/organization#cost_estimation_enabled Organization#cost_estimation_enabled}.

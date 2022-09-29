@@ -78,6 +78,10 @@ func (j *jsiiProxy_WorkspaceRunTask) validateSetProvisionersParameters(val *[]in
 	return nil
 }
 
+func (j *jsiiProxy_WorkspaceRunTask) validateSetStageParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_WorkspaceRunTask) validateSetTaskIdParameters(val *string) error {
 	return nil
 }

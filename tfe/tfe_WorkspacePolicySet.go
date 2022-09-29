@@ -10,11 +10,15 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/d/workspace_run_task tfe_workspace_run_task}.
-type DataTfeWorkspaceRunTask interface {
-	cdktf.TerraformDataSource
+// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/workspace_policy_set tfe_workspace_policy_set}.
+type WorkspacePolicySet interface {
+	cdktf.TerraformResource
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -25,7 +29,6 @@ type DataTfeWorkspaceRunTask interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
-	EnforcementLevel() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -43,16 +46,19 @@ type DataTfeWorkspaceRunTask interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	PolicySetId() *string
+	SetPolicySetId(val *string)
+	PolicySetIdInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
+	// Experimental.
 	RawOverrides() interface{}
-	Stage() *string
-	TaskId() *string
-	SetTaskId(val *string)
-	TaskIdInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -101,12 +107,12 @@ type DataTfeWorkspaceRunTask interface {
 	ToTerraform() interface{}
 }
 
-// The jsii proxy struct for DataTfeWorkspaceRunTask
-type jsiiProxy_DataTfeWorkspaceRunTask struct {
-	internal.Type__cdktfTerraformDataSource
+// The jsii proxy struct for WorkspacePolicySet
+type jsiiProxy_WorkspacePolicySet struct {
+	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) CdktfStack() cdktf.TerraformStack {
+func (j *jsiiProxy_WorkspacePolicySet) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
@@ -116,7 +122,17 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) ConstructNodeMetadata() *map[string]interface{} {
+func (j *jsiiProxy_WorkspacePolicySet) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspacePolicySet) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -126,7 +142,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) ConstructNodeMetadata() *map[string]
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) Count() *float64 {
+func (j *jsiiProxy_WorkspacePolicySet) Count() *float64 {
 	var returns *float64
 	_jsii_.Get(
 		j,
@@ -136,7 +152,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) Count() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) DependsOn() *[]*string {
+func (j *jsiiProxy_WorkspacePolicySet) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -146,17 +162,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) DependsOn() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) EnforcementLevel() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"enforcementLevel",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) ForEach() cdktf.ITerraformIterator {
+func (j *jsiiProxy_WorkspacePolicySet) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
 		j,
@@ -166,7 +172,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) ForEach() cdktf.ITerraformIterator {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) Fqn() *string {
+func (j *jsiiProxy_WorkspacePolicySet) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -176,7 +182,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) FriendlyUniqueId() *string {
+func (j *jsiiProxy_WorkspacePolicySet) FriendlyUniqueId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -186,7 +192,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) FriendlyUniqueId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) Id() *string {
+func (j *jsiiProxy_WorkspacePolicySet) Id() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -196,7 +202,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) IdInput() *string {
+func (j *jsiiProxy_WorkspacePolicySet) IdInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -206,7 +212,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) IdInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) Lifecycle() *cdktf.TerraformResourceLifecycle {
+func (j *jsiiProxy_WorkspacePolicySet) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
@@ -216,7 +222,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) Lifecycle() *cdktf.TerraformResource
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) Node() constructs.Node {
+func (j *jsiiProxy_WorkspacePolicySet) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -226,7 +232,27 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) Provider() cdktf.TerraformProvider {
+func (j *jsiiProxy_WorkspacePolicySet) PolicySetId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"policySetId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspacePolicySet) PolicySetIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"policySetIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspacePolicySet) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
 		j,
@@ -236,7 +262,17 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) RawOverrides() interface{} {
+func (j *jsiiProxy_WorkspacePolicySet) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspacePolicySet) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -246,37 +282,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) Stage() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"stage",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) TaskId() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"taskId",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) TaskIdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"taskIdInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
+func (j *jsiiProxy_WorkspacePolicySet) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
 		j,
@@ -286,7 +292,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) TerraformGeneratorMetadata() *cdktf.
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) TerraformMetaArguments() *map[string]interface{} {
+func (j *jsiiProxy_WorkspacePolicySet) TerraformMetaArguments() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -296,7 +302,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) TerraformMetaArguments() *map[string
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) TerraformResourceType() *string {
+func (j *jsiiProxy_WorkspacePolicySet) TerraformResourceType() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -306,7 +312,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) TerraformResourceType() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) WorkspaceId() *string {
+func (j *jsiiProxy_WorkspacePolicySet) WorkspaceId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -316,7 +322,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) WorkspaceId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask) WorkspaceIdInput() *string {
+func (j *jsiiProxy_WorkspacePolicySet) WorkspaceIdInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -327,17 +333,17 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/workspace_run_task tfe_workspace_run_task} Data Source.
-func NewDataTfeWorkspaceRunTask(scope constructs.Construct, id *string, config *DataTfeWorkspaceRunTaskConfig) DataTfeWorkspaceRunTask {
+// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/workspace_policy_set tfe_workspace_policy_set} Resource.
+func NewWorkspacePolicySet(scope constructs.Construct, id *string, config *WorkspacePolicySetConfig) WorkspacePolicySet {
 	_init_.Initialize()
 
-	if err := validateNewDataTfeWorkspaceRunTaskParameters(scope, id, config); err != nil {
+	if err := validateNewWorkspacePolicySetParameters(scope, id, config); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_DataTfeWorkspaceRunTask{}
+	j := jsiiProxy_WorkspacePolicySet{}
 
 	_jsii_.Create(
-		"@cdktf/provider-tfe.DataTfeWorkspaceRunTask",
+		"@cdktf/provider-tfe.WorkspacePolicySet",
 		[]interface{}{scope, id, config},
 		&j,
 	)
@@ -345,18 +351,29 @@ func NewDataTfeWorkspaceRunTask(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/workspace_run_task tfe_workspace_run_task} Data Source.
-func NewDataTfeWorkspaceRunTask_Override(d DataTfeWorkspaceRunTask, scope constructs.Construct, id *string, config *DataTfeWorkspaceRunTaskConfig) {
+// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/workspace_policy_set tfe_workspace_policy_set} Resource.
+func NewWorkspacePolicySet_Override(w WorkspacePolicySet, scope constructs.Construct, id *string, config *WorkspacePolicySetConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-tfe.DataTfeWorkspaceRunTask",
+		"@cdktf/provider-tfe.WorkspacePolicySet",
 		[]interface{}{scope, id, config},
-		d,
+		w,
 	)
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetCount(val *float64) {
+func (j *jsiiProxy_WorkspacePolicySet)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspacePolicySet)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -364,7 +381,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_WorkspacePolicySet)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -372,7 +389,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_WorkspacePolicySet)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -380,7 +397,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetForEach(val cdktf.ITerraformIterat
 	)
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetId(val *string) {
+func (j *jsiiProxy_WorkspacePolicySet)SetId(val *string) {
 	if err := j.validateSetIdParameters(val); err != nil {
 		panic(err)
 	}
@@ -391,7 +408,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetId(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_WorkspacePolicySet)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
 	}
@@ -402,7 +419,18 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetLifecycle(val *cdktf.TerraformReso
 	)
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_WorkspacePolicySet)SetPolicySetId(val *string) {
+	if err := j.validateSetPolicySetIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"policySetId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspacePolicySet)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -410,18 +438,18 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetProvider(val cdktf.TerraformProvid
 	)
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetTaskId(val *string) {
-	if err := j.validateSetTaskIdParameters(val); err != nil {
+func (j *jsiiProxy_WorkspacePolicySet)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"taskId",
+		"provisioners",
 		val,
 	)
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetWorkspaceId(val *string) {
+func (j *jsiiProxy_WorkspacePolicySet)SetWorkspaceId(val *string) {
 	if err := j.validateSetWorkspaceIdParameters(val); err != nil {
 		panic(err)
 	}
@@ -449,16 +477,16 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask)SetWorkspaceId(val *string) {
 // this type-testing method instead.
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
-func DataTfeWorkspaceRunTask_IsConstruct(x interface{}) *bool {
+func WorkspacePolicySet_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateDataTfeWorkspaceRunTask_IsConstructParameters(x); err != nil {
+	if err := validateWorkspacePolicySet_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-tfe.DataTfeWorkspaceRunTask",
+		"@cdktf/provider-tfe.WorkspacePolicySet",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -467,36 +495,36 @@ func DataTfeWorkspaceRunTask_IsConstruct(x interface{}) *bool {
 	return returns
 }
 
-func DataTfeWorkspaceRunTask_TfResourceType() *string {
+func WorkspacePolicySet_TfResourceType() *string {
 	_init_.Initialize()
 	var returns *string
 	_jsii_.StaticGet(
-		"@cdktf/provider-tfe.DataTfeWorkspaceRunTask",
+		"@cdktf/provider-tfe.WorkspacePolicySet",
 		"tfResourceType",
 		&returns,
 	)
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) AddOverride(path *string, value interface{}) {
-	if err := d.validateAddOverrideParameters(path, value); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) AddOverride(path *string, value interface{}) {
+	if err := w.validateAddOverrideParameters(path, value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		d,
+		w,
 		"addOverride",
 		[]interface{}{path, value},
 	)
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
-	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := w.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"getAnyMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -505,14 +533,14 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetAnyMapAttribute(terraformAttribut
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := w.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"getBooleanAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -521,14 +549,14 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetBooleanAttribute(terraformAttribu
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
-	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := w.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"getBooleanMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -537,14 +565,14 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetBooleanMapAttribute(terraformAttr
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetListAttribute(terraformAttribute *string) *[]*string {
-	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := w.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"getListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -553,14 +581,14 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetListAttribute(terraformAttribute 
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetNumberAttribute(terraformAttribute *string) *float64 {
-	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := w.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *float64
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"getNumberAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -569,14 +597,14 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetNumberAttribute(terraformAttribut
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
-	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := w.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"getNumberListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -585,14 +613,14 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetNumberListAttribute(terraformAttr
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
-	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := w.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"getNumberMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -601,14 +629,14 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetNumberMapAttribute(terraformAttri
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetStringAttribute(terraformAttribute *string) *string {
-	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) GetStringAttribute(terraformAttribute *string) *string {
+	if err := w.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"getStringAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -617,14 +645,14 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetStringAttribute(terraformAttribut
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
-	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := w.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"getStringMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -633,14 +661,14 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) GetStringMapAttribute(terraformAttri
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := d.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := w.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"interpolationForAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -649,38 +677,38 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) InterpolationForAttribute(terraformA
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) OverrideLogicalId(newLogicalId *string) {
-	if err := d.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+func (w *jsiiProxy_WorkspacePolicySet) OverrideLogicalId(newLogicalId *string) {
+	if err := w.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		d,
+		w,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
 	)
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) ResetId() {
+func (w *jsiiProxy_WorkspacePolicySet) ResetId() {
 	_jsii_.InvokeVoid(
-		d,
+		w,
 		"resetId",
 		nil, // no parameters
 	)
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) ResetOverrideLogicalId() {
+func (w *jsiiProxy_WorkspacePolicySet) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
-		d,
+		w,
 		"resetOverrideLogicalId",
 		nil, // no parameters
 	)
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) SynthesizeAttributes() *map[string]interface{} {
+func (w *jsiiProxy_WorkspacePolicySet) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"synthesizeAttributes",
 		nil, // no parameters
 		&returns,
@@ -689,11 +717,11 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) SynthesizeAttributes() *map[string]i
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) ToMetadata() interface{} {
+func (w *jsiiProxy_WorkspacePolicySet) ToMetadata() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"toMetadata",
 		nil, // no parameters
 		&returns,
@@ -702,11 +730,11 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) ToMetadata() interface{} {
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) ToString() *string {
+func (w *jsiiProxy_WorkspacePolicySet) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"toString",
 		nil, // no parameters
 		&returns,
@@ -715,11 +743,11 @@ func (d *jsiiProxy_DataTfeWorkspaceRunTask) ToString() *string {
 	return returns
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceRunTask) ToTerraform() interface{} {
+func (w *jsiiProxy_WorkspacePolicySet) ToTerraform() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
-		d,
+		w,
 		"toTerraform",
 		nil, // no parameters
 		&returns,

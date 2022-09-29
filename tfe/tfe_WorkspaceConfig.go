@@ -28,6 +28,8 @@ type WorkspaceConfig struct {
 	AgentPoolId *string `field:"optional" json:"agentPoolId" yaml:"agentPoolId"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#allow_destroy_plan Workspace#allow_destroy_plan}.
 	AllowDestroyPlan interface{} `field:"optional" json:"allowDestroyPlan" yaml:"allowDestroyPlan"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#assessments_enabled Workspace#assessments_enabled}.
+	AssessmentsEnabled interface{} `field:"optional" json:"assessmentsEnabled" yaml:"assessmentsEnabled"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#auto_apply Workspace#auto_apply}.
 	AutoApply interface{} `field:"optional" json:"autoApply" yaml:"autoApply"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#description Workspace#description}.

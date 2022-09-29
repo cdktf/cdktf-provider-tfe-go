@@ -13,6 +13,9 @@ import (
 // Represents a {@link https://www.terraform.io/docs/providers/tfe/r/organization tfe_organization}.
 type Organization interface {
 	cdktf.TerraformResource
+	AssessmentsEnforced() interface{}
+	SetAssessmentsEnforced(val interface{})
+	AssessmentsEnforcedInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CollaboratorAuthPolicy() *string
@@ -111,6 +114,7 @@ type Organization interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetAssessmentsEnforced()
 	ResetCollaboratorAuthPolicy()
 	ResetCostEstimationEnabled()
 	ResetId()
@@ -134,6 +138,26 @@ type Organization interface {
 // The jsii proxy struct for Organization
 type jsiiProxy_Organization struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Organization) AssessmentsEnforced() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"assessmentsEnforced",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Organization) AssessmentsEnforcedInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"assessmentsEnforcedInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Organization) CdktfStack() cdktf.TerraformStack {
@@ -503,6 +527,17 @@ func NewOrganization_Override(o Organization, scope constructs.Construct, id *st
 		"@cdktf/provider-tfe.Organization",
 		[]interface{}{scope, id, config},
 		o,
+	)
+}
+
+func (j *jsiiProxy_Organization)SetAssessmentsEnforced(val interface{}) {
+	if err := j.validateSetAssessmentsEnforcedParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"assessmentsEnforced",
+		val,
 	)
 }
 
@@ -895,6 +930,14 @@ func (o *jsiiProxy_Organization) OverrideLogicalId(newLogicalId *string) {
 		o,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (o *jsiiProxy_Organization) ResetAssessmentsEnforced() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetAssessmentsEnforced",
+		nil, // no parameters
 	)
 }
 

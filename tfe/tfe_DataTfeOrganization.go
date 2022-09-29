@@ -13,6 +13,7 @@ import (
 // Represents a {@link https://www.terraform.io/docs/providers/tfe/d/organization tfe_organization}.
 type DataTfeOrganization interface {
 	cdktf.TerraformDataSource
+	AssessmentsEnforced() cdktf.IResolvable
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CollaboratorAuthPolicy() *string
@@ -106,6 +107,16 @@ type DataTfeOrganization interface {
 // The jsii proxy struct for DataTfeOrganization
 type jsiiProxy_DataTfeOrganization struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataTfeOrganization) AssessmentsEnforced() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"assessmentsEnforced",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataTfeOrganization) CdktfStack() cdktf.TerraformStack {

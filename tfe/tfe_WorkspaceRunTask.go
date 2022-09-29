@@ -59,6 +59,9 @@ type WorkspaceRunTask interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	Stage() *string
+	SetStage(val *string)
+	StageInput() *string
 	TaskId() *string
 	SetTaskId(val *string)
 	TaskIdInput() *string
@@ -100,6 +103,7 @@ type WorkspaceRunTask interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetStage()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -280,6 +284,26 @@ func (j *jsiiProxy_WorkspaceRunTask) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceRunTask) Stage() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"stage",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceRunTask) StageInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"stageInput",
 		&returns,
 	)
 	return returns
@@ -468,6 +492,17 @@ func (j *jsiiProxy_WorkspaceRunTask)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspaceRunTask)SetStage(val *string) {
+	if err := j.validateSetStageParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"stage",
 		val,
 	)
 }
@@ -734,6 +769,14 @@ func (w *jsiiProxy_WorkspaceRunTask) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WorkspaceRunTask) ResetStage() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetStage",
 		nil, // no parameters
 	)
 }

@@ -70,6 +70,10 @@ func (j *jsiiProxy_Workspace) validateSetAllowDestroyPlanParameters(val interfac
 	return nil
 }
 
+func (j *jsiiProxy_Workspace) validateSetAssessmentsEnabledParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetAutoApplyParameters(val interface{}) error {
 	return nil
 }

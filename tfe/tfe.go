@@ -283,6 +283,7 @@ func init() {
 		reflect.TypeOf((*DataTfeOrganization)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforced", GoGetter: "AssessmentsEnforced"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "collaboratorAuthPolicy", GoGetter: "CollaboratorAuthPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
@@ -562,6 +563,125 @@ func init() {
 	_jsii_.RegisterStruct(
 		"@cdktf/provider-tfe.DataTfeOutputsConfig",
 		reflect.TypeOf((*DataTfeOutputsConfig)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-tfe.DataTfePolicySet",
+		reflect.TypeOf((*DataTfePolicySet)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
+			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "count", GoGetter: "Count"},
+			_jsii_.MemberProperty{JsiiProperty: "dependsOn", GoGetter: "DependsOn"},
+			_jsii_.MemberProperty{JsiiProperty: "description", GoGetter: "Description"},
+			_jsii_.MemberProperty{JsiiProperty: "forEach", GoGetter: "ForEach"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberProperty{JsiiProperty: "friendlyUniqueId", GoGetter: "FriendlyUniqueId"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "global", GoGetter: "Global"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "idInput", GoGetter: "IdInput"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "nameInput", GoGetter: "NameInput"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "organization", GoGetter: "Organization"},
+			_jsii_.MemberProperty{JsiiProperty: "organizationInput", GoGetter: "OrganizationInput"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "policiesPath", GoGetter: "PoliciesPath"},
+			_jsii_.MemberProperty{JsiiProperty: "policyIds", GoGetter: "PolicyIds"},
+			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
+			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
+			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
+			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResourceType", GoGetter: "TerraformResourceType"},
+			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
+			_jsii_.MemberProperty{JsiiProperty: "vcsRepo", GoGetter: "VcsRepo"},
+			_jsii_.MemberProperty{JsiiProperty: "workspaceIds", GoGetter: "WorkspaceIds"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DataTfePolicySet{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformDataSource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-tfe.DataTfePolicySetConfig",
+		reflect.TypeOf((*DataTfePolicySetConfig)(nil)).Elem(),
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-tfe.DataTfePolicySetVcsRepo",
+		reflect.TypeOf((*DataTfePolicySetVcsRepo)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-tfe.DataTfePolicySetVcsRepoList",
+		reflect.TypeOf((*DataTfePolicySetVcsRepoList)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "get", GoMethod: "Get"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberProperty{JsiiProperty: "wrapsSet", GoGetter: "WrapsSet"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DataTfePolicySetVcsRepoList{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
+			return &j
+		},
+	)
+	_jsii_.RegisterClass(
+		"@cdktf/provider-tfe.DataTfePolicySetVcsRepoOutputReference",
+		reflect.TypeOf((*DataTfePolicySetVcsRepoOutputReference)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "branch", GoGetter: "Branch"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
+			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
+			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
+			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "identifier", GoGetter: "Identifier"},
+			_jsii_.MemberProperty{JsiiProperty: "ingressSubmodules", GoGetter: "IngressSubmodules"},
+			_jsii_.MemberProperty{JsiiProperty: "internalValue", GoGetter: "InternalValue"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationAsList", GoMethod: "InterpolationAsList"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "oauthTokenId", GoGetter: "OauthTokenId"},
+			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResource", GoGetter: "TerraformResource"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_DataTfePolicySetVcsRepoOutputReference{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
+			return &j
+		},
 	)
 	_jsii_.RegisterClass(
 		"@cdktf/provider-tfe.DataTfeSlug",
@@ -1149,6 +1269,7 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "allowDestroyPlan", GoGetter: "AllowDestroyPlan"},
+			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnabled", GoGetter: "AssessmentsEnabled"},
 			_jsii_.MemberProperty{JsiiProperty: "autoApply", GoGetter: "AutoApply"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
@@ -1313,6 +1434,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "taskId", GoGetter: "TaskId"},
 			_jsii_.MemberProperty{JsiiProperty: "taskIdInput", GoGetter: "TaskIdInput"},
@@ -1554,6 +1676,8 @@ func init() {
 		reflect.TypeOf((*Organization)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforced", GoGetter: "AssessmentsEnforced"},
+			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforcedInput", GoGetter: "AssessmentsEnforcedInput"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "collaboratorAuthPolicy", GoGetter: "CollaboratorAuthPolicy"},
 			_jsii_.MemberProperty{JsiiProperty: "collaboratorAuthPolicyInput", GoGetter: "CollaboratorAuthPolicyInput"},
@@ -1590,6 +1714,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAssessmentsEnforced", GoMethod: "ResetAssessmentsEnforced"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCollaboratorAuthPolicy", GoMethod: "ResetCollaboratorAuthPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCostEstimationEnabled", GoMethod: "ResetCostEstimationEnabled"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
@@ -3067,6 +3192,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "agentPoolIdInput", GoGetter: "AgentPoolIdInput"},
 			_jsii_.MemberProperty{JsiiProperty: "allowDestroyPlan", GoGetter: "AllowDestroyPlan"},
 			_jsii_.MemberProperty{JsiiProperty: "allowDestroyPlanInput", GoGetter: "AllowDestroyPlanInput"},
+			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnabled", GoGetter: "AssessmentsEnabled"},
+			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnabledInput", GoGetter: "AssessmentsEnabledInput"},
 			_jsii_.MemberProperty{JsiiProperty: "autoApply", GoGetter: "AutoApply"},
 			_jsii_.MemberProperty{JsiiProperty: "autoApplyInput", GoGetter: "AutoApplyInput"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
@@ -3116,6 +3243,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "remoteStateConsumerIdsInput", GoGetter: "RemoteStateConsumerIdsInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAgentPoolId", GoMethod: "ResetAgentPoolId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAllowDestroyPlan", GoMethod: "ResetAllowDestroyPlan"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAssessmentsEnabled", GoMethod: "ResetAssessmentsEnabled"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAutoApply", GoMethod: "ResetAutoApply"},
 			_jsii_.MemberMethod{JsiiMethod: "resetDescription", GoMethod: "ResetDescription"},
 			_jsii_.MemberMethod{JsiiMethod: "resetExecutionMode", GoMethod: "ResetExecutionMode"},
@@ -3172,6 +3300,61 @@ func init() {
 		reflect.TypeOf((*WorkspaceConfig)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
+		"@cdktf/provider-tfe.WorkspacePolicySet",
+		reflect.TypeOf((*WorkspacePolicySet)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
+			_jsii_.MemberProperty{JsiiProperty: "connection", GoGetter: "Connection"},
+			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "count", GoGetter: "Count"},
+			_jsii_.MemberProperty{JsiiProperty: "dependsOn", GoGetter: "DependsOn"},
+			_jsii_.MemberProperty{JsiiProperty: "forEach", GoGetter: "ForEach"},
+			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
+			_jsii_.MemberProperty{JsiiProperty: "friendlyUniqueId", GoGetter: "FriendlyUniqueId"},
+			_jsii_.MemberMethod{JsiiMethod: "getAnyMapAttribute", GoMethod: "GetAnyMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanAttribute", GoMethod: "GetBooleanAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getBooleanMapAttribute", GoMethod: "GetBooleanMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getListAttribute", GoMethod: "GetListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberAttribute", GoMethod: "GetNumberAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberListAttribute", GoMethod: "GetNumberListAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
+			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
+			_jsii_.MemberProperty{JsiiProperty: "idInput", GoGetter: "IdInput"},
+			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "policySetId", GoGetter: "PolicySetId"},
+			_jsii_.MemberProperty{JsiiProperty: "policySetIdInput", GoGetter: "PolicySetIdInput"},
+			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
+			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
+			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
+			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
+			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
+			_jsii_.MemberProperty{JsiiProperty: "terraformResourceType", GoGetter: "TerraformResourceType"},
+			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
+			_jsii_.MemberProperty{JsiiProperty: "workspaceId", GoGetter: "WorkspaceId"},
+			_jsii_.MemberProperty{JsiiProperty: "workspaceIdInput", GoGetter: "WorkspaceIdInput"},
+		},
+		func() interface{} {
+			j := jsiiProxy_WorkspacePolicySet{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformResource)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"@cdktf/provider-tfe.WorkspacePolicySetConfig",
+		reflect.TypeOf((*WorkspacePolicySetConfig)(nil)).Elem(),
+	)
+	_jsii_.RegisterClass(
 		"@cdktf/provider-tfe.WorkspaceRunTask",
 		reflect.TypeOf((*WorkspaceRunTask)(nil)).Elem(),
 		[]_jsii_.Member{
@@ -3206,6 +3389,9 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "resetStage", GoMethod: "ResetStage"},
+			_jsii_.MemberProperty{JsiiProperty: "stage", GoGetter: "Stage"},
+			_jsii_.MemberProperty{JsiiProperty: "stageInput", GoGetter: "StageInput"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "taskId", GoGetter: "TaskId"},
 			_jsii_.MemberProperty{JsiiProperty: "taskIdInput", GoGetter: "TaskIdInput"},
