@@ -60,6 +60,9 @@ type DataTfeOrganizationMembership interface {
 	// Experimental.
 	TerraformResourceType() *string
 	UserId() *string
+	Username() *string
+	SetUsername(val *string)
+	UsernameInput() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -85,10 +88,12 @@ type DataTfeOrganizationMembership interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetEmail()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetUsername()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -314,6 +319,26 @@ func (j *jsiiProxy_DataTfeOrganizationMembership) UserId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeOrganizationMembership) Username() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"username",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOrganizationMembership) UsernameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"usernameInput",
+		&returns,
+	)
+	return returns
+}
+
 
 // Create a new {@link https://www.terraform.io/docs/providers/tfe/d/organization_membership tfe_organization_membership} Data Source.
 func NewDataTfeOrganizationMembership(scope constructs.Construct, id *string, config *DataTfeOrganizationMembershipConfig) DataTfeOrganizationMembership {
@@ -416,6 +441,17 @@ func (j *jsiiProxy_DataTfeOrganizationMembership)SetProvider(val cdktf.Terraform
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataTfeOrganizationMembership)SetUsername(val *string) {
+	if err := j.validateSetUsernameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"username",
 		val,
 	)
 }
@@ -648,6 +684,14 @@ func (d *jsiiProxy_DataTfeOrganizationMembership) OverrideLogicalId(newLogicalId
 	)
 }
 
+func (d *jsiiProxy_DataTfeOrganizationMembership) ResetEmail() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetEmail",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DataTfeOrganizationMembership) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
@@ -660,6 +704,14 @@ func (d *jsiiProxy_DataTfeOrganizationMembership) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeOrganizationMembership) ResetUsername() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetUsername",
 		nil, // no parameters
 	)
 }

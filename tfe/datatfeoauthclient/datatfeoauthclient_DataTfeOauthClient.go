@@ -13,6 +13,7 @@ import (
 type DataTfeOauthClient interface {
 	cdktf.TerraformDataSource
 	ApiUrl() *string
+	CallbackUrl() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -21,6 +22,7 @@ type DataTfeOauthClient interface {
 	Count() *float64
 	// Experimental.
 	SetCount(val *float64)
+	CreatedAt() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -41,18 +43,28 @@ type DataTfeOauthClient interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Name() *string
+	SetName(val *string)
+	NameInput() *string
 	// The tree node.
 	Node() constructs.Node
 	OauthClientId() *string
 	SetOauthClientId(val *string)
 	OauthClientIdInput() *string
 	OauthTokenId() *string
+	Organization() *string
+	SetOrganization(val *string)
+	OrganizationInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	ServiceProvider() *string
+	SetServiceProvider(val *string)
+	ServiceProviderDisplayName() *string
+	ServiceProviderInput() *string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -85,9 +97,13 @@ type DataTfeOauthClient interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetName()
+	ResetOauthClientId()
+	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetServiceProvider()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -108,6 +124,16 @@ func (j *jsiiProxy_DataTfeOauthClient) ApiUrl() *string {
 	_jsii_.Get(
 		j,
 		"apiUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOauthClient) CallbackUrl() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"callbackUrl",
 		&returns,
 	)
 	return returns
@@ -138,6 +164,16 @@ func (j *jsiiProxy_DataTfeOauthClient) Count() *float64 {
 	_jsii_.Get(
 		j,
 		"count",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOauthClient) CreatedAt() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"createdAt",
 		&returns,
 	)
 	return returns
@@ -223,6 +259,26 @@ func (j *jsiiProxy_DataTfeOauthClient) Lifecycle() *cdktf.TerraformResourceLifec
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeOauthClient) Name() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"name",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOauthClient) NameInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"nameInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeOauthClient) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
@@ -263,6 +319,26 @@ func (j *jsiiProxy_DataTfeOauthClient) OauthTokenId() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeOauthClient) Organization() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"organization",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOauthClient) OrganizationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"organizationInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeOauthClient) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -278,6 +354,36 @@ func (j *jsiiProxy_DataTfeOauthClient) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOauthClient) ServiceProvider() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceProvider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOauthClient) ServiceProviderDisplayName() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceProviderDisplayName",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOauthClient) ServiceProviderInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"serviceProviderInput",
 		&returns,
 	)
 	return returns
@@ -389,6 +495,17 @@ func (j *jsiiProxy_DataTfeOauthClient)SetLifecycle(val *cdktf.TerraformResourceL
 	)
 }
 
+func (j *jsiiProxy_DataTfeOauthClient)SetName(val *string) {
+	if err := j.validateSetNameParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"name",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataTfeOauthClient)SetOauthClientId(val *string) {
 	if err := j.validateSetOauthClientIdParameters(val); err != nil {
 		panic(err)
@@ -400,10 +517,32 @@ func (j *jsiiProxy_DataTfeOauthClient)SetOauthClientId(val *string) {
 	)
 }
 
+func (j *jsiiProxy_DataTfeOauthClient)SetOrganization(val *string) {
+	if err := j.validateSetOrganizationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"organization",
+		val,
+	)
+}
+
 func (j *jsiiProxy_DataTfeOauthClient)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataTfeOauthClient)SetServiceProvider(val *string) {
+	if err := j.validateSetServiceProviderParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"serviceProvider",
 		val,
 	)
 }
@@ -644,10 +783,42 @@ func (d *jsiiProxy_DataTfeOauthClient) ResetId() {
 	)
 }
 
+func (d *jsiiProxy_DataTfeOauthClient) ResetName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetName",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeOauthClient) ResetOauthClientId() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOauthClientId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeOauthClient) ResetOrganization() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOrganization",
+		nil, // no parameters
+	)
+}
+
 func (d *jsiiProxy_DataTfeOauthClient) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeOauthClient) ResetServiceProvider() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetServiceProvider",
 		nil, // no parameters
 	)
 }

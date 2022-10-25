@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package datatfeorganizationmembership
 
@@ -70,6 +69,10 @@ func (j *jsiiProxy_DataTfeOrganizationMembership) validateSetLifecycleParameters
 }
 
 func (j *jsiiProxy_DataTfeOrganizationMembership) validateSetOrganizationParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataTfeOrganizationMembership) validateSetUsernameParameters(val *string) error {
 	return nil
 }
 

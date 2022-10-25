@@ -68,6 +68,7 @@ type OrganizationMembership interface {
 	// Experimental.
 	TerraformResourceType() *string
 	UserId() *string
+	Username() *string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -337,6 +338,16 @@ func (j *jsiiProxy_OrganizationMembership) UserId() *string {
 	_jsii_.Get(
 		j,
 		"userId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OrganizationMembership) Username() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"username",
 		&returns,
 	)
 	return returns

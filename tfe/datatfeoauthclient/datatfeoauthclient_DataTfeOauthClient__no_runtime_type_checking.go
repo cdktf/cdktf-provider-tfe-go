@@ -1,5 +1,4 @@
 //go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 package datatfeoauthclient
 
@@ -65,7 +64,19 @@ func (j *jsiiProxy_DataTfeOauthClient) validateSetLifecycleParameters(val *cdktf
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeOauthClient) validateSetNameParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeOauthClient) validateSetOauthClientIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataTfeOauthClient) validateSetOrganizationParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_DataTfeOauthClient) validateSetServiceProviderParameters(val *string) error {
 	return nil
 }
 
