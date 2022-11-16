@@ -56,6 +56,14 @@ func validateDataTfeOrganizationMembership_IsConstructParameters(x interface{}) 
 	return nil
 }
 
+func validateDataTfeOrganizationMembership_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataTfeOrganizationMembership_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeOrganizationMembership) validateSetEmailParameters(val *string) error {
 	return nil
 }

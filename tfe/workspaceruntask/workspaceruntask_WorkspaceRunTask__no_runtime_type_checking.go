@@ -56,6 +56,14 @@ func validateWorkspaceRunTask_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateWorkspaceRunTask_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateWorkspaceRunTask_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_WorkspaceRunTask) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

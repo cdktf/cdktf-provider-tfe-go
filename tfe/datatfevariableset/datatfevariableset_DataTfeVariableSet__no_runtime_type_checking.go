@@ -56,6 +56,14 @@ func validateDataTfeVariableSet_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataTfeVariableSet_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataTfeVariableSet_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeVariableSet) validateSetIdParameters(val *string) error {
 	return nil
 }

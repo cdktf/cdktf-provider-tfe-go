@@ -56,6 +56,14 @@ func validatePolicySetParameter_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validatePolicySetParameter_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validatePolicySetParameter_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_PolicySetParameter) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

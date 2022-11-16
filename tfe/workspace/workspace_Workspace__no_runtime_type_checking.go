@@ -60,6 +60,14 @@ func validateWorkspace_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateWorkspace_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateWorkspace_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetAgentPoolIdParameters(val *string) error {
 	return nil
 }

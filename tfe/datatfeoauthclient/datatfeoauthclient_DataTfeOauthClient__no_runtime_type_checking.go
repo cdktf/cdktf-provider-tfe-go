@@ -56,6 +56,14 @@ func validateDataTfeOauthClient_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataTfeOauthClient_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataTfeOauthClient_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeOauthClient) validateSetIdParameters(val *string) error {
 	return nil
 }

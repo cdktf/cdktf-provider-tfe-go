@@ -56,6 +56,14 @@ func validateRunTrigger_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateRunTrigger_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateRunTrigger_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RunTrigger) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

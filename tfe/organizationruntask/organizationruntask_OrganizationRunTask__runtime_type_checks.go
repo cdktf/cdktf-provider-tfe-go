@@ -119,6 +119,22 @@ func validateOrganizationRunTask_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateOrganizationRunTask_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateOrganizationRunTask_IsTerraformResourceParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_OrganizationRunTask) validateSetCategoryParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

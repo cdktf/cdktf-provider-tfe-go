@@ -56,6 +56,14 @@ func validateDataTfeAgentPool_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataTfeAgentPool_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataTfeAgentPool_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeAgentPool) validateSetIdParameters(val *string) error {
 	return nil
 }

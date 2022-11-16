@@ -56,6 +56,14 @@ func validateVariable_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateVariable_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateVariable_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Variable) validateSetCategoryParameters(val *string) error {
 	return nil
 }

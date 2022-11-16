@@ -56,6 +56,14 @@ func validateAgentToken_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateAgentToken_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateAgentToken_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_AgentToken) validateSetAgentPoolIdParameters(val *string) error {
 	return nil
 }

@@ -60,6 +60,14 @@ func validateTeamAccess_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTeamAccess_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateTeamAccess_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TeamAccess) validateSetAccessParameters(val *string) error {
 	return nil
 }

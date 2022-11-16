@@ -56,6 +56,14 @@ func validateDataTfeOrganizations_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataTfeOrganizations_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataTfeOrganizations_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeOrganizations) validateSetAdminParameters(val interface{}) error {
 	return nil
 }

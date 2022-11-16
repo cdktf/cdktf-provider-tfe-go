@@ -60,6 +60,14 @@ func validateRegistryModule_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateRegistryModule_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateRegistryModule_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RegistryModule) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

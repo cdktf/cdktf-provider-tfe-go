@@ -56,6 +56,14 @@ func validateDataTfeIpRanges_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataTfeIpRanges_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataTfeIpRanges_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeIpRanges) validateSetIdParameters(val *string) error {
 	return nil
 }

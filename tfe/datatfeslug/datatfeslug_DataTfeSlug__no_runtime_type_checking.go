@@ -56,6 +56,14 @@ func validateDataTfeSlug_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataTfeSlug_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataTfeSlug_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeSlug) validateSetIdParameters(val *string) error {
 	return nil
 }

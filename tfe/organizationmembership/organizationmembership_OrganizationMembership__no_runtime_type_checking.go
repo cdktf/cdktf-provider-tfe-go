@@ -56,6 +56,14 @@ func validateOrganizationMembership_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateOrganizationMembership_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateOrganizationMembership_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_OrganizationMembership) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

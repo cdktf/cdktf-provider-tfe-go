@@ -2,10 +2,10 @@ package policysetparameter
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v3/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v4/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v3/policysetparameter/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v4/policysetparameter/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -557,6 +557,44 @@ func PolicySetParameter_IsConstruct(x interface{}) *bool {
 	_jsii_.StaticInvoke(
 		"@cdktf/provider-tfe.policySetParameter.PolicySetParameter",
 		"isConstruct",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func PolicySetParameter_IsTerraformElement(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validatePolicySetParameter_IsTerraformElementParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-tfe.policySetParameter.PolicySetParameter",
+		"isTerraformElement",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+// Experimental.
+func PolicySetParameter_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validatePolicySetParameter_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-tfe.policySetParameter.PolicySetParameter",
+		"isTerraformResource",
 		[]interface{}{x},
 		&returns,
 	)

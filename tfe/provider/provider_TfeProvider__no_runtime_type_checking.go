@@ -16,6 +16,14 @@ func validateTfeProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTfeProvider_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateTfeProvider_IsTerraformProviderParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TfeProvider) validateSetSslSkipVerifyParameters(val interface{}) error {
 	return nil
 }

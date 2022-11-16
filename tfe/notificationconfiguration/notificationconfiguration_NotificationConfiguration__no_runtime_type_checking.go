@@ -56,6 +56,14 @@ func validateNotificationConfiguration_IsConstructParameters(x interface{}) erro
 	return nil
 }
 
+func validateNotificationConfiguration_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateNotificationConfiguration_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_NotificationConfiguration) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

@@ -119,6 +119,22 @@ func validateDataTfeOrganizationMembers_IsConstructParameters(x interface{}) err
 	return nil
 }
 
+func validateDataTfeOrganizationMembers_IsTerraformDataSourceParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func validateDataTfeOrganizationMembers_IsTerraformElementParameters(x interface{}) error {
+	if x == nil {
+		return fmt.Errorf("parameter x is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeOrganizationMembers) validateSetIdParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

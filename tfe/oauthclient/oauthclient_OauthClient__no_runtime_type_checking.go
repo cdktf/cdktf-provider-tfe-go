@@ -56,6 +56,14 @@ func validateOauthClient_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateOauthClient_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateOauthClient_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_OauthClient) validateSetApiUrlParameters(val *string) error {
 	return nil
 }

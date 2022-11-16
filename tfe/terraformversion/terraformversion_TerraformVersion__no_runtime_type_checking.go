@@ -56,6 +56,14 @@ func validateTerraformVersion_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTerraformVersion_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateTerraformVersion_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TerraformVersion) validateSetBetaParameters(val interface{}) error {
 	return nil
 }
