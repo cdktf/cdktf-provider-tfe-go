@@ -64,6 +64,10 @@ func validateOrganization_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_Organization) validateSetAllowForceDeleteWorkspacesParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Organization) validateSetAssessmentsEnforcedParameters(val interface{}) error {
 	return nil
 }

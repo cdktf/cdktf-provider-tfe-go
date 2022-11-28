@@ -49,6 +49,9 @@ type Workspace interface {
 	FileTriggersEnabled() interface{}
 	SetFileTriggersEnabled(val interface{})
 	FileTriggersEnabledInput() interface{}
+	ForceDelete() interface{}
+	SetForceDelete(val interface{})
+	ForceDeleteInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -159,6 +162,7 @@ type Workspace interface {
 	ResetDescription()
 	ResetExecutionMode()
 	ResetFileTriggersEnabled()
+	ResetForceDelete()
 	ResetGlobalRemoteState()
 	ResetId()
 	ResetOperations()
@@ -376,6 +380,26 @@ func (j *jsiiProxy_Workspace) FileTriggersEnabledInput() interface{} {
 	_jsii_.Get(
 		j,
 		"fileTriggersEnabledInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) ForceDelete() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"forceDelete",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) ForceDeleteInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"forceDeleteInput",
 		&returns,
 	)
 	return returns
@@ -945,6 +969,17 @@ func (j *jsiiProxy_Workspace)SetFileTriggersEnabled(val interface{}) {
 	)
 }
 
+func (j *jsiiProxy_Workspace)SetForceDelete(val interface{}) {
+	if err := j.validateSetForceDeleteParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"forceDelete",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Workspace)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
@@ -1477,6 +1512,14 @@ func (w *jsiiProxy_Workspace) ResetFileTriggersEnabled() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetFileTriggersEnabled",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Workspace) ResetForceDelete() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetForceDelete",
 		nil, // no parameters
 	)
 }

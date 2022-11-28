@@ -12,6 +12,9 @@ import (
 // Represents a {@link https://www.terraform.io/docs/providers/tfe/r/organization tfe_organization}.
 type Organization interface {
 	cdktf.TerraformResource
+	AllowForceDeleteWorkspaces() interface{}
+	SetAllowForceDeleteWorkspaces(val interface{})
+	AllowForceDeleteWorkspacesInput() interface{}
 	AssessmentsEnforced() interface{}
 	SetAssessmentsEnforced(val interface{})
 	AssessmentsEnforcedInput() interface{}
@@ -113,6 +116,7 @@ type Organization interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetAllowForceDeleteWorkspaces()
 	ResetAssessmentsEnforced()
 	ResetCollaboratorAuthPolicy()
 	ResetCostEstimationEnabled()
@@ -137,6 +141,26 @@ type Organization interface {
 // The jsii proxy struct for Organization
 type jsiiProxy_Organization struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Organization) AllowForceDeleteWorkspaces() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"allowForceDeleteWorkspaces",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Organization) AllowForceDeleteWorkspacesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"allowForceDeleteWorkspacesInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Organization) AssessmentsEnforced() interface{} {
@@ -526,6 +550,17 @@ func NewOrganization_Override(o Organization, scope constructs.Construct, id *st
 		"@cdktf/provider-tfe.organization.Organization",
 		[]interface{}{scope, id, config},
 		o,
+	)
+}
+
+func (j *jsiiProxy_Organization)SetAllowForceDeleteWorkspaces(val interface{}) {
+	if err := j.validateSetAllowForceDeleteWorkspacesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"allowForceDeleteWorkspaces",
+		val,
 	)
 }
 
@@ -967,6 +1002,14 @@ func (o *jsiiProxy_Organization) OverrideLogicalId(newLogicalId *string) {
 		o,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (o *jsiiProxy_Organization) ResetAllowForceDeleteWorkspaces() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetAllowForceDeleteWorkspaces",
+		nil, // no parameters
 	)
 }
 

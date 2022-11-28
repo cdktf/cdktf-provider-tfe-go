@@ -12,6 +12,8 @@ func init() {
 		reflect.TypeOf((*Organization)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "allowForceDeleteWorkspaces", GoGetter: "AllowForceDeleteWorkspaces"},
+			_jsii_.MemberProperty{JsiiProperty: "allowForceDeleteWorkspacesInput", GoGetter: "AllowForceDeleteWorkspacesInput"},
 			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforced", GoGetter: "AssessmentsEnforced"},
 			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforcedInput", GoGetter: "AssessmentsEnforcedInput"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
@@ -50,6 +52,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAllowForceDeleteWorkspaces", GoMethod: "ResetAllowForceDeleteWorkspaces"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAssessmentsEnforced", GoMethod: "ResetAssessmentsEnforced"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCollaboratorAuthPolicy", GoMethod: "ResetCollaboratorAuthPolicy"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCostEstimationEnabled", GoMethod: "ResetCostEstimationEnabled"},

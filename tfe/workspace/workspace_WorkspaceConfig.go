@@ -37,6 +37,8 @@ type WorkspaceConfig struct {
 	ExecutionMode *string `field:"optional" json:"executionMode" yaml:"executionMode"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#file_triggers_enabled Workspace#file_triggers_enabled}.
 	FileTriggersEnabled interface{} `field:"optional" json:"fileTriggersEnabled" yaml:"fileTriggersEnabled"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#force_delete Workspace#force_delete}.
+	ForceDelete interface{} `field:"optional" json:"forceDelete" yaml:"forceDelete"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#global_remote_state Workspace#global_remote_state}.
 	GlobalRemoteState interface{} `field:"optional" json:"globalRemoteState" yaml:"globalRemoteState"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#id Workspace#id}.

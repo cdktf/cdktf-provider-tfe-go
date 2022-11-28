@@ -100,6 +100,10 @@ func (j *jsiiProxy_Workspace) validateSetFileTriggersEnabledParameters(val inter
 	return nil
 }
 
+func (j *jsiiProxy_Workspace) validateSetForceDeleteParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetGlobalRemoteStateParameters(val interface{}) error {
 	return nil
 }
