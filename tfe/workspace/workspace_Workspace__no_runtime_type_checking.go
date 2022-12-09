@@ -128,6 +128,10 @@ func (j *jsiiProxy_Workspace) validateSetOrganizationParameters(val *string) err
 	return nil
 }
 
+func (j *jsiiProxy_Workspace) validateSetProjectIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }

@@ -81,6 +81,9 @@ type Workspace interface {
 	Organization() *string
 	SetOrganization(val *string)
 	OrganizationInput() *string
+	ProjectId() *string
+	SetProjectId(val *string)
+	ProjectIdInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -169,6 +172,7 @@ type Workspace interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetProjectId()
 	ResetQueueAllRuns()
 	ResetRemoteStateConsumerIds()
 	ResetSpeculativeEnabled()
@@ -550,6 +554,26 @@ func (j *jsiiProxy_Workspace) OrganizationInput() *string {
 	_jsii_.Get(
 		j,
 		"organizationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) ProjectId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) ProjectIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectIdInput",
 		&returns,
 	)
 	return returns
@@ -1054,6 +1078,17 @@ func (j *jsiiProxy_Workspace)SetOrganization(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Workspace)SetProjectId(val *string) {
+	if err := j.validateSetProjectIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"projectId",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Workspace)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
@@ -1552,6 +1587,14 @@ func (w *jsiiProxy_Workspace) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Workspace) ResetProjectId() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetProjectId",
 		nil, // no parameters
 	)
 }

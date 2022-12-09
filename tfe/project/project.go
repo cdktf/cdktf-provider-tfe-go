@@ -1,4 +1,4 @@
-package organization
+package project
 
 import (
 	"reflect"
@@ -8,26 +8,15 @@ import (
 
 func init() {
 	_jsii_.RegisterClass(
-		"@cdktf/provider-tfe.organization.Organization",
-		reflect.TypeOf((*Organization)(nil)).Elem(),
+		"@cdktf/provider-tfe.project.Project",
+		reflect.TypeOf((*Project)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
-			_jsii_.MemberProperty{JsiiProperty: "allowForceDeleteWorkspaces", GoGetter: "AllowForceDeleteWorkspaces"},
-			_jsii_.MemberProperty{JsiiProperty: "allowForceDeleteWorkspacesInput", GoGetter: "AllowForceDeleteWorkspacesInput"},
-			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforced", GoGetter: "AssessmentsEnforced"},
-			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforcedInput", GoGetter: "AssessmentsEnforcedInput"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
-			_jsii_.MemberProperty{JsiiProperty: "collaboratorAuthPolicy", GoGetter: "CollaboratorAuthPolicy"},
-			_jsii_.MemberProperty{JsiiProperty: "collaboratorAuthPolicyInput", GoGetter: "CollaboratorAuthPolicyInput"},
 			_jsii_.MemberProperty{JsiiProperty: "connection", GoGetter: "Connection"},
 			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
-			_jsii_.MemberProperty{JsiiProperty: "costEstimationEnabled", GoGetter: "CostEstimationEnabled"},
-			_jsii_.MemberProperty{JsiiProperty: "costEstimationEnabledInput", GoGetter: "CostEstimationEnabledInput"},
 			_jsii_.MemberProperty{JsiiProperty: "count", GoGetter: "Count"},
-			_jsii_.MemberProperty{JsiiProperty: "defaultProjectId", GoGetter: "DefaultProjectId"},
 			_jsii_.MemberProperty{JsiiProperty: "dependsOn", GoGetter: "DependsOn"},
-			_jsii_.MemberProperty{JsiiProperty: "email", GoGetter: "Email"},
-			_jsii_.MemberProperty{JsiiProperty: "emailInput", GoGetter: "EmailInput"},
 			_jsii_.MemberProperty{JsiiProperty: "forEach", GoGetter: "ForEach"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
 			_jsii_.MemberProperty{JsiiProperty: "friendlyUniqueId", GoGetter: "FriendlyUniqueId"},
@@ -47,28 +36,14 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
 			_jsii_.MemberProperty{JsiiProperty: "nameInput", GoGetter: "NameInput"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "organization", GoGetter: "Organization"},
+			_jsii_.MemberProperty{JsiiProperty: "organizationInput", GoGetter: "OrganizationInput"},
 			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
-			_jsii_.MemberProperty{JsiiProperty: "ownersTeamSamlRoleId", GoGetter: "OwnersTeamSamlRoleId"},
-			_jsii_.MemberProperty{JsiiProperty: "ownersTeamSamlRoleIdInput", GoGetter: "OwnersTeamSamlRoleIdInput"},
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
-			_jsii_.MemberMethod{JsiiMethod: "resetAllowForceDeleteWorkspaces", GoMethod: "ResetAllowForceDeleteWorkspaces"},
-			_jsii_.MemberMethod{JsiiMethod: "resetAssessmentsEnforced", GoMethod: "ResetAssessmentsEnforced"},
-			_jsii_.MemberMethod{JsiiMethod: "resetCollaboratorAuthPolicy", GoMethod: "ResetCollaboratorAuthPolicy"},
-			_jsii_.MemberMethod{JsiiMethod: "resetCostEstimationEnabled", GoMethod: "ResetCostEstimationEnabled"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
-			_jsii_.MemberMethod{JsiiMethod: "resetOwnersTeamSamlRoleId", GoMethod: "ResetOwnersTeamSamlRoleId"},
-			_jsii_.MemberMethod{JsiiMethod: "resetSendPassingStatusesForUntriggeredSpeculativePlans", GoMethod: "ResetSendPassingStatusesForUntriggeredSpeculativePlans"},
-			_jsii_.MemberMethod{JsiiMethod: "resetSessionRememberMinutes", GoMethod: "ResetSessionRememberMinutes"},
-			_jsii_.MemberMethod{JsiiMethod: "resetSessionTimeoutMinutes", GoMethod: "ResetSessionTimeoutMinutes"},
-			_jsii_.MemberProperty{JsiiProperty: "sendPassingStatusesForUntriggeredSpeculativePlans", GoGetter: "SendPassingStatusesForUntriggeredSpeculativePlans"},
-			_jsii_.MemberProperty{JsiiProperty: "sendPassingStatusesForUntriggeredSpeculativePlansInput", GoGetter: "SendPassingStatusesForUntriggeredSpeculativePlansInput"},
-			_jsii_.MemberProperty{JsiiProperty: "sessionRememberMinutes", GoGetter: "SessionRememberMinutes"},
-			_jsii_.MemberProperty{JsiiProperty: "sessionRememberMinutesInput", GoGetter: "SessionRememberMinutesInput"},
-			_jsii_.MemberProperty{JsiiProperty: "sessionTimeoutMinutes", GoGetter: "SessionTimeoutMinutes"},
-			_jsii_.MemberProperty{JsiiProperty: "sessionTimeoutMinutesInput", GoGetter: "SessionTimeoutMinutesInput"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
@@ -78,13 +53,13 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
 		},
 		func() interface{} {
-			j := jsiiProxy_Organization{}
+			j := jsiiProxy_Project{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformResource)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-tfe.organization.OrganizationConfig",
-		reflect.TypeOf((*OrganizationConfig)(nil)).Elem(),
+		"@cdktf/provider-tfe.project.ProjectConfig",
+		reflect.TypeOf((*ProjectConfig)(nil)).Elem(),
 	)
 }

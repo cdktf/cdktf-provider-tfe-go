@@ -55,6 +55,7 @@ type DataTfeWorkspace interface {
 	SetOrganization(val *string)
 	OrganizationInput() *string
 	PolicyCheckFailures() *float64
+	ProjectId() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -353,6 +354,16 @@ func (j *jsiiProxy_DataTfeWorkspace) PolicyCheckFailures() *float64 {
 	_jsii_.Get(
 		j,
 		"policyCheckFailures",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) ProjectId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"projectId",
 		&returns,
 	)
 	return returns

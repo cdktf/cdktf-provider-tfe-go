@@ -48,6 +48,8 @@ type WorkspaceConfig struct {
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#operations Workspace#operations}.
 	Operations interface{} `field:"optional" json:"operations" yaml:"operations"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#project_id Workspace#project_id}.
+	ProjectId *string `field:"optional" json:"projectId" yaml:"projectId"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#queue_all_runs Workspace#queue_all_runs}.
 	QueueAllRuns interface{} `field:"optional" json:"queueAllRuns" yaml:"queueAllRuns"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/workspace#remote_state_consumer_ids Workspace#remote_state_consumer_ids}.

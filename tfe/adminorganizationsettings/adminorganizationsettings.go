@@ -1,4 +1,4 @@
-package datatfeorganization
+package adminorganizationsettings
 
 import (
 	"reflect"
@@ -8,20 +8,17 @@ import (
 
 func init() {
 	_jsii_.RegisterClass(
-		"@cdktf/provider-tfe.dataTfeOrganization.DataTfeOrganization",
-		reflect.TypeOf((*DataTfeOrganization)(nil)).Elem(),
+		"@cdktf/provider-tfe.adminOrganizationSettings.AdminOrganizationSettings",
+		reflect.TypeOf((*AdminOrganizationSettings)(nil)).Elem(),
 		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "accessBetaTools", GoGetter: "AccessBetaTools"},
+			_jsii_.MemberProperty{JsiiProperty: "accessBetaToolsInput", GoGetter: "AccessBetaToolsInput"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
-			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforced", GoGetter: "AssessmentsEnforced"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
-			_jsii_.MemberProperty{JsiiProperty: "collaboratorAuthPolicy", GoGetter: "CollaboratorAuthPolicy"},
+			_jsii_.MemberProperty{JsiiProperty: "connection", GoGetter: "Connection"},
 			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
-			_jsii_.MemberProperty{JsiiProperty: "costEstimationEnabled", GoGetter: "CostEstimationEnabled"},
 			_jsii_.MemberProperty{JsiiProperty: "count", GoGetter: "Count"},
-			_jsii_.MemberProperty{JsiiProperty: "defaultProjectId", GoGetter: "DefaultProjectId"},
 			_jsii_.MemberProperty{JsiiProperty: "dependsOn", GoGetter: "DependsOn"},
-			_jsii_.MemberProperty{JsiiProperty: "email", GoGetter: "Email"},
-			_jsii_.MemberProperty{JsiiProperty: "externalId", GoGetter: "ExternalId"},
 			_jsii_.MemberProperty{JsiiProperty: "forEach", GoGetter: "ForEach"},
 			_jsii_.MemberProperty{JsiiProperty: "fqn", GoGetter: "Fqn"},
 			_jsii_.MemberProperty{JsiiProperty: "friendlyUniqueId", GoGetter: "FriendlyUniqueId"},
@@ -34,20 +31,28 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "getNumberMapAttribute", GoMethod: "GetNumberMapAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getStringAttribute", GoMethod: "GetStringAttribute"},
 			_jsii_.MemberMethod{JsiiMethod: "getStringMapAttribute", GoMethod: "GetStringMapAttribute"},
+			_jsii_.MemberProperty{JsiiProperty: "globalModuleSharing", GoGetter: "GlobalModuleSharing"},
+			_jsii_.MemberProperty{JsiiProperty: "globalModuleSharingInput", GoGetter: "GlobalModuleSharingInput"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
 			_jsii_.MemberProperty{JsiiProperty: "idInput", GoGetter: "IdInput"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
-			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
-			_jsii_.MemberProperty{JsiiProperty: "nameInput", GoGetter: "NameInput"},
+			_jsii_.MemberProperty{JsiiProperty: "moduleSharingConsumerOrganizations", GoGetter: "ModuleSharingConsumerOrganizations"},
+			_jsii_.MemberProperty{JsiiProperty: "moduleSharingConsumerOrganizationsInput", GoGetter: "ModuleSharingConsumerOrganizationsInput"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberProperty{JsiiProperty: "organization", GoGetter: "Organization"},
+			_jsii_.MemberProperty{JsiiProperty: "organizationInput", GoGetter: "OrganizationInput"},
 			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
-			_jsii_.MemberProperty{JsiiProperty: "ownersTeamSamlRoleId", GoGetter: "OwnersTeamSamlRoleId"},
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
+			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAccessBetaTools", GoMethod: "ResetAccessBetaTools"},
+			_jsii_.MemberMethod{JsiiMethod: "resetGlobalModuleSharing", GoMethod: "ResetGlobalModuleSharing"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
+			_jsii_.MemberMethod{JsiiMethod: "resetModuleSharingConsumerOrganizations", GoMethod: "ResetModuleSharingConsumerOrganizations"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
-			_jsii_.MemberProperty{JsiiProperty: "sendPassingStatusesForUntriggeredSpeculativePlans", GoGetter: "SendPassingStatusesForUntriggeredSpeculativePlans"},
+			_jsii_.MemberMethod{JsiiMethod: "resetWorkspaceLimit", GoMethod: "ResetWorkspaceLimit"},
+			_jsii_.MemberProperty{JsiiProperty: "ssoEnabled", GoGetter: "SsoEnabled"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
@@ -55,16 +60,17 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toMetadata", GoMethod: "ToMetadata"},
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
-			_jsii_.MemberProperty{JsiiProperty: "twoFactorConformant", GoGetter: "TwoFactorConformant"},
+			_jsii_.MemberProperty{JsiiProperty: "workspaceLimit", GoGetter: "WorkspaceLimit"},
+			_jsii_.MemberProperty{JsiiProperty: "workspaceLimitInput", GoGetter: "WorkspaceLimitInput"},
 		},
 		func() interface{} {
-			j := jsiiProxy_DataTfeOrganization{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformDataSource)
+			j := jsiiProxy_AdminOrganizationSettings{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformResource)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-tfe.dataTfeOrganization.DataTfeOrganizationConfig",
-		reflect.TypeOf((*DataTfeOrganizationConfig)(nil)).Elem(),
+		"@cdktf/provider-tfe.adminOrganizationSettings.AdminOrganizationSettingsConfig",
+		reflect.TypeOf((*AdminOrganizationSettingsConfig)(nil)).Elem(),
 	)
 }
