@@ -100,6 +100,7 @@ type Workspace interface {
 	RemoteStateConsumerIds() *[]*string
 	SetRemoteStateConsumerIds(val *[]*string)
 	RemoteStateConsumerIdsInput() *[]*string
+	ResourceCount() *float64
 	SpeculativeEnabled() interface{}
 	SetSpeculativeEnabled(val interface{})
 	SpeculativeEnabledInput() interface{}
@@ -644,6 +645,16 @@ func (j *jsiiProxy_Workspace) RemoteStateConsumerIdsInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"remoteStateConsumerIdsInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) ResourceCount() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"resourceCount",
 		&returns,
 	)
 	return returns

@@ -93,6 +93,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetTriggerPrefixes", GoMethod: "ResetTriggerPrefixes"},
 			_jsii_.MemberMethod{JsiiMethod: "resetVcsRepo", GoMethod: "ResetVcsRepo"},
 			_jsii_.MemberMethod{JsiiMethod: "resetWorkingDirectory", GoMethod: "ResetWorkingDirectory"},
+			_jsii_.MemberProperty{JsiiProperty: "resourceCount", GoGetter: "ResourceCount"},
 			_jsii_.MemberProperty{JsiiProperty: "speculativeEnabled", GoGetter: "SpeculativeEnabled"},
 			_jsii_.MemberProperty{JsiiProperty: "speculativeEnabledInput", GoGetter: "SpeculativeEnabledInput"},
 			_jsii_.MemberProperty{JsiiProperty: "sshKeyId", GoGetter: "SshKeyId"},

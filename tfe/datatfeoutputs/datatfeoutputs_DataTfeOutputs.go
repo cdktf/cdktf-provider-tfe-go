@@ -39,6 +39,7 @@ type DataTfeOutputs interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	NonsensitiveValues() cdktf.AnyMap
 	Organization() *string
 	SetOrganization(val *string)
 	OrganizationInput() *string
@@ -199,6 +200,16 @@ func (j *jsiiProxy_DataTfeOutputs) Node() constructs.Node {
 	_jsii_.Get(
 		j,
 		"node",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOutputs) NonsensitiveValues() cdktf.AnyMap {
+	var returns cdktf.AnyMap
+	_jsii_.Get(
+		j,
+		"nonsensitiveValues",
 		&returns,
 	)
 	return returns
