@@ -21,8 +21,6 @@ type PolicySetConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy_set#name PolicySet#name}.
 	Name *string `field:"required" json:"name" yaml:"name"`
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy_set#organization PolicySet#organization}.
-	Organization *string `field:"required" json:"organization" yaml:"organization"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy_set#description PolicySet#description}.
 	Description *string `field:"optional" json:"description" yaml:"description"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy_set#global PolicySet#global}.
@@ -34,6 +32,8 @@ type PolicySetConfig struct {
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy_set#kind PolicySet#kind}.
 	Kind *string `field:"optional" json:"kind" yaml:"kind"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy_set#organization PolicySet#organization}.
+	Organization *string `field:"optional" json:"organization" yaml:"organization"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy_set#overridable PolicySet#overridable}.
 	Overridable interface{} `field:"optional" json:"overridable" yaml:"overridable"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy_set#policies_path PolicySet#policies_path}.

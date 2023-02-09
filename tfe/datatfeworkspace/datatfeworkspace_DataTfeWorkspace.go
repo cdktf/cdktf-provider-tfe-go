@@ -28,6 +28,7 @@ type DataTfeWorkspace interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	ExecutionMode() *string
 	FileTriggersEnabled() cdktf.IResolvable
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -110,6 +111,7 @@ type DataTfeWorkspace interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -204,6 +206,16 @@ func (j *jsiiProxy_DataTfeWorkspace) Description() *string {
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) ExecutionMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"executionMode",
 		&returns,
 	)
 	return returns
@@ -956,6 +968,14 @@ func (d *jsiiProxy_DataTfeWorkspace) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeWorkspace) ResetOrganization() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOrganization",
 		nil, // no parameters
 	)
 }

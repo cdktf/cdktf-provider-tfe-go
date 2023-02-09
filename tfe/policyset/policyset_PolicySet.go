@@ -123,6 +123,7 @@ type PolicySet interface {
 	ResetGlobal()
 	ResetId()
 	ResetKind()
+	ResetOrganization()
 	ResetOverridable()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -1068,6 +1069,14 @@ func (p *jsiiProxy_PolicySet) ResetKind() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetKind",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PolicySet) ResetOrganization() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetOrganization",
 		nil, // no parameters
 	)
 }

@@ -50,6 +50,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "resetGlobalModuleSharing", GoMethod: "ResetGlobalModuleSharing"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetModuleSharingConsumerOrganizations", GoMethod: "ResetModuleSharingConsumerOrganizations"},
+			_jsii_.MemberMethod{JsiiMethod: "resetOrganization", GoMethod: "ResetOrganization"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetWorkspaceLimit", GoMethod: "ResetWorkspaceLimit"},
 			_jsii_.MemberProperty{JsiiProperty: "ssoEnabled", GoGetter: "SsoEnabled"},

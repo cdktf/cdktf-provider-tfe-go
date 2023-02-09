@@ -98,6 +98,7 @@ type DataTfePolicySet interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
 	ResetKind()
+	ResetOrganization()
 	ResetOverridable()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -823,6 +824,14 @@ func (d *jsiiProxy_DataTfePolicySet) ResetKind() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetKind",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfePolicySet) ResetOrganization() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOrganization",
 		nil, // no parameters
 	)
 }

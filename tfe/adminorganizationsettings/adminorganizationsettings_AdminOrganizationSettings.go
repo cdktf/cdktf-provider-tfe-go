@@ -106,6 +106,7 @@ type AdminOrganizationSettings interface {
 	ResetGlobalModuleSharing()
 	ResetId()
 	ResetModuleSharingConsumerOrganizations()
+	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -870,6 +871,14 @@ func (a *jsiiProxy_AdminOrganizationSettings) ResetModuleSharingConsumerOrganiza
 	_jsii_.InvokeVoid(
 		a,
 		"resetModuleSharingConsumerOrganizations",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AdminOrganizationSettings) ResetOrganization() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetOrganization",
 		nil, // no parameters
 	)
 }

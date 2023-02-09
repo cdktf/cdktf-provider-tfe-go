@@ -95,6 +95,7 @@ type DataTfeWorkspaceIds interface {
 	ResetExcludeTags()
 	ResetId()
 	ResetNames()
+	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -788,6 +789,14 @@ func (d *jsiiProxy_DataTfeWorkspaceIds) ResetNames() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetNames",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeWorkspaceIds) ResetOrganization() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOrganization",
 		nil, // no parameters
 	)
 }

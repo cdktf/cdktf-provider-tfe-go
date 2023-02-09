@@ -170,6 +170,7 @@ type Workspace interface {
 	ResetGlobalRemoteState()
 	ResetId()
 	ResetOperations()
+	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -1590,6 +1591,14 @@ func (w *jsiiProxy_Workspace) ResetOperations() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetOperations",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Workspace) ResetOrganization() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetOrganization",
 		nil, // no parameters
 	)
 }

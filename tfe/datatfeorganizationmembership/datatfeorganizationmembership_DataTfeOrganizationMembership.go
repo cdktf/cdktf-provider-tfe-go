@@ -90,6 +90,7 @@ type DataTfeOrganizationMembership interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetEmail()
 	ResetId()
+	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -734,6 +735,14 @@ func (d *jsiiProxy_DataTfeOrganizationMembership) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeOrganizationMembership) ResetOrganization() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetOrganization",
 		nil, // no parameters
 	)
 }

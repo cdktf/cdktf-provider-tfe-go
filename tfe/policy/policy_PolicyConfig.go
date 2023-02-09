@@ -23,10 +23,6 @@ type PolicyConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy#name Policy#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
-	// Name of the organization that this policy belongs to.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy#organization Policy#organization}
-	Organization *string `field:"required" json:"organization" yaml:"organization"`
 	// Text of a valid Sentinel or OPA policy.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy#policy Policy#policy}
@@ -50,6 +46,10 @@ type PolicyConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy#kind Policy#kind}
 	Kind *string `field:"optional" json:"kind" yaml:"kind"`
+	// Name of the organization that this policy belongs to.
+	//
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy#organization Policy#organization}
+	Organization *string `field:"optional" json:"organization" yaml:"organization"`
 	// The OPA query to run. Required for OPA policies.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/policy#query Policy#query}

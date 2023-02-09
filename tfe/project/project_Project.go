@@ -93,6 +93,7 @@ type Project interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -729,6 +730,14 @@ func (p *jsiiProxy_Project) ResetId() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_Project) ResetOrganization() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetOrganization",
 		nil, // no parameters
 	)
 }

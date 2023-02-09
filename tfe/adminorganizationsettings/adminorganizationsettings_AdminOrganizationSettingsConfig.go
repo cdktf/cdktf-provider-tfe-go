@@ -19,8 +19,6 @@ type AdminOrganizationSettingsConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/admin_organization_settings#organization AdminOrganizationSettings#organization}.
-	Organization *string `field:"required" json:"organization" yaml:"organization"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/admin_organization_settings#access_beta_tools AdminOrganizationSettings#access_beta_tools}.
 	AccessBetaTools interface{} `field:"optional" json:"accessBetaTools" yaml:"accessBetaTools"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/admin_organization_settings#global_module_sharing AdminOrganizationSettings#global_module_sharing}.
@@ -32,6 +30,8 @@ type AdminOrganizationSettingsConfig struct {
 	Id *string `field:"optional" json:"id" yaml:"id"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/admin_organization_settings#module_sharing_consumer_organizations AdminOrganizationSettings#module_sharing_consumer_organizations}.
 	ModuleSharingConsumerOrganizations *[]*string `field:"optional" json:"moduleSharingConsumerOrganizations" yaml:"moduleSharingConsumerOrganizations"`
+	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/admin_organization_settings#organization AdminOrganizationSettings#organization}.
+	Organization *string `field:"optional" json:"organization" yaml:"organization"`
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tfe/r/admin_organization_settings#workspace_limit AdminOrganizationSettings#workspace_limit}.
 	WorkspaceLimit *float64 `field:"optional" json:"workspaceLimit" yaml:"workspaceLimit"`
 }
