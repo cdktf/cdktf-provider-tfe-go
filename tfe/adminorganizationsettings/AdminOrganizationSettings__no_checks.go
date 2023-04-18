@@ -72,6 +72,10 @@ func (j *jsiiProxy_AdminOrganizationSettings) validateSetConnectionParameters(va
 	return nil
 }
 
+func (j *jsiiProxy_AdminOrganizationSettings) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_AdminOrganizationSettings) validateSetGlobalModuleSharingParameters(val interface{}) error {
 	return nil
 }

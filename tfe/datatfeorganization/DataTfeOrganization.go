@@ -2,14 +2,14 @@ package datatfeorganization
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/datatfeorganization/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/datatfeorganization/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/d/organization tfe_organization}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/organization tfe_organization}.
 type DataTfeOrganization interface {
 	cdktf.TerraformDataSource
 	AssessmentsEnforced() cdktf.IResolvable
@@ -20,9 +20,9 @@ type DataTfeOrganization interface {
 	ConstructNodeMetadata() *map[string]interface{}
 	CostEstimationEnabled() cdktf.IResolvable
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	DefaultProjectId() *string
 	// Experimental.
 	DependsOn() *[]*string
@@ -159,8 +159,8 @@ func (j *jsiiProxy_DataTfeOrganization) CostEstimationEnabled() cdktf.IResolvabl
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeOrganization) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataTfeOrganization) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -380,7 +380,7 @@ func (j *jsiiProxy_DataTfeOrganization) TwoFactorConformant() cdktf.IResolvable 
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/organization tfe_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/organization tfe_organization} Data Source.
 func NewDataTfeOrganization(scope constructs.Construct, id *string, config *DataTfeOrganizationConfig) DataTfeOrganization {
 	_init_.Initialize()
 
@@ -398,7 +398,7 @@ func NewDataTfeOrganization(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/organization tfe_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/organization tfe_organization} Data Source.
 func NewDataTfeOrganization_Override(d DataTfeOrganization, scope constructs.Construct, id *string, config *DataTfeOrganizationConfig) {
 	_init_.Initialize()
 
@@ -409,7 +409,10 @@ func NewDataTfeOrganization_Override(d DataTfeOrganization, scope constructs.Con
 	)
 }
 
-func (j *jsiiProxy_DataTfeOrganization)SetCount(val *float64) {
+func (j *jsiiProxy_DataTfeOrganization)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

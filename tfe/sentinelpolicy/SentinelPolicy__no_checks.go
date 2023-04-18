@@ -68,6 +68,10 @@ func (j *jsiiProxy_SentinelPolicy) validateSetConnectionParameters(val interface
 	return nil
 }
 
+func (j *jsiiProxy_SentinelPolicy) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_SentinelPolicy) validateSetDescriptionParameters(val *string) error {
 	return nil
 }

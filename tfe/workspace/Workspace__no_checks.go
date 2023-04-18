@@ -88,6 +88,10 @@ func (j *jsiiProxy_Workspace) validateSetConnectionParameters(val interface{}) e
 	return nil
 }
 
+func (j *jsiiProxy_Workspace) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetDescriptionParameters(val *string) error {
 	return nil
 }

@@ -2,14 +2,14 @@ package organizationtoken
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/organizationtoken/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/organizationtoken/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/organization_token tfe_organization_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/organization_token tfe_organization_token}.
 type OrganizationToken interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type OrganizationToken interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -144,8 +144,8 @@ func (j *jsiiProxy_OrganizationToken) ConstructNodeMetadata() *map[string]interf
 	return returns
 }
 
-func (j *jsiiProxy_OrganizationToken) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_OrganizationToken) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -345,7 +345,7 @@ func (j *jsiiProxy_OrganizationToken) Token() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/organization_token tfe_organization_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/organization_token tfe_organization_token} Resource.
 func NewOrganizationToken(scope constructs.Construct, id *string, config *OrganizationTokenConfig) OrganizationToken {
 	_init_.Initialize()
 
@@ -363,7 +363,7 @@ func NewOrganizationToken(scope constructs.Construct, id *string, config *Organi
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/organization_token tfe_organization_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/organization_token tfe_organization_token} Resource.
 func NewOrganizationToken_Override(o OrganizationToken, scope constructs.Construct, id *string, config *OrganizationTokenConfig) {
 	_init_.Initialize()
 
@@ -385,7 +385,10 @@ func (j *jsiiProxy_OrganizationToken)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_OrganizationToken)SetCount(val *float64) {
+func (j *jsiiProxy_OrganizationToken)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

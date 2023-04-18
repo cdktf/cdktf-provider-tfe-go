@@ -2,14 +2,14 @@ package organizationmodulesharing
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/organizationmodulesharing/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/organizationmodulesharing/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/organization_module_sharing tfe_organization_module_sharing}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/organization_module_sharing tfe_organization_module_sharing}.
 type OrganizationModuleSharing interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type OrganizationModuleSharing interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -142,8 +142,8 @@ func (j *jsiiProxy_OrganizationModuleSharing) ConstructNodeMetadata() *map[strin
 	return returns
 }
 
-func (j *jsiiProxy_OrganizationModuleSharing) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_OrganizationModuleSharing) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -333,7 +333,7 @@ func (j *jsiiProxy_OrganizationModuleSharing) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/organization_module_sharing tfe_organization_module_sharing} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
 func NewOrganizationModuleSharing(scope constructs.Construct, id *string, config *OrganizationModuleSharingConfig) OrganizationModuleSharing {
 	_init_.Initialize()
 
@@ -351,7 +351,7 @@ func NewOrganizationModuleSharing(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/organization_module_sharing tfe_organization_module_sharing} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
 func NewOrganizationModuleSharing_Override(o OrganizationModuleSharing, scope constructs.Construct, id *string, config *OrganizationModuleSharingConfig) {
 	_init_.Initialize()
 
@@ -373,7 +373,10 @@ func (j *jsiiProxy_OrganizationModuleSharing)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_OrganizationModuleSharing)SetCount(val *float64) {
+func (j *jsiiProxy_OrganizationModuleSharing)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

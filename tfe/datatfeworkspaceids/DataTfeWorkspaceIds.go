@@ -2,14 +2,14 @@ package datatfeworkspaceids
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/datatfeworkspaceids/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/datatfeworkspaceids/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/d/workspace_ids tfe_workspace_ids}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/workspace_ids tfe_workspace_ids}.
 type DataTfeWorkspaceIds interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataTfeWorkspaceIds interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -135,8 +135,8 @@ func (j *jsiiProxy_DataTfeWorkspaceIds) ConstructNodeMetadata() *map[string]inte
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceIds) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataTfeWorkspaceIds) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -376,7 +376,7 @@ func (j *jsiiProxy_DataTfeWorkspaceIds) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/workspace_ids tfe_workspace_ids} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
 func NewDataTfeWorkspaceIds(scope constructs.Construct, id *string, config *DataTfeWorkspaceIdsConfig) DataTfeWorkspaceIds {
 	_init_.Initialize()
 
@@ -394,7 +394,7 @@ func NewDataTfeWorkspaceIds(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/workspace_ids tfe_workspace_ids} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
 func NewDataTfeWorkspaceIds_Override(d DataTfeWorkspaceIds, scope constructs.Construct, id *string, config *DataTfeWorkspaceIdsConfig) {
 	_init_.Initialize()
 
@@ -405,7 +405,10 @@ func NewDataTfeWorkspaceIds_Override(d DataTfeWorkspaceIds, scope constructs.Con
 	)
 }
 
-func (j *jsiiProxy_DataTfeWorkspaceIds)SetCount(val *float64) {
+func (j *jsiiProxy_DataTfeWorkspaceIds)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

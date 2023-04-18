@@ -68,6 +68,10 @@ func (j *jsiiProxy_TeamOrganizationMember) validateSetConnectionParameters(val i
 	return nil
 }
 
+func (j *jsiiProxy_TeamOrganizationMember) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TeamOrganizationMember) validateSetIdParameters(val *string) error {
 	return nil
 }

@@ -72,6 +72,10 @@ func (j *jsiiProxy_RegistryModule) validateSetConnectionParameters(val interface
 	return nil
 }
 
+func (j *jsiiProxy_RegistryModule) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_RegistryModule) validateSetIdParameters(val *string) error {
 	return nil
 }

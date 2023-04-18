@@ -2,14 +2,14 @@ package datatfeorganizationmembership
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/datatfeorganizationmembership/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/datatfeorganizationmembership/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/d/organization_membership tfe_organization_membership}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/organization_membership tfe_organization_membership}.
 type DataTfeOrganizationMembership interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataTfeOrganizationMembership interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -130,8 +130,8 @@ func (j *jsiiProxy_DataTfeOrganizationMembership) ConstructNodeMetadata() *map[s
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeOrganizationMembership) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataTfeOrganizationMembership) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -341,7 +341,7 @@ func (j *jsiiProxy_DataTfeOrganizationMembership) UsernameInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/organization_membership tfe_organization_membership} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/organization_membership tfe_organization_membership} Data Source.
 func NewDataTfeOrganizationMembership(scope constructs.Construct, id *string, config *DataTfeOrganizationMembershipConfig) DataTfeOrganizationMembership {
 	_init_.Initialize()
 
@@ -359,7 +359,7 @@ func NewDataTfeOrganizationMembership(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/organization_membership tfe_organization_membership} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/organization_membership tfe_organization_membership} Data Source.
 func NewDataTfeOrganizationMembership_Override(d DataTfeOrganizationMembership, scope constructs.Construct, id *string, config *DataTfeOrganizationMembershipConfig) {
 	_init_.Initialize()
 
@@ -370,7 +370,10 @@ func NewDataTfeOrganizationMembership_Override(d DataTfeOrganizationMembership, 
 	)
 }
 
-func (j *jsiiProxy_DataTfeOrganizationMembership)SetCount(val *float64) {
+func (j *jsiiProxy_DataTfeOrganizationMembership)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

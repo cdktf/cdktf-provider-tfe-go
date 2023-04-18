@@ -72,6 +72,10 @@ func (j *jsiiProxy_TerraformVersion) validateSetConnectionParameters(val interfa
 	return nil
 }
 
+func (j *jsiiProxy_TerraformVersion) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TerraformVersion) validateSetDeprecatedParameters(val interface{}) error {
 	return nil
 }

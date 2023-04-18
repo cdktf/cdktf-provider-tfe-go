@@ -2,14 +2,14 @@ package datatfegithubappinstallation
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/datatfegithubappinstallation/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/datatfegithubappinstallation/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/d/github_app_installation tfe_github_app_installation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/github_app_installation tfe_github_app_installation}.
 type DataTfeGithubAppInstallation interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataTfeGithubAppInstallation interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -122,8 +122,8 @@ func (j *jsiiProxy_DataTfeGithubAppInstallation) ConstructNodeMetadata() *map[st
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeGithubAppInstallation) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataTfeGithubAppInstallation) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -293,7 +293,7 @@ func (j *jsiiProxy_DataTfeGithubAppInstallation) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/github_app_installation tfe_github_app_installation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
 func NewDataTfeGithubAppInstallation(scope constructs.Construct, id *string, config *DataTfeGithubAppInstallationConfig) DataTfeGithubAppInstallation {
 	_init_.Initialize()
 
@@ -311,7 +311,7 @@ func NewDataTfeGithubAppInstallation(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/github_app_installation tfe_github_app_installation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
 func NewDataTfeGithubAppInstallation_Override(d DataTfeGithubAppInstallation, scope constructs.Construct, id *string, config *DataTfeGithubAppInstallationConfig) {
 	_init_.Initialize()
 
@@ -322,7 +322,10 @@ func NewDataTfeGithubAppInstallation_Override(d DataTfeGithubAppInstallation, sc
 	)
 }
 
-func (j *jsiiProxy_DataTfeGithubAppInstallation)SetCount(val *float64) {
+func (j *jsiiProxy_DataTfeGithubAppInstallation)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

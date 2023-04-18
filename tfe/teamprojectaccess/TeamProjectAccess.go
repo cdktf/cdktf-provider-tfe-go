@@ -2,14 +2,14 @@ package teamprojectaccess
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/teamprojectaccess/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/teamprojectaccess/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/team_project_access tfe_team_project_access}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_project_access tfe_team_project_access}.
 type TeamProjectAccess interface {
 	cdktf.TerraformResource
 	Access() *string
@@ -24,9 +24,9 @@ type TeamProjectAccess interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -164,8 +164,8 @@ func (j *jsiiProxy_TeamProjectAccess) ConstructNodeMetadata() *map[string]interf
 	return returns
 }
 
-func (j *jsiiProxy_TeamProjectAccess) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_TeamProjectAccess) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -355,7 +355,7 @@ func (j *jsiiProxy_TeamProjectAccess) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/team_project_access tfe_team_project_access} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_project_access tfe_team_project_access} Resource.
 func NewTeamProjectAccess(scope constructs.Construct, id *string, config *TeamProjectAccessConfig) TeamProjectAccess {
 	_init_.Initialize()
 
@@ -373,7 +373,7 @@ func NewTeamProjectAccess(scope constructs.Construct, id *string, config *TeamPr
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/team_project_access tfe_team_project_access} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_project_access tfe_team_project_access} Resource.
 func NewTeamProjectAccess_Override(t TeamProjectAccess, scope constructs.Construct, id *string, config *TeamProjectAccessConfig) {
 	_init_.Initialize()
 
@@ -406,7 +406,10 @@ func (j *jsiiProxy_TeamProjectAccess)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_TeamProjectAccess)SetCount(val *float64) {
+func (j *jsiiProxy_TeamProjectAccess)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

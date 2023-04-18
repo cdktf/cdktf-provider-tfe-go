@@ -64,6 +64,10 @@ func validateDataTfeIpRanges_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeIpRanges) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeIpRanges) validateSetIdParameters(val *string) error {
 	return nil
 }

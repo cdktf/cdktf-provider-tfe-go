@@ -68,6 +68,10 @@ func (j *jsiiProxy_NotificationConfiguration) validateSetConnectionParameters(va
 	return nil
 }
 
+func (j *jsiiProxy_NotificationConfiguration) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_NotificationConfiguration) validateSetDestinationTypeParameters(val *string) error {
 	return nil
 }

@@ -68,6 +68,10 @@ func (j *jsiiProxy_DataTfeOrganizationRunTask) validateSetCategoryParameters(val
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeOrganizationRunTask) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeOrganizationRunTask) validateSetDescriptionParameters(val *string) error {
 	return nil
 }

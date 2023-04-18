@@ -2,14 +2,14 @@ package sentinelpolicy
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/sentinelpolicy/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/sentinelpolicy/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/sentinel_policy tfe_sentinel_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/sentinel_policy tfe_sentinel_policy}.
 type SentinelPolicy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type SentinelPolicy interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -153,8 +153,8 @@ func (j *jsiiProxy_SentinelPolicy) ConstructNodeMetadata() *map[string]interface
 	return returns
 }
 
-func (j *jsiiProxy_SentinelPolicy) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_SentinelPolicy) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -404,7 +404,7 @@ func (j *jsiiProxy_SentinelPolicy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/sentinel_policy tfe_sentinel_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/sentinel_policy tfe_sentinel_policy} Resource.
 func NewSentinelPolicy(scope constructs.Construct, id *string, config *SentinelPolicyConfig) SentinelPolicy {
 	_init_.Initialize()
 
@@ -422,7 +422,7 @@ func NewSentinelPolicy(scope constructs.Construct, id *string, config *SentinelP
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/sentinel_policy tfe_sentinel_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/sentinel_policy tfe_sentinel_policy} Resource.
 func NewSentinelPolicy_Override(s SentinelPolicy, scope constructs.Construct, id *string, config *SentinelPolicyConfig) {
 	_init_.Initialize()
 
@@ -444,7 +444,10 @@ func (j *jsiiProxy_SentinelPolicy)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_SentinelPolicy)SetCount(val *float64) {
+func (j *jsiiProxy_SentinelPolicy)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

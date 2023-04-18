@@ -2,14 +2,14 @@ package policysetparameter
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/policysetparameter/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/policysetparameter/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/policy_set_parameter tfe_policy_set_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/policy_set_parameter tfe_policy_set_parameter}.
 type PolicySetParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type PolicySetParameter interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -149,8 +149,8 @@ func (j *jsiiProxy_PolicySetParameter) ConstructNodeMetadata() *map[string]inter
 	return returns
 }
 
-func (j *jsiiProxy_PolicySetParameter) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_PolicySetParameter) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -380,7 +380,7 @@ func (j *jsiiProxy_PolicySetParameter) ValueInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/policy_set_parameter tfe_policy_set_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
 func NewPolicySetParameter(scope constructs.Construct, id *string, config *PolicySetParameterConfig) PolicySetParameter {
 	_init_.Initialize()
 
@@ -398,7 +398,7 @@ func NewPolicySetParameter(scope constructs.Construct, id *string, config *Polic
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/policy_set_parameter tfe_policy_set_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
 func NewPolicySetParameter_Override(p PolicySetParameter, scope constructs.Construct, id *string, config *PolicySetParameterConfig) {
 	_init_.Initialize()
 
@@ -420,7 +420,10 @@ func (j *jsiiProxy_PolicySetParameter)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_PolicySetParameter)SetCount(val *float64) {
+func (j *jsiiProxy_PolicySetParameter)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

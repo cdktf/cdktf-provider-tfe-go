@@ -2,14 +2,14 @@ package datatfeipranges
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/datatfeipranges/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/datatfeipranges/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/d/ip_ranges tfe_ip_ranges}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/ip_ranges tfe_ip_ranges}.
 type DataTfeIpRanges interface {
 	cdktf.TerraformDataSource
 	Api() *[]*string
@@ -18,9 +18,9 @@ type DataTfeIpRanges interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -131,8 +131,8 @@ func (j *jsiiProxy_DataTfeIpRanges) ConstructNodeMetadata() *map[string]interfac
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeIpRanges) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataTfeIpRanges) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -302,7 +302,7 @@ func (j *jsiiProxy_DataTfeIpRanges) Vcs() *[]*string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/ip_ranges tfe_ip_ranges} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/ip_ranges tfe_ip_ranges} Data Source.
 func NewDataTfeIpRanges(scope constructs.Construct, id *string, config *DataTfeIpRangesConfig) DataTfeIpRanges {
 	_init_.Initialize()
 
@@ -320,7 +320,7 @@ func NewDataTfeIpRanges(scope constructs.Construct, id *string, config *DataTfeI
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/ip_ranges tfe_ip_ranges} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/ip_ranges tfe_ip_ranges} Data Source.
 func NewDataTfeIpRanges_Override(d DataTfeIpRanges, scope constructs.Construct, id *string, config *DataTfeIpRangesConfig) {
 	_init_.Initialize()
 
@@ -331,7 +331,10 @@ func NewDataTfeIpRanges_Override(d DataTfeIpRanges, scope constructs.Construct, 
 	)
 }
 
-func (j *jsiiProxy_DataTfeIpRanges)SetCount(val *float64) {
+func (j *jsiiProxy_DataTfeIpRanges)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

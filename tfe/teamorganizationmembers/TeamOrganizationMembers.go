@@ -2,14 +2,14 @@ package teamorganizationmembers
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/teamorganizationmembers/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/teamorganizationmembers/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/team_organization_members tfe_team_organization_members}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_organization_members tfe_team_organization_members}.
 type TeamOrganizationMembers interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type TeamOrganizationMembers interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -141,8 +141,8 @@ func (j *jsiiProxy_TeamOrganizationMembers) ConstructNodeMetadata() *map[string]
 	return returns
 }
 
-func (j *jsiiProxy_TeamOrganizationMembers) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_TeamOrganizationMembers) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -332,7 +332,7 @@ func (j *jsiiProxy_TeamOrganizationMembers) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/team_organization_members tfe_team_organization_members} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_organization_members tfe_team_organization_members} Resource.
 func NewTeamOrganizationMembers(scope constructs.Construct, id *string, config *TeamOrganizationMembersConfig) TeamOrganizationMembers {
 	_init_.Initialize()
 
@@ -350,7 +350,7 @@ func NewTeamOrganizationMembers(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/team_organization_members tfe_team_organization_members} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_organization_members tfe_team_organization_members} Resource.
 func NewTeamOrganizationMembers_Override(t TeamOrganizationMembers, scope constructs.Construct, id *string, config *TeamOrganizationMembersConfig) {
 	_init_.Initialize()
 
@@ -372,7 +372,10 @@ func (j *jsiiProxy_TeamOrganizationMembers)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_TeamOrganizationMembers)SetCount(val *float64) {
+func (j *jsiiProxy_TeamOrganizationMembers)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

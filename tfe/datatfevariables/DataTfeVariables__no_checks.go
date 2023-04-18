@@ -64,6 +64,10 @@ func validateDataTfeVariables_IsTerraformElementParameters(x interface{}) error 
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeVariables) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeVariables) validateSetIdParameters(val *string) error {
 	return nil
 }

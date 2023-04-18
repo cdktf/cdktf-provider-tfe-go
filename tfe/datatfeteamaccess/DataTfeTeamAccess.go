@@ -2,14 +2,14 @@ package datatfeteamaccess
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/datatfeteamaccess/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/datatfeteamaccess/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/d/team_access tfe_team_access}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/team_access tfe_team_access}.
 type DataTfeTeamAccess interface {
 	cdktf.TerraformDataSource
 	Access() *string
@@ -18,9 +18,9 @@ type DataTfeTeamAccess interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -135,8 +135,8 @@ func (j *jsiiProxy_DataTfeTeamAccess) ConstructNodeMetadata() *map[string]interf
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeTeamAccess) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataTfeTeamAccess) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -326,7 +326,7 @@ func (j *jsiiProxy_DataTfeTeamAccess) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/team_access tfe_team_access} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/team_access tfe_team_access} Data Source.
 func NewDataTfeTeamAccess(scope constructs.Construct, id *string, config *DataTfeTeamAccessConfig) DataTfeTeamAccess {
 	_init_.Initialize()
 
@@ -344,7 +344,7 @@ func NewDataTfeTeamAccess(scope constructs.Construct, id *string, config *DataTf
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/team_access tfe_team_access} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/team_access tfe_team_access} Data Source.
 func NewDataTfeTeamAccess_Override(d DataTfeTeamAccess, scope constructs.Construct, id *string, config *DataTfeTeamAccessConfig) {
 	_init_.Initialize()
 
@@ -355,7 +355,10 @@ func NewDataTfeTeamAccess_Override(d DataTfeTeamAccess, scope constructs.Constru
 	)
 }
 
-func (j *jsiiProxy_DataTfeTeamAccess)SetCount(val *float64) {
+func (j *jsiiProxy_DataTfeTeamAccess)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

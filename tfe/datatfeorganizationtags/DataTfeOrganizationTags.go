@@ -2,14 +2,14 @@ package datatfeorganizationtags
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/datatfeorganizationtags/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/datatfeorganizationtags/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/d/organization_tags tfe_organization_tags}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/organization_tags tfe_organization_tags}.
 type DataTfeOrganizationTags interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataTfeOrganizationTags interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -122,8 +122,8 @@ func (j *jsiiProxy_DataTfeOrganizationTags) ConstructNodeMetadata() *map[string]
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeOrganizationTags) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataTfeOrganizationTags) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -293,7 +293,7 @@ func (j *jsiiProxy_DataTfeOrganizationTags) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/organization_tags tfe_organization_tags} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/organization_tags tfe_organization_tags} Data Source.
 func NewDataTfeOrganizationTags(scope constructs.Construct, id *string, config *DataTfeOrganizationTagsConfig) DataTfeOrganizationTags {
 	_init_.Initialize()
 
@@ -311,7 +311,7 @@ func NewDataTfeOrganizationTags(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/organization_tags tfe_organization_tags} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/organization_tags tfe_organization_tags} Data Source.
 func NewDataTfeOrganizationTags_Override(d DataTfeOrganizationTags, scope constructs.Construct, id *string, config *DataTfeOrganizationTagsConfig) {
 	_init_.Initialize()
 
@@ -322,7 +322,10 @@ func NewDataTfeOrganizationTags_Override(d DataTfeOrganizationTags, scope constr
 	)
 }
 
-func (j *jsiiProxy_DataTfeOrganizationTags)SetCount(val *float64) {
+func (j *jsiiProxy_DataTfeOrganizationTags)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

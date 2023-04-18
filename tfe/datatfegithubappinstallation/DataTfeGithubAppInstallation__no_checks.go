@@ -64,6 +64,10 @@ func validateDataTfeGithubAppInstallation_IsTerraformElementParameters(x interfa
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeGithubAppInstallation) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeGithubAppInstallation) validateSetInstallationIdParameters(val *float64) error {
 	return nil
 }

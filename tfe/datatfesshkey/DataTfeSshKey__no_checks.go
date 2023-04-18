@@ -64,6 +64,10 @@ func validateDataTfeSshKey_IsTerraformElementParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeSshKey) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeSshKey) validateSetIdParameters(val *string) error {
 	return nil
 }

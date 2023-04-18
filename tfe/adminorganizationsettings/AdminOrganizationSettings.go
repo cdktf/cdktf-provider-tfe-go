@@ -2,14 +2,14 @@ package adminorganizationsettings
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/adminorganizationsettings/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/adminorganizationsettings/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/admin_organization_settings tfe_admin_organization_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/admin_organization_settings tfe_admin_organization_settings}.
 type AdminOrganizationSettings interface {
 	cdktf.TerraformResource
 	AccessBetaTools() interface{}
@@ -24,9 +24,9 @@ type AdminOrganizationSettings interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -176,8 +176,8 @@ func (j *jsiiProxy_AdminOrganizationSettings) ConstructNodeMetadata() *map[strin
 	return returns
 }
 
-func (j *jsiiProxy_AdminOrganizationSettings) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_AdminOrganizationSettings) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -417,7 +417,7 @@ func (j *jsiiProxy_AdminOrganizationSettings) WorkspaceLimitInput() *float64 {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/admin_organization_settings tfe_admin_organization_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/admin_organization_settings tfe_admin_organization_settings} Resource.
 func NewAdminOrganizationSettings(scope constructs.Construct, id *string, config *AdminOrganizationSettingsConfig) AdminOrganizationSettings {
 	_init_.Initialize()
 
@@ -435,7 +435,7 @@ func NewAdminOrganizationSettings(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/admin_organization_settings tfe_admin_organization_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/admin_organization_settings tfe_admin_organization_settings} Resource.
 func NewAdminOrganizationSettings_Override(a AdminOrganizationSettings, scope constructs.Construct, id *string, config *AdminOrganizationSettingsConfig) {
 	_init_.Initialize()
 
@@ -468,7 +468,10 @@ func (j *jsiiProxy_AdminOrganizationSettings)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_AdminOrganizationSettings)SetCount(val *float64) {
+func (j *jsiiProxy_AdminOrganizationSettings)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

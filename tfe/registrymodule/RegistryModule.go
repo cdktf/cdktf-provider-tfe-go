@@ -2,14 +2,14 @@ package registrymodule
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/registrymodule/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/registrymodule/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/registry_module tfe_registry_module}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/registry_module tfe_registry_module}.
 type RegistryModule interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type RegistryModule interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -163,8 +163,8 @@ func (j *jsiiProxy_RegistryModule) ConstructNodeMetadata() *map[string]interface
 	return returns
 }
 
-func (j *jsiiProxy_RegistryModule) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_RegistryModule) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -454,7 +454,7 @@ func (j *jsiiProxy_RegistryModule) VcsRepoInput() *RegistryModuleVcsRepo {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/registry_module tfe_registry_module} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/registry_module tfe_registry_module} Resource.
 func NewRegistryModule(scope constructs.Construct, id *string, config *RegistryModuleConfig) RegistryModule {
 	_init_.Initialize()
 
@@ -472,7 +472,7 @@ func NewRegistryModule(scope constructs.Construct, id *string, config *RegistryM
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/registry_module tfe_registry_module} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/registry_module tfe_registry_module} Resource.
 func NewRegistryModule_Override(r RegistryModule, scope constructs.Construct, id *string, config *RegistryModuleConfig) {
 	_init_.Initialize()
 
@@ -494,7 +494,10 @@ func (j *jsiiProxy_RegistryModule)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RegistryModule)SetCount(val *float64) {
+func (j *jsiiProxy_RegistryModule)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

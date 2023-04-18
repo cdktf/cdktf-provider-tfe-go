@@ -2,14 +2,14 @@ package datatfeagentpool
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/datatfeagentpool/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/datatfeagentpool/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/d/agent_pool tfe_agent_pool}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/agent_pool tfe_agent_pool}.
 type DataTfeAgentPool interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -17,9 +17,9 @@ type DataTfeAgentPool interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -124,8 +124,8 @@ func (j *jsiiProxy_DataTfeAgentPool) ConstructNodeMetadata() *map[string]interfa
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeAgentPool) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_DataTfeAgentPool) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -305,7 +305,7 @@ func (j *jsiiProxy_DataTfeAgentPool) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/agent_pool tfe_agent_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
 func NewDataTfeAgentPool(scope constructs.Construct, id *string, config *DataTfeAgentPoolConfig) DataTfeAgentPool {
 	_init_.Initialize()
 
@@ -323,7 +323,7 @@ func NewDataTfeAgentPool(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/d/agent_pool tfe_agent_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
 func NewDataTfeAgentPool_Override(d DataTfeAgentPool, scope constructs.Construct, id *string, config *DataTfeAgentPoolConfig) {
 	_init_.Initialize()
 
@@ -334,7 +334,10 @@ func NewDataTfeAgentPool_Override(d DataTfeAgentPool, scope constructs.Construct
 	)
 }
 
-func (j *jsiiProxy_DataTfeAgentPool)SetCount(val *float64) {
+func (j *jsiiProxy_DataTfeAgentPool)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

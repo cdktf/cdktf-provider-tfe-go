@@ -72,6 +72,10 @@ func (j *jsiiProxy_OrganizationRunTask) validateSetConnectionParameters(val inte
 	return nil
 }
 
+func (j *jsiiProxy_OrganizationRunTask) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_OrganizationRunTask) validateSetDescriptionParameters(val *string) error {
 	return nil
 }

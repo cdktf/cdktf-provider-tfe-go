@@ -2,14 +2,14 @@ package runtrigger
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/runtrigger/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/runtrigger/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/run_trigger tfe_run_trigger}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/run_trigger tfe_run_trigger}.
 type RunTrigger interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type RunTrigger interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -141,8 +141,8 @@ func (j *jsiiProxy_RunTrigger) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_RunTrigger) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_RunTrigger) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -332,7 +332,7 @@ func (j *jsiiProxy_RunTrigger) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/run_trigger tfe_run_trigger} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/run_trigger tfe_run_trigger} Resource.
 func NewRunTrigger(scope constructs.Construct, id *string, config *RunTriggerConfig) RunTrigger {
 	_init_.Initialize()
 
@@ -350,7 +350,7 @@ func NewRunTrigger(scope constructs.Construct, id *string, config *RunTriggerCon
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/run_trigger tfe_run_trigger} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/run_trigger tfe_run_trigger} Resource.
 func NewRunTrigger_Override(r RunTrigger, scope constructs.Construct, id *string, config *RunTriggerConfig) {
 	_init_.Initialize()
 
@@ -372,7 +372,10 @@ func (j *jsiiProxy_RunTrigger)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_RunTrigger)SetCount(val *float64) {
+func (j *jsiiProxy_RunTrigger)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

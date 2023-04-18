@@ -2,14 +2,14 @@ package notificationconfiguration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/notificationconfiguration/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/notificationconfiguration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/notification_configuration tfe_notification_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/notification_configuration tfe_notification_configuration}.
 type NotificationConfiguration interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type NotificationConfiguration interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -168,8 +168,8 @@ func (j *jsiiProxy_NotificationConfiguration) ConstructNodeMetadata() *map[strin
 	return returns
 }
 
-func (j *jsiiProxy_NotificationConfiguration) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_NotificationConfiguration) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -499,7 +499,7 @@ func (j *jsiiProxy_NotificationConfiguration) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/notification_configuration tfe_notification_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/notification_configuration tfe_notification_configuration} Resource.
 func NewNotificationConfiguration(scope constructs.Construct, id *string, config *NotificationConfigurationConfig) NotificationConfiguration {
 	_init_.Initialize()
 
@@ -517,7 +517,7 @@ func NewNotificationConfiguration(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/notification_configuration tfe_notification_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/notification_configuration tfe_notification_configuration} Resource.
 func NewNotificationConfiguration_Override(n NotificationConfiguration, scope constructs.Construct, id *string, config *NotificationConfigurationConfig) {
 	_init_.Initialize()
 
@@ -539,7 +539,10 @@ func (j *jsiiProxy_NotificationConfiguration)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_NotificationConfiguration)SetCount(val *float64) {
+func (j *jsiiProxy_NotificationConfiguration)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

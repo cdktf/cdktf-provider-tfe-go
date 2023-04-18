@@ -2,14 +2,14 @@ package agenttoken
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/agenttoken/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/agenttoken/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/agent_token tfe_agent_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/agent_token tfe_agent_token}.
 type AgentToken interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -24,9 +24,9 @@ type AgentToken interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -162,8 +162,8 @@ func (j *jsiiProxy_AgentToken) ConstructNodeMetadata() *map[string]interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_AgentToken) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_AgentToken) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -343,7 +343,7 @@ func (j *jsiiProxy_AgentToken) Token() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/agent_token tfe_agent_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/agent_token tfe_agent_token} Resource.
 func NewAgentToken(scope constructs.Construct, id *string, config *AgentTokenConfig) AgentToken {
 	_init_.Initialize()
 
@@ -361,7 +361,7 @@ func NewAgentToken(scope constructs.Construct, id *string, config *AgentTokenCon
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/agent_token tfe_agent_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/agent_token tfe_agent_token} Resource.
 func NewAgentToken_Override(a AgentToken, scope constructs.Construct, id *string, config *AgentTokenConfig) {
 	_init_.Initialize()
 
@@ -394,7 +394,10 @@ func (j *jsiiProxy_AgentToken)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_AgentToken)SetCount(val *float64) {
+func (j *jsiiProxy_AgentToken)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

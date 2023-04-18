@@ -72,6 +72,10 @@ func (j *jsiiProxy_AgentToken) validateSetConnectionParameters(val interface{}) 
 	return nil
 }
 
+func (j *jsiiProxy_AgentToken) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_AgentToken) validateSetDescriptionParameters(val *string) error {
 	return nil
 }

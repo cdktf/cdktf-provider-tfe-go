@@ -2,14 +2,14 @@ package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/provider/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/provider/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe tfe}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs tfe}.
 type TfeProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -276,7 +276,7 @@ func (j *jsiiProxy_TfeProvider) TokenInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe tfe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs tfe} Resource.
 func NewTfeProvider(scope constructs.Construct, id *string, config *TfeProviderConfig) TfeProvider {
 	_init_.Initialize()
 
@@ -294,7 +294,7 @@ func NewTfeProvider(scope constructs.Construct, id *string, config *TfeProviderC
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe tfe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs tfe} Resource.
 func NewTfeProvider_Override(t TfeProvider, scope constructs.Construct, id *string, config *TfeProviderConfig) {
 	_init_.Initialize()
 

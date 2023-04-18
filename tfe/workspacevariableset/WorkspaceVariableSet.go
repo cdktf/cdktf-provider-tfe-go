@@ -2,14 +2,14 @@ package workspacevariableset
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v5/workspacevariableset/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/workspacevariableset/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/tfe/r/workspace_variable_set tfe_workspace_variable_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/workspace_variable_set tfe_workspace_variable_set}.
 type WorkspaceVariableSet interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -21,9 +21,9 @@ type WorkspaceVariableSet interface {
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
-	Count() *float64
+	Count() interface{}
 	// Experimental.
-	SetCount(val *float64)
+	SetCount(val interface{})
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
@@ -141,8 +141,8 @@ func (j *jsiiProxy_WorkspaceVariableSet) ConstructNodeMetadata() *map[string]int
 	return returns
 }
 
-func (j *jsiiProxy_WorkspaceVariableSet) Count() *float64 {
-	var returns *float64
+func (j *jsiiProxy_WorkspaceVariableSet) Count() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"count",
@@ -332,7 +332,7 @@ func (j *jsiiProxy_WorkspaceVariableSet) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/workspace_variable_set tfe_workspace_variable_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/workspace_variable_set tfe_workspace_variable_set} Resource.
 func NewWorkspaceVariableSet(scope constructs.Construct, id *string, config *WorkspaceVariableSetConfig) WorkspaceVariableSet {
 	_init_.Initialize()
 
@@ -350,7 +350,7 @@ func NewWorkspaceVariableSet(scope constructs.Construct, id *string, config *Wor
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/tfe/r/workspace_variable_set tfe_workspace_variable_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/workspace_variable_set tfe_workspace_variable_set} Resource.
 func NewWorkspaceVariableSet_Override(w WorkspaceVariableSet, scope constructs.Construct, id *string, config *WorkspaceVariableSetConfig) {
 	_init_.Initialize()
 
@@ -372,7 +372,10 @@ func (j *jsiiProxy_WorkspaceVariableSet)SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_WorkspaceVariableSet)SetCount(val *float64) {
+func (j *jsiiProxy_WorkspaceVariableSet)SetCount(val interface{}) {
+	if err := j.validateSetCountParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"count",

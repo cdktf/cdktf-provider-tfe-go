@@ -64,6 +64,10 @@ func validateDataTfeWorkspaceIds_IsTerraformElementParameters(x interface{}) err
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeWorkspaceIds) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeWorkspaceIds) validateSetExcludeTagsParameters(val *[]*string) error {
 	return nil
 }

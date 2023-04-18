@@ -76,6 +76,10 @@ func (j *jsiiProxy_TeamAccess) validateSetConnectionParameters(val interface{}) 
 	return nil
 }
 
+func (j *jsiiProxy_TeamAccess) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TeamAccess) validateSetIdParameters(val *string) error {
 	return nil
 }

@@ -84,6 +84,10 @@ func (j *jsiiProxy_Organization) validateSetCostEstimationEnabledParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_Organization) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Organization) validateSetEmailParameters(val *string) error {
 	return nil
 }
