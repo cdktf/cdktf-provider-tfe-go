@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_project_access tfe_team_project_access}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.0/docs/resources/team_project_access tfe_team_project_access}.
 type TeamProjectAccess interface {
 	cdktf.TerraformResource
 	Access() *string
@@ -355,7 +355,7 @@ func (j *jsiiProxy_TeamProjectAccess) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_project_access tfe_team_project_access} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.0/docs/resources/team_project_access tfe_team_project_access} Resource.
 func NewTeamProjectAccess(scope constructs.Construct, id *string, config *TeamProjectAccessConfig) TeamProjectAccess {
 	_init_.Initialize()
 
@@ -373,7 +373,7 @@ func NewTeamProjectAccess(scope constructs.Construct, id *string, config *TeamPr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_project_access tfe_team_project_access} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.0/docs/resources/team_project_access tfe_team_project_access} Resource.
 func NewTeamProjectAccess_Override(t TeamProjectAccess, scope constructs.Construct, id *string, config *TeamProjectAccessConfig) {
 	_init_.Initialize()
 

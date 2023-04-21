@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_token tfe_team_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.0/docs/resources/team_token tfe_team_token}.
 type TeamToken interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -344,7 +344,7 @@ func (j *jsiiProxy_TeamToken) Token() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_token tfe_team_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.0/docs/resources/team_token tfe_team_token} Resource.
 func NewTeamToken(scope constructs.Construct, id *string, config *TeamTokenConfig) TeamToken {
 	_init_.Initialize()
 
@@ -362,7 +362,7 @@ func NewTeamToken(scope constructs.Construct, id *string, config *TeamTokenConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.43.0/docs/resources/team_token tfe_team_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.0/docs/resources/team_token tfe_team_token} Resource.
 func NewTeamToken_Override(t TeamToken, scope constructs.Construct, id *string, config *TeamTokenConfig) {
 	_init_.Initialize()
 
