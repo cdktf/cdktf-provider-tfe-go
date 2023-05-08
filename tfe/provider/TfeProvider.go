@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.0/docs tfe}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.1/docs tfe}.
 type TfeProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -276,7 +276,7 @@ func (j *jsiiProxy_TfeProvider) TokenInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.0/docs tfe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.1/docs tfe} Resource.
 func NewTfeProvider(scope constructs.Construct, id *string, config *TfeProviderConfig) TfeProvider {
 	_init_.Initialize()
 
@@ -294,7 +294,7 @@ func NewTfeProvider(scope constructs.Construct, id *string, config *TfeProviderC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.0/docs tfe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.44.1/docs tfe} Resource.
 func NewTfeProvider_Override(t TfeProvider, scope constructs.Construct, id *string, config *TfeProviderConfig) {
 	_init_.Initialize()
 
