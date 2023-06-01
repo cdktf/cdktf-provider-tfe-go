@@ -29,6 +29,9 @@ type TeamOrganizationAccessOutputReference interface {
 	Fqn() *string
 	InternalValue() *TeamOrganizationAccess
 	SetInternalValue(val *TeamOrganizationAccess)
+	ManageMembership() interface{}
+	SetManageMembership(val interface{})
+	ManageMembershipInput() interface{}
 	ManageModules() interface{}
 	SetManageModules(val interface{})
 	ManageModulesInput() interface{}
@@ -91,6 +94,7 @@ type TeamOrganizationAccessOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetManageMembership()
 	ResetManageModules()
 	ResetManagePolicies()
 	ResetManagePolicyOverrides()
@@ -161,6 +165,26 @@ func (j *jsiiProxy_TeamOrganizationAccessOutputReference) InternalValue() *TeamO
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageMembership() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"manageMembership",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageMembershipInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"manageMembershipInput",
 		&returns,
 	)
 	return returns
@@ -443,6 +467,17 @@ func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetInternalValue(val *T
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetManageMembership(val interface{}) {
+	if err := j.validateSetManageMembershipParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"manageMembership",
 		val,
 	)
 }
@@ -763,6 +798,14 @@ func (t *jsiiProxy_TeamOrganizationAccessOutputReference) InterpolationForAttrib
 	)
 
 	return returns
+}
+
+func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetManageMembership() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetManageMembership",
+		nil, // no parameters
+	)
 }
 
 func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetManageModules() {
