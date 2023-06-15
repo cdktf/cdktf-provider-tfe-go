@@ -2,10 +2,10 @@ package datatfeworkspaceids
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v6/datatfeworkspaceids/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/datatfeworkspaceids/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
