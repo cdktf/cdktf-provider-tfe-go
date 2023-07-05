@@ -2,14 +2,14 @@ package policyset
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/policyset/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/policyset/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/policy_set tfe_policy_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/policy_set tfe_policy_set}.
 type PolicySet interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -549,7 +549,7 @@ func (j *jsiiProxy_PolicySet) WorkspaceIdsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/policy_set tfe_policy_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/policy_set tfe_policy_set} Resource.
 func NewPolicySet(scope constructs.Construct, id *string, config *PolicySetConfig) PolicySet {
 	_init_.Initialize()
 
@@ -567,7 +567,7 @@ func NewPolicySet(scope constructs.Construct, id *string, config *PolicySetConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/policy_set tfe_policy_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/policy_set tfe_policy_set} Resource.
 func NewPolicySet_Override(p PolicySet, scope constructs.Construct, id *string, config *PolicySetConfig) {
 	_init_.Initialize()
 

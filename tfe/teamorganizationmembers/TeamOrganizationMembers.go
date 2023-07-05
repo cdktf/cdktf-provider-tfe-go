@@ -2,14 +2,14 @@ package teamorganizationmembers
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/teamorganizationmembers/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/teamorganizationmembers/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/team_organization_members tfe_team_organization_members}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/team_organization_members tfe_team_organization_members}.
 type TeamOrganizationMembers interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -332,7 +332,7 @@ func (j *jsiiProxy_TeamOrganizationMembers) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/team_organization_members tfe_team_organization_members} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/team_organization_members tfe_team_organization_members} Resource.
 func NewTeamOrganizationMembers(scope constructs.Construct, id *string, config *TeamOrganizationMembersConfig) TeamOrganizationMembers {
 	_init_.Initialize()
 
@@ -350,7 +350,7 @@ func NewTeamOrganizationMembers(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/team_organization_members tfe_team_organization_members} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/team_organization_members tfe_team_organization_members} Resource.
 func NewTeamOrganizationMembers_Override(t TeamOrganizationMembers, scope constructs.Construct, id *string, config *TeamOrganizationMembersConfig) {
 	_init_.Initialize()
 

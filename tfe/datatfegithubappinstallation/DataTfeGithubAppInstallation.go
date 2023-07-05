@@ -2,14 +2,14 @@ package datatfegithubappinstallation
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/datatfegithubappinstallation/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/datatfegithubappinstallation/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/data-sources/github_app_installation tfe_github_app_installation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/github_app_installation tfe_github_app_installation}.
 type DataTfeGithubAppInstallation interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -293,7 +293,7 @@ func (j *jsiiProxy_DataTfeGithubAppInstallation) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
 func NewDataTfeGithubAppInstallation(scope constructs.Construct, id *string, config *DataTfeGithubAppInstallationConfig) DataTfeGithubAppInstallation {
 	_init_.Initialize()
 
@@ -311,7 +311,7 @@ func NewDataTfeGithubAppInstallation(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
 func NewDataTfeGithubAppInstallation_Override(d DataTfeGithubAppInstallation, scope constructs.Construct, id *string, config *DataTfeGithubAppInstallationConfig) {
 	_init_.Initialize()
 

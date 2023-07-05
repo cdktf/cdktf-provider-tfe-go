@@ -2,14 +2,14 @@ package organizationtoken
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/organizationtoken/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/organizationtoken/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/organization_token tfe_organization_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/organization_token tfe_organization_token}.
 type OrganizationToken interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -28,6 +28,9 @@ type OrganizationToken interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	ExpiredAt() *string
+	SetExpiredAt(val *string)
+	ExpiredAtInput() *string
 	ForceRegenerate() interface{}
 	SetForceRegenerate(val interface{})
 	ForceRegenerateInput() interface{}
@@ -93,6 +96,7 @@ type OrganizationToken interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetExpiredAt()
 	ResetForceRegenerate()
 	ResetId()
 	ResetOrganization()
@@ -159,6 +163,26 @@ func (j *jsiiProxy_OrganizationToken) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OrganizationToken) ExpiredAt() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"expiredAt",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OrganizationToken) ExpiredAtInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"expiredAtInput",
 		&returns,
 	)
 	return returns
@@ -345,7 +369,7 @@ func (j *jsiiProxy_OrganizationToken) Token() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/organization_token tfe_organization_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/organization_token tfe_organization_token} Resource.
 func NewOrganizationToken(scope constructs.Construct, id *string, config *OrganizationTokenConfig) OrganizationToken {
 	_init_.Initialize()
 
@@ -363,7 +387,7 @@ func NewOrganizationToken(scope constructs.Construct, id *string, config *Organi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/organization_token tfe_organization_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/organization_token tfe_organization_token} Resource.
 func NewOrganizationToken_Override(o OrganizationToken, scope constructs.Construct, id *string, config *OrganizationTokenConfig) {
 	_init_.Initialize()
 
@@ -400,6 +424,17 @@ func (j *jsiiProxy_OrganizationToken)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_OrganizationToken)SetExpiredAt(val *string) {
+	if err := j.validateSetExpiredAtParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"expiredAt",
 		val,
 	)
 }
@@ -738,6 +773,14 @@ func (o *jsiiProxy_OrganizationToken) OverrideLogicalId(newLogicalId *string) {
 		o,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (o *jsiiProxy_OrganizationToken) ResetExpiredAt() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetExpiredAt",
+		nil, // no parameters
 	)
 }
 

@@ -2,14 +2,14 @@ package notificationconfiguration
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/notificationconfiguration/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/notificationconfiguration/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/notification_configuration tfe_notification_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/notification_configuration tfe_notification_configuration}.
 type NotificationConfiguration interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -499,7 +499,7 @@ func (j *jsiiProxy_NotificationConfiguration) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/notification_configuration tfe_notification_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/notification_configuration tfe_notification_configuration} Resource.
 func NewNotificationConfiguration(scope constructs.Construct, id *string, config *NotificationConfigurationConfig) NotificationConfiguration {
 	_init_.Initialize()
 
@@ -517,7 +517,7 @@ func NewNotificationConfiguration(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/notification_configuration tfe_notification_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/notification_configuration tfe_notification_configuration} Resource.
 func NewNotificationConfiguration_Override(n NotificationConfiguration, scope constructs.Construct, id *string, config *NotificationConfigurationConfig) {
 	_init_.Initialize()
 

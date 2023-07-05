@@ -2,14 +2,14 @@ package variable
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/variable/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/variable/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/variable tfe_variable}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/variable tfe_variable}.
 type Variable interface {
 	cdktf.TerraformResource
 	Category() *string
@@ -474,7 +474,7 @@ func (j *jsiiProxy_Variable) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/variable tfe_variable} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/variable tfe_variable} Resource.
 func NewVariable(scope constructs.Construct, id *string, config *VariableConfig) Variable {
 	_init_.Initialize()
 
@@ -492,7 +492,7 @@ func NewVariable(scope constructs.Construct, id *string, config *VariableConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/variable tfe_variable} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/variable tfe_variable} Resource.
 func NewVariable_Override(v Variable, scope constructs.Construct, id *string, config *VariableConfig) {
 	_init_.Initialize()
 

@@ -2,14 +2,14 @@ package agentpool
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/agentpool/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/agentpool/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/agent_pool tfe_agent_pool}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/agent_pool tfe_agent_pool}.
 type AgentPool interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -51,6 +51,9 @@ type AgentPool interface {
 	Organization() *string
 	SetOrganization(val *string)
 	OrganizationInput() *string
+	OrganizationScoped() interface{}
+	SetOrganizationScoped(val interface{})
+	OrganizationScopedInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -94,6 +97,7 @@ type AgentPool interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
 	ResetOrganization()
+	ResetOrganizationScoped()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -272,6 +276,26 @@ func (j *jsiiProxy_AgentPool) OrganizationInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_AgentPool) OrganizationScoped() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"organizationScoped",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_AgentPool) OrganizationScopedInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"organizationScopedInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_AgentPool) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -333,7 +357,7 @@ func (j *jsiiProxy_AgentPool) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/agent_pool tfe_agent_pool} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/agent_pool tfe_agent_pool} Resource.
 func NewAgentPool(scope constructs.Construct, id *string, config *AgentPoolConfig) AgentPool {
 	_init_.Initialize()
 
@@ -351,7 +375,7 @@ func NewAgentPool(scope constructs.Construct, id *string, config *AgentPoolConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/agent_pool tfe_agent_pool} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/agent_pool tfe_agent_pool} Resource.
 func NewAgentPool_Override(a AgentPool, scope constructs.Construct, id *string, config *AgentPoolConfig) {
 	_init_.Initialize()
 
@@ -440,6 +464,17 @@ func (j *jsiiProxy_AgentPool)SetOrganization(val *string) {
 	_jsii_.Set(
 		j,
 		"organization",
+		val,
+	)
+}
+
+func (j *jsiiProxy_AgentPool)SetOrganizationScoped(val interface{}) {
+	if err := j.validateSetOrganizationScopedParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"organizationScoped",
 		val,
 	)
 }
@@ -741,6 +776,14 @@ func (a *jsiiProxy_AgentPool) ResetOrganization() {
 	_jsii_.InvokeVoid(
 		a,
 		"resetOrganization",
+		nil, // no parameters
+	)
+}
+
+func (a *jsiiProxy_AgentPool) ResetOrganizationScoped() {
+	_jsii_.InvokeVoid(
+		a,
+		"resetOrganizationScoped",
 		nil, // no parameters
 	)
 }

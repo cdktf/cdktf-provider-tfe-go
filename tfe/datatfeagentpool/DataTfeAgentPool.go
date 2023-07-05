@@ -2,16 +2,17 @@ package datatfeagentpool
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/datatfeagentpool/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/datatfeagentpool/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/data-sources/agent_pool tfe_agent_pool}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/agent_pool tfe_agent_pool}.
 type DataTfeAgentPool interface {
 	cdktf.TerraformDataSource
+	AllowedWorkspaceIds() *[]*string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -47,6 +48,7 @@ type DataTfeAgentPool interface {
 	Organization() *string
 	SetOrganization(val *string)
 	OrganizationInput() *string
+	OrganizationScoped() cdktf.IResolvable
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -102,6 +104,16 @@ type DataTfeAgentPool interface {
 // The jsii proxy struct for DataTfeAgentPool
 type jsiiProxy_DataTfeAgentPool struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataTfeAgentPool) AllowedWorkspaceIds() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"allowedWorkspaceIds",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataTfeAgentPool) CdktfStack() cdktf.TerraformStack {
@@ -254,6 +266,16 @@ func (j *jsiiProxy_DataTfeAgentPool) OrganizationInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeAgentPool) OrganizationScoped() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"organizationScoped",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeAgentPool) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -305,7 +327,7 @@ func (j *jsiiProxy_DataTfeAgentPool) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
 func NewDataTfeAgentPool(scope constructs.Construct, id *string, config *DataTfeAgentPoolConfig) DataTfeAgentPool {
 	_init_.Initialize()
 
@@ -323,7 +345,7 @@ func NewDataTfeAgentPool(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
 func NewDataTfeAgentPool_Override(d DataTfeAgentPool, scope constructs.Construct, id *string, config *DataTfeAgentPoolConfig) {
 	_init_.Initialize()
 

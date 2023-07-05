@@ -2,14 +2,14 @@ package teamtoken
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/teamtoken/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/teamtoken/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/team_token tfe_team_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/team_token tfe_team_token}.
 type TeamToken interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -28,6 +28,9 @@ type TeamToken interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	ExpiredAt() *string
+	SetExpiredAt(val *string)
+	ExpiredAtInput() *string
 	ForceRegenerate() interface{}
 	SetForceRegenerate(val interface{})
 	ForceRegenerateInput() interface{}
@@ -93,6 +96,7 @@ type TeamToken interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetExpiredAt()
 	ResetForceRegenerate()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -158,6 +162,26 @@ func (j *jsiiProxy_TeamToken) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamToken) ExpiredAt() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"expiredAt",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamToken) ExpiredAtInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"expiredAtInput",
 		&returns,
 	)
 	return returns
@@ -344,7 +368,7 @@ func (j *jsiiProxy_TeamToken) Token() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/team_token tfe_team_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/team_token tfe_team_token} Resource.
 func NewTeamToken(scope constructs.Construct, id *string, config *TeamTokenConfig) TeamToken {
 	_init_.Initialize()
 
@@ -362,7 +386,7 @@ func NewTeamToken(scope constructs.Construct, id *string, config *TeamTokenConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/team_token tfe_team_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/team_token tfe_team_token} Resource.
 func NewTeamToken_Override(t TeamToken, scope constructs.Construct, id *string, config *TeamTokenConfig) {
 	_init_.Initialize()
 
@@ -399,6 +423,17 @@ func (j *jsiiProxy_TeamToken)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TeamToken)SetExpiredAt(val *string) {
+	if err := j.validateSetExpiredAtParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"expiredAt",
 		val,
 	)
 }
@@ -737,6 +772,14 @@ func (t *jsiiProxy_TeamToken) OverrideLogicalId(newLogicalId *string) {
 		t,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (t *jsiiProxy_TeamToken) ResetExpiredAt() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetExpiredAt",
+		nil, // no parameters
 	)
 }
 

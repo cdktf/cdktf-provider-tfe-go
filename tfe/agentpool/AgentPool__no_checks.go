@@ -88,6 +88,10 @@ func (j *jsiiProxy_AgentPool) validateSetOrganizationParameters(val *string) err
 	return nil
 }
 
+func (j *jsiiProxy_AgentPool) validateSetOrganizationScopedParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_AgentPool) validateSetProvisionersParameters(val *[]interface{}) error {
 	return nil
 }

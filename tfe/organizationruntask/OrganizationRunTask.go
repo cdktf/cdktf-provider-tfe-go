@@ -2,14 +2,14 @@ package organizationruntask
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/organizationruntask/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/organizationruntask/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/organization_run_task tfe_organization_run_task}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/organization_run_task tfe_organization_run_task}.
 type OrganizationRunTask interface {
 	cdktf.TerraformResource
 	Category() *string
@@ -452,7 +452,7 @@ func (j *jsiiProxy_OrganizationRunTask) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/organization_run_task tfe_organization_run_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/organization_run_task tfe_organization_run_task} Resource.
 func NewOrganizationRunTask(scope constructs.Construct, id *string, config *OrganizationRunTaskConfig) OrganizationRunTask {
 	_init_.Initialize()
 
@@ -470,7 +470,7 @@ func NewOrganizationRunTask(scope constructs.Construct, id *string, config *Orga
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/organization_run_task tfe_organization_run_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/organization_run_task tfe_organization_run_task} Resource.
 func NewOrganizationRunTask_Override(o OrganizationRunTask, scope constructs.Construct, id *string, config *OrganizationRunTaskConfig) {
 	_init_.Initialize()
 

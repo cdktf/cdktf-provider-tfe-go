@@ -2,14 +2,14 @@ package organizationmodulesharing
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v7/organizationmodulesharing/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/organizationmodulesharing/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/organization_module_sharing tfe_organization_module_sharing}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/organization_module_sharing tfe_organization_module_sharing}.
 type OrganizationModuleSharing interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -333,7 +333,7 @@ func (j *jsiiProxy_OrganizationModuleSharing) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
 func NewOrganizationModuleSharing(scope constructs.Construct, id *string, config *OrganizationModuleSharingConfig) OrganizationModuleSharing {
 	_init_.Initialize()
 
@@ -351,7 +351,7 @@ func NewOrganizationModuleSharing(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.45.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
 func NewOrganizationModuleSharing_Override(o OrganizationModuleSharing, scope constructs.Construct, id *string, config *OrganizationModuleSharingConfig) {
 	_init_.Initialize()
 
