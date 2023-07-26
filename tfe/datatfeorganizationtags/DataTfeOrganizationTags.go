@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/organization_tags tfe_organization_tags}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/organization_tags tfe_organization_tags}.
 type DataTfeOrganizationTags interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -293,7 +293,7 @@ func (j *jsiiProxy_DataTfeOrganizationTags) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/organization_tags tfe_organization_tags} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/organization_tags tfe_organization_tags} Data Source.
 func NewDataTfeOrganizationTags(scope constructs.Construct, id *string, config *DataTfeOrganizationTagsConfig) DataTfeOrganizationTags {
 	_init_.Initialize()
 
@@ -311,7 +311,7 @@ func NewDataTfeOrganizationTags(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/organization_tags tfe_organization_tags} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/organization_tags tfe_organization_tags} Data Source.
 func NewDataTfeOrganizationTags_Override(d DataTfeOrganizationTags, scope constructs.Construct, id *string, config *DataTfeOrganizationTagsConfig) {
 	_init_.Initialize()
 

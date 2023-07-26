@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/agent_pool tfe_agent_pool}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/agent_pool tfe_agent_pool}.
 type AgentPool interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -357,7 +357,7 @@ func (j *jsiiProxy_AgentPool) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/agent_pool tfe_agent_pool} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/agent_pool tfe_agent_pool} Resource.
 func NewAgentPool(scope constructs.Construct, id *string, config *AgentPoolConfig) AgentPool {
 	_init_.Initialize()
 
@@ -375,7 +375,7 @@ func NewAgentPool(scope constructs.Construct, id *string, config *AgentPoolConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/agent_pool tfe_agent_pool} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/agent_pool tfe_agent_pool} Resource.
 func NewAgentPool_Override(a AgentPool, scope constructs.Construct, id *string, config *AgentPoolConfig) {
 	_init_.Initialize()
 

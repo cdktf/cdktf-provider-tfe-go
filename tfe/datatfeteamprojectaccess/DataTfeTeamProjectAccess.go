@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/team_project_access tfe_team_project_access}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/team_project_access tfe_team_project_access}.
 type DataTfeTeamProjectAccess interface {
 	cdktf.TerraformDataSource
 	Access() *string
@@ -315,7 +315,7 @@ func (j *jsiiProxy_DataTfeTeamProjectAccess) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/team_project_access tfe_team_project_access} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/team_project_access tfe_team_project_access} Data Source.
 func NewDataTfeTeamProjectAccess(scope constructs.Construct, id *string, config *DataTfeTeamProjectAccessConfig) DataTfeTeamProjectAccess {
 	_init_.Initialize()
 
@@ -333,7 +333,7 @@ func NewDataTfeTeamProjectAccess(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/data-sources/team_project_access tfe_team_project_access} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/team_project_access tfe_team_project_access} Data Source.
 func NewDataTfeTeamProjectAccess_Override(d DataTfeTeamProjectAccess, scope constructs.Construct, id *string, config *DataTfeTeamProjectAccessConfig) {
 	_init_.Initialize()
 

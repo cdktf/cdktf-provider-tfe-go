@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/team_access tfe_team_access}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_access tfe_team_access}.
 type TeamAccess interface {
 	cdktf.TerraformResource
 	Access() *string
@@ -380,7 +380,7 @@ func (j *jsiiProxy_TeamAccess) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/team_access tfe_team_access} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_access tfe_team_access} Resource.
 func NewTeamAccess(scope constructs.Construct, id *string, config *TeamAccessConfig) TeamAccess {
 	_init_.Initialize()
 
@@ -398,7 +398,7 @@ func NewTeamAccess(scope constructs.Construct, id *string, config *TeamAccessCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.46.0/docs/resources/team_access tfe_team_access} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_access tfe_team_access} Resource.
 func NewTeamAccess_Override(t TeamAccess, scope constructs.Construct, id *string, config *TeamAccessConfig) {
 	_init_.Initialize()
 
