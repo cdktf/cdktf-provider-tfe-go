@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datatfeteamprojectaccess
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/datatfeteamprojectaccess/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/datatfeteamprojectaccess/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/team_project_access tfe_team_project_access}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/team_project_access tfe_team_project_access}.
 type DataTfeTeamProjectAccess interface {
 	cdktf.TerraformDataSource
 	Access() *string
@@ -42,6 +45,7 @@ type DataTfeTeamProjectAccess interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	ProjectAccess() DataTfeTeamProjectAccessProjectAccessList
 	ProjectId() *string
 	SetProjectId(val *string)
 	ProjectIdInput() *string
@@ -60,6 +64,7 @@ type DataTfeTeamProjectAccess interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	WorkspaceAccess() DataTfeTeamProjectAccessWorkspaceAccessList
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -224,6 +229,16 @@ func (j *jsiiProxy_DataTfeTeamProjectAccess) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeTeamProjectAccess) ProjectAccess() DataTfeTeamProjectAccessProjectAccessList {
+	var returns DataTfeTeamProjectAccessProjectAccessList
+	_jsii_.Get(
+		j,
+		"projectAccess",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeTeamProjectAccess) ProjectId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -314,8 +329,18 @@ func (j *jsiiProxy_DataTfeTeamProjectAccess) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeTeamProjectAccess) WorkspaceAccess() DataTfeTeamProjectAccessWorkspaceAccessList {
+	var returns DataTfeTeamProjectAccessWorkspaceAccessList
+	_jsii_.Get(
+		j,
+		"workspaceAccess",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/team_project_access tfe_team_project_access} Data Source.
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/team_project_access tfe_team_project_access} Data Source.
 func NewDataTfeTeamProjectAccess(scope constructs.Construct, id *string, config *DataTfeTeamProjectAccessConfig) DataTfeTeamProjectAccess {
 	_init_.Initialize()
 
@@ -333,7 +358,7 @@ func NewDataTfeTeamProjectAccess(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/team_project_access tfe_team_project_access} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/team_project_access tfe_team_project_access} Data Source.
 func NewDataTfeTeamProjectAccess_Override(d DataTfeTeamProjectAccess, scope constructs.Construct, id *string, config *DataTfeTeamProjectAccessConfig) {
 	_init_.Initialize()
 

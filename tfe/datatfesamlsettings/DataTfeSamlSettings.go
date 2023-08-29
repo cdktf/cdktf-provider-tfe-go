@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datatfesamlsettings
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/datatfesamlsettings/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/datatfesamlsettings/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/saml_settings tfe_saml_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/saml_settings tfe_saml_settings}.
 type DataTfeSamlSettings interface {
 	cdktf.TerraformDataSource
 	AcsConsumerUrl() *string
@@ -50,12 +53,15 @@ type DataTfeSamlSettings interface {
 	// The tree node.
 	Node() constructs.Node
 	OldIdpCert() *string
+	PrivateKey() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	SignatureDigestMethod() *string
+	SignatureSigningMethod() *string
 	SiteAdminRole() *string
 	SloEndpointUrl() *string
 	SsoApiTokenSessionTimeout() *float64
@@ -321,6 +327,16 @@ func (j *jsiiProxy_DataTfeSamlSettings) OldIdpCert() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeSamlSettings) PrivateKey() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"privateKey",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeSamlSettings) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -336,6 +352,26 @@ func (j *jsiiProxy_DataTfeSamlSettings) RawOverrides() interface{} {
 	_jsii_.Get(
 		j,
 		"rawOverrides",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeSamlSettings) SignatureDigestMethod() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"signatureDigestMethod",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeSamlSettings) SignatureSigningMethod() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"signatureSigningMethod",
 		&returns,
 	)
 	return returns
@@ -432,7 +468,7 @@ func (j *jsiiProxy_DataTfeSamlSettings) WantAssertionsSigned() cdktf.IResolvable
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/saml_settings tfe_saml_settings} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/saml_settings tfe_saml_settings} Data Source.
 func NewDataTfeSamlSettings(scope constructs.Construct, id *string, config *DataTfeSamlSettingsConfig) DataTfeSamlSettings {
 	_init_.Initialize()
 
@@ -450,7 +486,7 @@ func NewDataTfeSamlSettings(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/saml_settings tfe_saml_settings} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/saml_settings tfe_saml_settings} Data Source.
 func NewDataTfeSamlSettings_Override(d DataTfeSamlSettings, scope constructs.Construct, id *string, config *DataTfeSamlSettingsConfig) {
 	_init_.Initialize()
 

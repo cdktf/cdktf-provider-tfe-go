@@ -1,3 +1,6 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 //go:build no_runtime_type_checking
 
 package teamprojectaccess
@@ -49,6 +52,14 @@ func (t *jsiiProxy_TeamProjectAccess) validateInterpolationForAttributeParameter
 }
 
 func (t *jsiiProxy_TeamProjectAccess) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (t *jsiiProxy_TeamProjectAccess) validatePutProjectAccessParameters(value interface{}) error {
+	return nil
+}
+
+func (t *jsiiProxy_TeamProjectAccess) validatePutWorkspaceAccessParameters(value interface{}) error {
 	return nil
 }
 

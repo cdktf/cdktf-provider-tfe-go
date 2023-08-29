@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package teamprojectaccess
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/teamprojectaccess/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/teamprojectaccess/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_project_access tfe_team_project_access}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/team_project_access tfe_team_project_access}.
 type TeamProjectAccess interface {
 	cdktf.TerraformResource
 	Access() *string
@@ -48,6 +51,8 @@ type TeamProjectAccess interface {
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
+	ProjectAccess() TeamProjectAccessProjectAccessList
+	ProjectAccessInput() interface{}
 	ProjectId() *string
 	SetProjectId(val *string)
 	ProjectIdInput() *string
@@ -70,6 +75,8 @@ type TeamProjectAccess interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	WorkspaceAccess() TeamProjectAccessWorkspaceAccessList
+	WorkspaceAccessInput() interface{}
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -95,10 +102,14 @@ type TeamProjectAccess interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutProjectAccess(value interface{})
+	PutWorkspaceAccess(value interface{})
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetProjectAccess()
+	ResetWorkspaceAccess()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -254,6 +265,26 @@ func (j *jsiiProxy_TeamProjectAccess) Node() constructs.Node {
 	return returns
 }
 
+func (j *jsiiProxy_TeamProjectAccess) ProjectAccess() TeamProjectAccessProjectAccessList {
+	var returns TeamProjectAccessProjectAccessList
+	_jsii_.Get(
+		j,
+		"projectAccess",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamProjectAccess) ProjectAccessInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"projectAccessInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_TeamProjectAccess) ProjectId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -354,8 +385,28 @@ func (j *jsiiProxy_TeamProjectAccess) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_TeamProjectAccess) WorkspaceAccess() TeamProjectAccessWorkspaceAccessList {
+	var returns TeamProjectAccessWorkspaceAccessList
+	_jsii_.Get(
+		j,
+		"workspaceAccess",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_project_access tfe_team_project_access} Resource.
+func (j *jsiiProxy_TeamProjectAccess) WorkspaceAccessInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"workspaceAccessInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/team_project_access tfe_team_project_access} Resource.
 func NewTeamProjectAccess(scope constructs.Construct, id *string, config *TeamProjectAccessConfig) TeamProjectAccess {
 	_init_.Initialize()
 
@@ -373,7 +424,7 @@ func NewTeamProjectAccess(scope constructs.Construct, id *string, config *TeamPr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_project_access tfe_team_project_access} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/team_project_access tfe_team_project_access} Resource.
 func NewTeamProjectAccess_Override(t TeamProjectAccess, scope constructs.Construct, id *string, config *TeamProjectAccessConfig) {
 	_init_.Initialize()
 
@@ -762,6 +813,28 @@ func (t *jsiiProxy_TeamProjectAccess) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (t *jsiiProxy_TeamProjectAccess) PutProjectAccess(value interface{}) {
+	if err := t.validatePutProjectAccessParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"putProjectAccess",
+		[]interface{}{value},
+	)
+}
+
+func (t *jsiiProxy_TeamProjectAccess) PutWorkspaceAccess(value interface{}) {
+	if err := t.validatePutWorkspaceAccessParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"putWorkspaceAccess",
+		[]interface{}{value},
+	)
+}
+
 func (t *jsiiProxy_TeamProjectAccess) ResetId() {
 	_jsii_.InvokeVoid(
 		t,
@@ -774,6 +847,22 @@ func (t *jsiiProxy_TeamProjectAccess) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TeamProjectAccess) ResetProjectAccess() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetProjectAccess",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TeamProjectAccess) ResetWorkspaceAccess() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetWorkspaceAccess",
 		nil, // no parameters
 	)
 }

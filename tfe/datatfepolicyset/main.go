@@ -1,3 +1,6 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datatfepolicyset
 
 import (
@@ -46,6 +49,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
 			_jsii_.MemberProperty{JsiiProperty: "policiesPath", GoGetter: "PoliciesPath"},
 			_jsii_.MemberProperty{JsiiProperty: "policyIds", GoGetter: "PolicyIds"},
+			_jsii_.MemberProperty{JsiiProperty: "projectIds", GoGetter: "ProjectIds"},
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},

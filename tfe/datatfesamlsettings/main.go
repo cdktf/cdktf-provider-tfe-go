@@ -1,3 +1,6 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datatfesamlsettings
 
 import (
@@ -44,9 +47,12 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
 			_jsii_.MemberProperty{JsiiProperty: "oldIdpCert", GoGetter: "OldIdpCert"},
 			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "privateKey", GoGetter: "PrivateKey"},
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
+			_jsii_.MemberProperty{JsiiProperty: "signatureDigestMethod", GoGetter: "SignatureDigestMethod"},
+			_jsii_.MemberProperty{JsiiProperty: "signatureSigningMethod", GoGetter: "SignatureSigningMethod"},
 			_jsii_.MemberProperty{JsiiProperty: "siteAdminRole", GoGetter: "SiteAdminRole"},
 			_jsii_.MemberProperty{JsiiProperty: "sloEndpointUrl", GoGetter: "SloEndpointUrl"},
 			_jsii_.MemberProperty{JsiiProperty: "ssoApiTokenSessionTimeout", GoGetter: "SsoApiTokenSessionTimeout"},

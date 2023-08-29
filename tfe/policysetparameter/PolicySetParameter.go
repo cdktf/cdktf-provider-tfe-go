@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package policysetparameter
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/policysetparameter/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/policysetparameter/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/policy_set_parameter tfe_policy_set_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/policy_set_parameter tfe_policy_set_parameter}.
 type PolicySetParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -380,7 +383,7 @@ func (j *jsiiProxy_PolicySetParameter) ValueInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
 func NewPolicySetParameter(scope constructs.Construct, id *string, config *PolicySetParameterConfig) PolicySetParameter {
 	_init_.Initialize()
 
@@ -398,7 +401,7 @@ func NewPolicySetParameter(scope constructs.Construct, id *string, config *Polic
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
 func NewPolicySetParameter_Override(p PolicySetParameter, scope constructs.Construct, id *string, config *PolicySetParameterConfig) {
 	_init_.Initialize()
 

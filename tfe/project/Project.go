@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package project
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/project/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/project/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/project tfe_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/project tfe_project}.
 type Project interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -333,7 +336,7 @@ func (j *jsiiProxy_Project) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/project tfe_project} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/project tfe_project} Resource.
 func NewProject(scope constructs.Construct, id *string, config *ProjectConfig) Project {
 	_init_.Initialize()
 
@@ -351,7 +354,7 @@ func NewProject(scope constructs.Construct, id *string, config *ProjectConfig) P
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/project tfe_project} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/project tfe_project} Resource.
 func NewProject_Override(p Project, scope constructs.Construct, id *string, config *ProjectConfig) {
 	_init_.Initialize()
 

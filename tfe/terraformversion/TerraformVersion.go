@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package terraformversion
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/terraformversion/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/terraformversion/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/terraform_version tfe_terraform_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/terraform_version tfe_terraform_version}.
 type TerraformVersion interface {
 	cdktf.TerraformResource
 	Beta() interface{}
@@ -475,7 +478,7 @@ func (j *jsiiProxy_TerraformVersion) VersionInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/terraform_version tfe_terraform_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/terraform_version tfe_terraform_version} Resource.
 func NewTerraformVersion(scope constructs.Construct, id *string, config *TerraformVersionConfig) TerraformVersion {
 	_init_.Initialize()
 
@@ -493,7 +496,7 @@ func NewTerraformVersion(scope constructs.Construct, id *string, config *Terrafo
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/terraform_version tfe_terraform_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/terraform_version tfe_terraform_version} Resource.
 func NewTerraformVersion_Override(t TerraformVersion, scope constructs.Construct, id *string, config *TerraformVersionConfig) {
 	_init_.Initialize()
 

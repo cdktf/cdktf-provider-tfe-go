@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datatfeproject
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/datatfeproject/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/datatfeproject/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/project tfe_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/project tfe_project}.
 type DataTfeProject interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -329,7 +332,7 @@ func (j *jsiiProxy_DataTfeProject) WorkspaceIdsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/project tfe_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/project tfe_project} Data Source.
 func NewDataTfeProject(scope constructs.Construct, id *string, config *DataTfeProjectConfig) DataTfeProject {
 	_init_.Initialize()
 
@@ -347,7 +350,7 @@ func NewDataTfeProject(scope constructs.Construct, id *string, config *DataTfePr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/project tfe_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/project tfe_project} Data Source.
 func NewDataTfeProject_Override(d DataTfeProject, scope constructs.Construct, id *string, config *DataTfeProjectConfig) {
 	_init_.Initialize()
 

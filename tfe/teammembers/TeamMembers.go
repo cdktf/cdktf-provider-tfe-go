@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package teammembers
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/teammembers/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/teammembers/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_members tfe_team_members}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/team_members tfe_team_members}.
 type TeamMembers interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -332,7 +335,7 @@ func (j *jsiiProxy_TeamMembers) UsernamesInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_members tfe_team_members} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/team_members tfe_team_members} Resource.
 func NewTeamMembers(scope constructs.Construct, id *string, config *TeamMembersConfig) TeamMembers {
 	_init_.Initialize()
 
@@ -350,7 +353,7 @@ func NewTeamMembers(scope constructs.Construct, id *string, config *TeamMembersC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_members tfe_team_members} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/team_members tfe_team_members} Resource.
 func NewTeamMembers_Override(t TeamMembers, scope constructs.Construct, id *string, config *TeamMembersConfig) {
 	_init_.Initialize()
 

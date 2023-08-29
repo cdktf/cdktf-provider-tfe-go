@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package variableset
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/variableset/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/variableset/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/variable_set tfe_variable_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/variable_set tfe_variable_set}.
 type VariableSet interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -405,7 +408,7 @@ func (j *jsiiProxy_VariableSet) WorkspaceIdsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/variable_set tfe_variable_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/variable_set tfe_variable_set} Resource.
 func NewVariableSet(scope constructs.Construct, id *string, config *VariableSetConfig) VariableSet {
 	_init_.Initialize()
 
@@ -423,7 +426,7 @@ func NewVariableSet(scope constructs.Construct, id *string, config *VariableSetC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/variable_set tfe_variable_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/variable_set tfe_variable_set} Resource.
 func NewVariableSet_Override(v VariableSet, scope constructs.Construct, id *string, config *VariableSetConfig) {
 	_init_.Initialize()
 

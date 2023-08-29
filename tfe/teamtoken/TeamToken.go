@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package teamtoken
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/teamtoken/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/teamtoken/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_token tfe_team_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/team_token tfe_team_token}.
 type TeamToken interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -368,7 +371,7 @@ func (j *jsiiProxy_TeamToken) Token() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_token tfe_team_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/team_token tfe_team_token} Resource.
 func NewTeamToken(scope constructs.Construct, id *string, config *TeamTokenConfig) TeamToken {
 	_init_.Initialize()
 
@@ -386,7 +389,7 @@ func NewTeamToken(scope constructs.Construct, id *string, config *TeamTokenConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/team_token tfe_team_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/team_token tfe_team_token} Resource.
 func NewTeamToken_Override(t TeamToken, scope constructs.Construct, id *string, config *TeamTokenConfig) {
 	_init_.Initialize()
 

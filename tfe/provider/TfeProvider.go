@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/provider/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/provider/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs tfe}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs tfe}.
 type TfeProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -276,7 +279,7 @@ func (j *jsiiProxy_TfeProvider) TokenInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs tfe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs tfe} Resource.
 func NewTfeProvider(scope constructs.Construct, id *string, config *TfeProviderConfig) TfeProvider {
 	_init_.Initialize()
 
@@ -294,7 +297,7 @@ func NewTfeProvider(scope constructs.Construct, id *string, config *TfeProviderC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs tfe} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs tfe} Resource.
 func NewTfeProvider_Override(t TfeProvider, scope constructs.Construct, id *string, config *TfeProviderConfig) {
 	_init_.Initialize()
 

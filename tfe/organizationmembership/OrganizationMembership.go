@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package organizationmembership
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/organizationmembership/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/organizationmembership/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/organization_membership tfe_organization_membership}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/organization_membership tfe_organization_membership}.
 type OrganizationMembership interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -355,7 +358,7 @@ func (j *jsiiProxy_OrganizationMembership) Username() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/organization_membership tfe_organization_membership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/organization_membership tfe_organization_membership} Resource.
 func NewOrganizationMembership(scope constructs.Construct, id *string, config *OrganizationMembershipConfig) OrganizationMembership {
 	_init_.Initialize()
 
@@ -373,7 +376,7 @@ func NewOrganizationMembership(scope constructs.Construct, id *string, config *O
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/organization_membership tfe_organization_membership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/organization_membership tfe_organization_membership} Resource.
 func NewOrganizationMembership_Override(o OrganizationMembership, scope constructs.Construct, id *string, config *OrganizationMembershipConfig) {
 	_init_.Initialize()
 

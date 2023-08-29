@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datatfeipranges
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/datatfeipranges/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/datatfeipranges/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/ip_ranges tfe_ip_ranges}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/ip_ranges tfe_ip_ranges}.
 type DataTfeIpRanges interface {
 	cdktf.TerraformDataSource
 	Api() *[]*string
@@ -302,7 +305,7 @@ func (j *jsiiProxy_DataTfeIpRanges) Vcs() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/ip_ranges tfe_ip_ranges} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/ip_ranges tfe_ip_ranges} Data Source.
 func NewDataTfeIpRanges(scope constructs.Construct, id *string, config *DataTfeIpRangesConfig) DataTfeIpRanges {
 	_init_.Initialize()
 
@@ -320,7 +323,7 @@ func NewDataTfeIpRanges(scope constructs.Construct, id *string, config *DataTfeI
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/ip_ranges tfe_ip_ranges} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/ip_ranges tfe_ip_ranges} Data Source.
 func NewDataTfeIpRanges_Override(d DataTfeIpRanges, scope constructs.Construct, id *string, config *DataTfeIpRangesConfig) {
 	_init_.Initialize()
 

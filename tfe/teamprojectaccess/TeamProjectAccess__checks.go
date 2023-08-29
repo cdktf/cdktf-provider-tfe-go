@@ -1,3 +1,6 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 //go:build !no_runtime_type_checking
 
 package teamprojectaccess
@@ -106,6 +109,68 @@ func (t *jsiiProxy_TeamProjectAccess) validateInterpolationForAttributeParameter
 func (t *jsiiProxy_TeamProjectAccess) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (t *jsiiProxy_TeamProjectAccess) validatePutProjectAccessParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*TeamProjectAccessProjectAccess:
+		value := value.(*[]*TeamProjectAccessProjectAccess)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*TeamProjectAccessProjectAccess:
+		value_ := value.([]*TeamProjectAccessProjectAccess)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*TeamProjectAccessProjectAccess; received %#v (a %T)", value, value)
+		}
+	}
+
+	return nil
+}
+
+func (t *jsiiProxy_TeamProjectAccess) validatePutWorkspaceAccessParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*TeamProjectAccessWorkspaceAccess:
+		value := value.(*[]*TeamProjectAccessWorkspaceAccess)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*TeamProjectAccessWorkspaceAccess:
+		value_ := value.([]*TeamProjectAccessWorkspaceAccess)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*TeamProjectAccessWorkspaceAccess; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil

@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package agentpoolallowedworkspaces
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/agentpoolallowedworkspaces/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/agentpoolallowedworkspaces/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/agent_pool_allowed_workspaces tfe_agent_pool_allowed_workspaces}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/agent_pool_allowed_workspaces tfe_agent_pool_allowed_workspaces}.
 type AgentPoolAllowedWorkspaces interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -332,7 +335,7 @@ func (j *jsiiProxy_AgentPoolAllowedWorkspaces) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/agent_pool_allowed_workspaces tfe_agent_pool_allowed_workspaces} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/agent_pool_allowed_workspaces tfe_agent_pool_allowed_workspaces} Resource.
 func NewAgentPoolAllowedWorkspaces(scope constructs.Construct, id *string, config *AgentPoolAllowedWorkspacesConfig) AgentPoolAllowedWorkspaces {
 	_init_.Initialize()
 
@@ -350,7 +353,7 @@ func NewAgentPoolAllowedWorkspaces(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/agent_pool_allowed_workspaces tfe_agent_pool_allowed_workspaces} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/agent_pool_allowed_workspaces tfe_agent_pool_allowed_workspaces} Resource.
 func NewAgentPoolAllowedWorkspaces_Override(a AgentPoolAllowedWorkspaces, scope constructs.Construct, id *string, config *AgentPoolAllowedWorkspacesConfig) {
 	_init_.Initialize()
 

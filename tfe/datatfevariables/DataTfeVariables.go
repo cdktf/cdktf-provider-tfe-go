@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datatfevariables
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/datatfevariables/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/datatfevariables/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/variables tfe_variables}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/variables tfe_variables}.
 type DataTfeVariables interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -339,7 +342,7 @@ func (j *jsiiProxy_DataTfeVariables) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/variables tfe_variables} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/variables tfe_variables} Data Source.
 func NewDataTfeVariables(scope constructs.Construct, id *string, config *DataTfeVariablesConfig) DataTfeVariables {
 	_init_.Initialize()
 
@@ -357,7 +360,7 @@ func NewDataTfeVariables(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/data-sources/variables tfe_variables} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/variables tfe_variables} Data Source.
 func NewDataTfeVariables_Override(d DataTfeVariables, scope constructs.Construct, id *string, config *DataTfeVariablesConfig) {
 	_init_.Initialize()
 

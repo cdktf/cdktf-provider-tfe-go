@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package runtrigger
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/runtrigger/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/runtrigger/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/run_trigger tfe_run_trigger}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/run_trigger tfe_run_trigger}.
 type RunTrigger interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -332,7 +335,7 @@ func (j *jsiiProxy_RunTrigger) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/run_trigger tfe_run_trigger} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/run_trigger tfe_run_trigger} Resource.
 func NewRunTrigger(scope constructs.Construct, id *string, config *RunTriggerConfig) RunTrigger {
 	_init_.Initialize()
 
@@ -350,7 +353,7 @@ func NewRunTrigger(scope constructs.Construct, id *string, config *RunTriggerCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/run_trigger tfe_run_trigger} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/run_trigger tfe_run_trigger} Resource.
 func NewRunTrigger_Override(r RunTrigger, scope constructs.Construct, id *string, config *RunTriggerConfig) {
 	_init_.Initialize()
 

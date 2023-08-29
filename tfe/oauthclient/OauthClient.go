@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package oauthclient
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/oauthclient/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/oauthclient/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/oauth_client tfe_oauth_client}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/oauth_client tfe_oauth_client}.
 type OauthClient interface {
 	cdktf.TerraformResource
 	ApiUrl() *string
@@ -534,7 +537,7 @@ func (j *jsiiProxy_OauthClient) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/oauth_client tfe_oauth_client} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/oauth_client tfe_oauth_client} Resource.
 func NewOauthClient(scope constructs.Construct, id *string, config *OauthClientConfig) OauthClient {
 	_init_.Initialize()
 
@@ -552,7 +555,7 @@ func NewOauthClient(scope constructs.Construct, id *string, config *OauthClientC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/oauth_client tfe_oauth_client} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/oauth_client tfe_oauth_client} Resource.
 func NewOauthClient_Override(o OauthClient, scope constructs.Construct, id *string, config *OauthClientConfig) {
 	_init_.Initialize()
 

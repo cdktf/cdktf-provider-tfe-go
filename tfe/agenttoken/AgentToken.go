@@ -1,15 +1,18 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package agenttoken
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v8/agenttoken/internal"
+	"github.com/cdktf/cdktf-provider-tfe-go/tfe/v9/agenttoken/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/agent_token tfe_agent_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/agent_token tfe_agent_token}.
 type AgentToken interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -343,7 +346,7 @@ func (j *jsiiProxy_AgentToken) Token() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/agent_token tfe_agent_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/agent_token tfe_agent_token} Resource.
 func NewAgentToken(scope constructs.Construct, id *string, config *AgentTokenConfig) AgentToken {
 	_init_.Initialize()
 
@@ -361,7 +364,7 @@ func NewAgentToken(scope constructs.Construct, id *string, config *AgentTokenCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.47.0/docs/resources/agent_token tfe_agent_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/agent_token tfe_agent_token} Resource.
 func NewAgentToken_Override(a AgentToken, scope constructs.Construct, id *string, config *AgentTokenConfig) {
 	_init_.Initialize()
 
