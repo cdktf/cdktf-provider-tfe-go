@@ -87,6 +87,10 @@ func (j *jsiiProxy_DataTfeOrganizationMembership) validateSetOrganizationParamet
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeOrganizationMembership) validateSetOrganizationMembershipIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeOrganizationMembership) validateSetUsernameParameters(val *string) error {
 	return nil
 }

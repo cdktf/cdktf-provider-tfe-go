@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/policy tfe_policy}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/policy tfe_policy}.
 type Policy interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -455,7 +455,7 @@ func (j *jsiiProxy_Policy) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/policy tfe_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/policy tfe_policy} Resource.
 func NewPolicy(scope constructs.Construct, id *string, config *PolicyConfig) Policy {
 	_init_.Initialize()
 
@@ -473,7 +473,7 @@ func NewPolicy(scope constructs.Construct, id *string, config *PolicyConfig) Pol
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/policy tfe_policy} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/policy tfe_policy} Resource.
 func NewPolicy_Override(p Policy, scope constructs.Construct, id *string, config *PolicyConfig) {
 	_init_.Initialize()
 

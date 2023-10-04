@@ -227,6 +227,14 @@ func (j *jsiiProxy_DataTfeVariableSet) validateSetOrganizationParameters(val *st
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeVariableSet) validateSetProjectIdsParameters(val *[]*string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeVariableSet) validateSetVariableIdsParameters(val *[]*string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

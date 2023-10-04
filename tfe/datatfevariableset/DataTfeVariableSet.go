@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/variable_set tfe_variable_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/variable_set tfe_variable_set}.
 type DataTfeVariableSet interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -52,6 +52,9 @@ type DataTfeVariableSet interface {
 	Organization() *string
 	SetOrganization(val *string)
 	OrganizationInput() *string
+	ProjectIds() *[]*string
+	SetProjectIds(val *[]*string)
+	ProjectIdsInput() *[]*string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -100,6 +103,7 @@ type DataTfeVariableSet interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetProjectIds()
 	ResetVariableIds()
 	ResetWorkspaceIds()
 	SynthesizeAttributes() *map[string]interface{}
@@ -287,6 +291,26 @@ func (j *jsiiProxy_DataTfeVariableSet) OrganizationInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeVariableSet) ProjectIds() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"projectIds",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeVariableSet) ProjectIdsInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"projectIdsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeVariableSet) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -378,7 +402,7 @@ func (j *jsiiProxy_DataTfeVariableSet) WorkspaceIdsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/variable_set tfe_variable_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/variable_set tfe_variable_set} Data Source.
 func NewDataTfeVariableSet(scope constructs.Construct, id *string, config *DataTfeVariableSetConfig) DataTfeVariableSet {
 	_init_.Initialize()
 
@@ -396,7 +420,7 @@ func NewDataTfeVariableSet(scope constructs.Construct, id *string, config *DataT
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/variable_set tfe_variable_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/variable_set tfe_variable_set} Data Source.
 func NewDataTfeVariableSet_Override(d DataTfeVariableSet, scope constructs.Construct, id *string, config *DataTfeVariableSetConfig) {
 	_init_.Initialize()
 
@@ -474,6 +498,17 @@ func (j *jsiiProxy_DataTfeVariableSet)SetOrganization(val *string) {
 	_jsii_.Set(
 		j,
 		"organization",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataTfeVariableSet)SetProjectIds(val *[]*string) {
+	if err := j.validateSetProjectIdsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"projectIds",
 		val,
 	)
 }
@@ -794,6 +829,14 @@ func (d *jsiiProxy_DataTfeVariableSet) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeVariableSet) ResetProjectIds() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetProjectIds",
 		nil, // no parameters
 	)
 }

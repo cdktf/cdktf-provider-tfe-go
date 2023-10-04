@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/organization_module_sharing tfe_organization_module_sharing}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/organization_module_sharing tfe_organization_module_sharing}.
 type OrganizationModuleSharing interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -336,7 +336,7 @@ func (j *jsiiProxy_OrganizationModuleSharing) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
 func NewOrganizationModuleSharing(scope constructs.Construct, id *string, config *OrganizationModuleSharingConfig) OrganizationModuleSharing {
 	_init_.Initialize()
 
@@ -354,7 +354,7 @@ func NewOrganizationModuleSharing(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
 func NewOrganizationModuleSharing_Override(o OrganizationModuleSharing, scope constructs.Construct, id *string, config *OrganizationModuleSharingConfig) {
 	_init_.Initialize()
 

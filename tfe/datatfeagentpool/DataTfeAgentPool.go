@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/agent_pool tfe_agent_pool}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/agent_pool tfe_agent_pool}.
 type DataTfeAgentPool interface {
 	cdktf.TerraformDataSource
 	AllowedWorkspaceIds() *[]*string
@@ -330,7 +330,7 @@ func (j *jsiiProxy_DataTfeAgentPool) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
 func NewDataTfeAgentPool(scope constructs.Construct, id *string, config *DataTfeAgentPoolConfig) DataTfeAgentPool {
 	_init_.Initialize()
 
@@ -348,7 +348,7 @@ func NewDataTfeAgentPool(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
 func NewDataTfeAgentPool_Override(d DataTfeAgentPool, scope constructs.Construct, id *string, config *DataTfeAgentPoolConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/saml_settings tfe_saml_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/saml_settings tfe_saml_settings}.
 type SamlSettings interface {
 	cdktf.TerraformResource
 	AcsConsumerUrl() *string
@@ -701,7 +701,7 @@ func (j *jsiiProxy_SamlSettings) WantAssertionsSignedInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/saml_settings tfe_saml_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/saml_settings tfe_saml_settings} Resource.
 func NewSamlSettings(scope constructs.Construct, id *string, config *SamlSettingsConfig) SamlSettings {
 	_init_.Initialize()
 
@@ -719,7 +719,7 @@ func NewSamlSettings(scope constructs.Construct, id *string, config *SamlSetting
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/resources/saml_settings tfe_saml_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/saml_settings tfe_saml_settings} Resource.
 func NewSamlSettings_Override(s SamlSettings, scope constructs.Construct, id *string, config *SamlSettingsConfig) {
 	_init_.Initialize()
 

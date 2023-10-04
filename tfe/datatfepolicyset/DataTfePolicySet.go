@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/policy_set tfe_policy_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/policy_set tfe_policy_set}.
 type DataTfePolicySet interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -28,6 +28,7 @@ type DataTfePolicySet interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	ExcludedWorkspaceIds() *[]*string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -167,6 +168,16 @@ func (j *jsiiProxy_DataTfePolicySet) Description() *string {
 	_jsii_.Get(
 		j,
 		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfePolicySet) ExcludedWorkspaceIds() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"excludedWorkspaceIds",
 		&returns,
 	)
 	return returns
@@ -433,7 +444,7 @@ func (j *jsiiProxy_DataTfePolicySet) WorkspaceIds() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/policy_set tfe_policy_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/policy_set tfe_policy_set} Data Source.
 func NewDataTfePolicySet(scope constructs.Construct, id *string, config *DataTfePolicySetConfig) DataTfePolicySet {
 	_init_.Initialize()
 
@@ -451,7 +462,7 @@ func NewDataTfePolicySet(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.48.0/docs/data-sources/policy_set tfe_policy_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/policy_set tfe_policy_set} Data Source.
 func NewDataTfePolicySet_Override(d DataTfePolicySet, scope constructs.Construct, id *string, config *DataTfePolicySetConfig) {
 	_init_.Initialize()
 
