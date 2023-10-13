@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/workspace_policy_set_exclusion tfe_workspace_policy_set_exclusion}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/workspace_policy_set_exclusion tfe_workspace_policy_set_exclusion}.
 type WorkspacePolicySetExclusion interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -335,7 +335,7 @@ func (j *jsiiProxy_WorkspacePolicySetExclusion) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/workspace_policy_set_exclusion tfe_workspace_policy_set_exclusion} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/workspace_policy_set_exclusion tfe_workspace_policy_set_exclusion} Resource.
 func NewWorkspacePolicySetExclusion(scope constructs.Construct, id *string, config *WorkspacePolicySetExclusionConfig) WorkspacePolicySetExclusion {
 	_init_.Initialize()
 
@@ -353,7 +353,7 @@ func NewWorkspacePolicySetExclusion(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/workspace_policy_set_exclusion tfe_workspace_policy_set_exclusion} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/workspace_policy_set_exclusion tfe_workspace_policy_set_exclusion} Resource.
 func NewWorkspacePolicySetExclusion_Override(w WorkspacePolicySetExclusion, scope constructs.Construct, id *string, config *WorkspacePolicySetExclusionConfig) {
 	_init_.Initialize()
 

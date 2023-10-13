@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/organization_members tfe_organization_members}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/data-sources/organization_members tfe_organization_members}.
 type DataTfeOrganizationMembers interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -307,7 +307,7 @@ func (j *jsiiProxy_DataTfeOrganizationMembers) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/organization_members tfe_organization_members} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/data-sources/organization_members tfe_organization_members} Data Source.
 func NewDataTfeOrganizationMembers(scope constructs.Construct, id *string, config *DataTfeOrganizationMembersConfig) DataTfeOrganizationMembers {
 	_init_.Initialize()
 
@@ -325,7 +325,7 @@ func NewDataTfeOrganizationMembers(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/data-sources/organization_members tfe_organization_members} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/data-sources/organization_members tfe_organization_members} Data Source.
 func NewDataTfeOrganizationMembers_Override(d DataTfeOrganizationMembers, scope constructs.Construct, id *string, config *DataTfeOrganizationMembersConfig) {
 	_init_.Initialize()
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/terraform_version tfe_terraform_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/terraform_version tfe_terraform_version}.
 type TerraformVersion interface {
 	cdktf.TerraformResource
 	Beta() interface{}
@@ -478,7 +478,7 @@ func (j *jsiiProxy_TerraformVersion) VersionInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/terraform_version tfe_terraform_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/terraform_version tfe_terraform_version} Resource.
 func NewTerraformVersion(scope constructs.Construct, id *string, config *TerraformVersionConfig) TerraformVersion {
 	_init_.Initialize()
 
@@ -496,7 +496,7 @@ func NewTerraformVersion(scope constructs.Construct, id *string, config *Terrafo
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.1/docs/resources/terraform_version tfe_terraform_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/terraform_version tfe_terraform_version} Resource.
 func NewTerraformVersion_Override(t TerraformVersion, scope constructs.Construct, id *string, config *TerraformVersionConfig) {
 	_init_.Initialize()
 
