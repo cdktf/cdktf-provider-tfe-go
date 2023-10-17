@@ -7,6 +7,10 @@ package workspacerun
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (w *jsiiProxy_WorkspaceRun) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WorkspaceRun) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (w *jsiiProxy_WorkspaceRun) validateGetStringMapAttributeParameters(terrafo
 	return nil
 }
 
+func (w *jsiiProxy_WorkspaceRun) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WorkspaceRun) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (w *jsiiProxy_WorkspaceRun) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -60,6 +72,10 @@ func (w *jsiiProxy_WorkspaceRun) validatePutApplyParameters(value *WorkspaceRunA
 }
 
 func (w *jsiiProxy_WorkspaceRun) validatePutDestroyParameters(value *WorkspaceRunDestroy) error {
+	return nil
+}
+
+func validateWorkspaceRun_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

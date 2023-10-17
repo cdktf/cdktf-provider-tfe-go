@@ -7,6 +7,10 @@ package workspacepolicysetexclusion
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (w *jsiiProxy_WorkspacePolicySetExclusion) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WorkspacePolicySetExclusion) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,11 +51,23 @@ func (w *jsiiProxy_WorkspacePolicySetExclusion) validateGetStringMapAttributePar
 	return nil
 }
 
+func (w *jsiiProxy_WorkspacePolicySetExclusion) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WorkspacePolicySetExclusion) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
+func (w *jsiiProxy_WorkspacePolicySetExclusion) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
 func (w *jsiiProxy_WorkspacePolicySetExclusion) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func validateWorkspacePolicySetExclusion_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 
