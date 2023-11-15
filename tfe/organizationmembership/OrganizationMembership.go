@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/organization_membership tfe_organization_membership}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/organization_membership tfe_organization_membership}.
 type OrganizationMembership interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -366,7 +366,7 @@ func (j *jsiiProxy_OrganizationMembership) Username() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/organization_membership tfe_organization_membership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/organization_membership tfe_organization_membership} Resource.
 func NewOrganizationMembership(scope constructs.Construct, id *string, config *OrganizationMembershipConfig) OrganizationMembership {
 	_init_.Initialize()
 
@@ -384,7 +384,7 @@ func NewOrganizationMembership(scope constructs.Construct, id *string, config *O
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/organization_membership tfe_organization_membership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/organization_membership tfe_organization_membership} Resource.
 func NewOrganizationMembership_Override(o OrganizationMembership, scope constructs.Construct, id *string, config *OrganizationMembershipConfig) {
 	_init_.Initialize()
 

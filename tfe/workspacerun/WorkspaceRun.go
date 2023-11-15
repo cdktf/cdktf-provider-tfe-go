@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/workspace_run tfe_workspace_run}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/workspace_run tfe_workspace_run}.
 type WorkspaceRun interface {
 	cdktf.TerraformResource
 	Apply() WorkspaceRunApplyOutputReference
@@ -368,7 +368,7 @@ func (j *jsiiProxy_WorkspaceRun) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/workspace_run tfe_workspace_run} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/workspace_run tfe_workspace_run} Resource.
 func NewWorkspaceRun(scope constructs.Construct, id *string, config *WorkspaceRunConfig) WorkspaceRun {
 	_init_.Initialize()
 
@@ -386,7 +386,7 @@ func NewWorkspaceRun(scope constructs.Construct, id *string, config *WorkspaceRu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/workspace_run tfe_workspace_run} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/workspace_run tfe_workspace_run} Resource.
 func NewWorkspaceRun_Override(w WorkspaceRun, scope constructs.Construct, id *string, config *WorkspaceRunConfig) {
 	_init_.Initialize()
 

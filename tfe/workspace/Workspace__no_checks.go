@@ -103,6 +103,10 @@ func (j *jsiiProxy_Workspace) validateSetAutoApplyParameters(val interface{}) er
 	return nil
 }
 
+func (j *jsiiProxy_Workspace) validateSetAutoApplyRunTriggerParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

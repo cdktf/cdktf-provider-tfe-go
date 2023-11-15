@@ -12,12 +12,13 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/data-sources/workspace tfe_workspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/data-sources/workspace tfe_workspace}.
 type DataTfeWorkspace interface {
 	cdktf.TerraformDataSource
 	AllowDestroyPlan() cdktf.IResolvable
 	AssessmentsEnabled() cdktf.IResolvable
 	AutoApply() cdktf.IResolvable
+	AutoApplyRunTrigger() cdktf.IResolvable
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -162,6 +163,16 @@ func (j *jsiiProxy_DataTfeWorkspace) AutoApply() cdktf.IResolvable {
 	_jsii_.Get(
 		j,
 		"autoApply",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) AutoApplyRunTrigger() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"autoApplyRunTrigger",
 		&returns,
 	)
 	return returns
@@ -618,7 +629,7 @@ func (j *jsiiProxy_DataTfeWorkspace) WorkingDirectory() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/data-sources/workspace tfe_workspace} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/data-sources/workspace tfe_workspace} Data Source.
 func NewDataTfeWorkspace(scope constructs.Construct, id *string, config *DataTfeWorkspaceConfig) DataTfeWorkspace {
 	_init_.Initialize()
 
@@ -636,7 +647,7 @@ func NewDataTfeWorkspace(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/data-sources/workspace tfe_workspace} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/data-sources/workspace tfe_workspace} Data Source.
 func NewDataTfeWorkspace_Override(d DataTfeWorkspace, scope constructs.Construct, id *string, config *DataTfeWorkspaceConfig) {
 	_init_.Initialize()
 

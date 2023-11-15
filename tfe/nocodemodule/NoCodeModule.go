@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/no_code_module tfe_no_code_module}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/no_code_module tfe_no_code_module}.
 type NoCodeModule interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -416,7 +416,7 @@ func (j *jsiiProxy_NoCodeModule) VersionPinInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/no_code_module tfe_no_code_module} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/no_code_module tfe_no_code_module} Resource.
 func NewNoCodeModule(scope constructs.Construct, id *string, config *NoCodeModuleConfig) NoCodeModule {
 	_init_.Initialize()
 
@@ -434,7 +434,7 @@ func NewNoCodeModule(scope constructs.Construct, id *string, config *NoCodeModul
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.49.2/docs/resources/no_code_module tfe_no_code_module} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/no_code_module tfe_no_code_module} Resource.
 func NewNoCodeModule_Override(n NoCodeModule, scope constructs.Construct, id *string, config *NoCodeModuleConfig) {
 	_init_.Initialize()
 
