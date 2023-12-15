@@ -59,7 +59,15 @@ func (a *jsiiProxy_AgentPoolAllowedWorkspaces) validateInterpolationForAttribute
 	return nil
 }
 
+func (a *jsiiProxy_AgentPoolAllowedWorkspaces) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (a *jsiiProxy_AgentPoolAllowedWorkspaces) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (a *jsiiProxy_AgentPoolAllowedWorkspaces) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

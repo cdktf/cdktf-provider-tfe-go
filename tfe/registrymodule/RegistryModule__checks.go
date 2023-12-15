@@ -122,6 +122,14 @@ func (r *jsiiProxy_RegistryModule) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (r *jsiiProxy_RegistryModule) validateMoveFromIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RegistryModule) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	if moveTarget == nil {
 		return fmt.Errorf("parameter moveTarget is required, but nil was provided")
@@ -183,9 +191,48 @@ func (r *jsiiProxy_RegistryModule) validateMoveToParameters(moveTarget *string, 
 	return nil
 }
 
+func (r *jsiiProxy_RegistryModule) validateMoveToIdParameters(id *string) error {
+	if id == nil {
+		return fmt.Errorf("parameter id is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (r *jsiiProxy_RegistryModule) validateOverrideLogicalIdParameters(newLogicalId *string) error {
 	if newLogicalId == nil {
 		return fmt.Errorf("parameter newLogicalId is required, but nil was provided")
+	}
+
+	return nil
+}
+
+func (r *jsiiProxy_RegistryModule) validatePutTestConfigParameters(value interface{}) error {
+	if value == nil {
+		return fmt.Errorf("parameter value is required, but nil was provided")
+	}
+	switch value.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*RegistryModuleTestConfig:
+		value := value.(*[]*RegistryModuleTestConfig)
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	case []*RegistryModuleTestConfig:
+		value_ := value.([]*RegistryModuleTestConfig)
+		value := &value_
+		for idx_cd4240, v := range *value {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter value[%#v]", idx_cd4240) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(value) {
+			return fmt.Errorf("parameter value must be one of the allowed types: cdktf.IResolvable, *[]*RegistryModuleTestConfig; received %#v (a %T)", value, value)
+		}
 	}
 
 	return nil

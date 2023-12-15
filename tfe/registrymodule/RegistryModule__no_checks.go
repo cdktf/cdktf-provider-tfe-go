@@ -59,11 +59,23 @@ func (r *jsiiProxy_RegistryModule) validateInterpolationForAttributeParameters(t
 	return nil
 }
 
+func (r *jsiiProxy_RegistryModule) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RegistryModule) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
+func (r *jsiiProxy_RegistryModule) validateMoveToIdParameters(id *string) error {
+	return nil
+}
+
 func (r *jsiiProxy_RegistryModule) validateOverrideLogicalIdParameters(newLogicalId *string) error {
+	return nil
+}
+
+func (r *jsiiProxy_RegistryModule) validatePutTestConfigParameters(value interface{}) error {
 	return nil
 }
 

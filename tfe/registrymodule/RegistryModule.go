@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/registry_module tfe_registry_module}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/registry_module tfe_registry_module}.
 type RegistryModule interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -71,6 +71,7 @@ type RegistryModule interface {
 	Provisioners() *[]interface{}
 	// Experimental.
 	SetProvisioners(val *[]interface{})
+	PublishingMechanism() *string
 	// Experimental.
 	RawOverrides() interface{}
 	RegistryName() *string
@@ -82,6 +83,8 @@ type RegistryModule interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
+	TestConfig() RegistryModuleTestConfigList
+	TestConfigInput() interface{}
 	VcsRepo() RegistryModuleVcsRepoOutputReference
 	VcsRepoInput() *RegistryModuleVcsRepo
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
@@ -108,15 +111,26 @@ type RegistryModule interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTestConfig(value interface{})
 	PutVcsRepo(value *RegistryModuleVcsRepo)
 	ResetId()
 	ResetModuleProvider()
@@ -128,6 +142,7 @@ type RegistryModule interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetRegistryName()
+	ResetTestConfig()
 	ResetVcsRepo()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
@@ -384,6 +399,16 @@ func (j *jsiiProxy_RegistryModule) Provisioners() *[]interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_RegistryModule) PublishingMechanism() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"publishingMechanism",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RegistryModule) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -444,6 +469,26 @@ func (j *jsiiProxy_RegistryModule) TerraformResourceType() *string {
 	return returns
 }
 
+func (j *jsiiProxy_RegistryModule) TestConfig() RegistryModuleTestConfigList {
+	var returns RegistryModuleTestConfigList
+	_jsii_.Get(
+		j,
+		"testConfig",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryModule) TestConfigInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"testConfigInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RegistryModule) VcsRepo() RegistryModuleVcsRepoOutputReference {
 	var returns RegistryModuleVcsRepoOutputReference
 	_jsii_.Get(
@@ -465,7 +510,7 @@ func (j *jsiiProxy_RegistryModule) VcsRepoInput() *RegistryModuleVcsRepo {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/registry_module tfe_registry_module} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/registry_module tfe_registry_module} Resource.
 func NewRegistryModule(scope constructs.Construct, id *string, config *RegistryModuleConfig) RegistryModule {
 	_init_.Initialize()
 
@@ -483,7 +528,7 @@ func NewRegistryModule(scope constructs.Construct, id *string, config *RegistryM
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/registry_module tfe_registry_module} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/registry_module tfe_registry_module} Resource.
 func NewRegistryModule_Override(r RegistryModule, scope constructs.Construct, id *string, config *RegistryModuleConfig) {
 	_init_.Initialize()
 
@@ -908,6 +953,19 @@ func (r *jsiiProxy_RegistryModule) GetStringMapAttribute(terraformAttribute *str
 	return returns
 }
 
+func (r *jsiiProxy_RegistryModule) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		r,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (r *jsiiProxy_RegistryModule) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := r.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -935,6 +993,17 @@ func (r *jsiiProxy_RegistryModule) InterpolationForAttribute(terraformAttribute 
 	return returns
 }
 
+func (r *jsiiProxy_RegistryModule) MoveFromId(id *string) {
+	if err := r.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RegistryModule) MoveTo(moveTarget *string, index interface{}) {
 	if err := r.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -946,6 +1015,17 @@ func (r *jsiiProxy_RegistryModule) MoveTo(moveTarget *string, index interface{})
 	)
 }
 
+func (r *jsiiProxy_RegistryModule) MoveToId(id *string) {
+	if err := r.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"moveToId",
+		[]interface{}{id},
+	)
+}
+
 func (r *jsiiProxy_RegistryModule) OverrideLogicalId(newLogicalId *string) {
 	if err := r.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
@@ -954,6 +1034,17 @@ func (r *jsiiProxy_RegistryModule) OverrideLogicalId(newLogicalId *string) {
 		r,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (r *jsiiProxy_RegistryModule) PutTestConfig(value interface{}) {
+	if err := r.validatePutTestConfigParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		r,
+		"putTestConfig",
+		[]interface{}{value},
 	)
 }
 
@@ -1028,6 +1119,14 @@ func (r *jsiiProxy_RegistryModule) ResetRegistryName() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetRegistryName",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RegistryModule) ResetTestConfig() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTestConfig",
 		nil, // no parameters
 	)
 }

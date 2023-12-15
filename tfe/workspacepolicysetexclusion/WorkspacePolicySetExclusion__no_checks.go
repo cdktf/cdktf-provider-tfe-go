@@ -59,7 +59,15 @@ func (w *jsiiProxy_WorkspacePolicySetExclusion) validateInterpolationForAttribut
 	return nil
 }
 
+func (w *jsiiProxy_WorkspacePolicySetExclusion) validateMoveFromIdParameters(id *string) error {
+	return nil
+}
+
 func (w *jsiiProxy_WorkspacePolicySetExclusion) validateMoveToParameters(moveTarget *string, index interface{}) error {
+	return nil
+}
+
+func (w *jsiiProxy_WorkspacePolicySetExclusion) validateMoveToIdParameters(id *string) error {
 	return nil
 }
 

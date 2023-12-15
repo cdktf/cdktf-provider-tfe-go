@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/team_project_access tfe_team_project_access}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/team_project_access tfe_team_project_access}.
 type TeamProjectAccess interface {
 	cdktf.TerraformResource
 	Access() *string
@@ -101,12 +101,22 @@ type TeamProjectAccess interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -414,7 +424,7 @@ func (j *jsiiProxy_TeamProjectAccess) WorkspaceAccessInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/team_project_access tfe_team_project_access} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/team_project_access tfe_team_project_access} Resource.
 func NewTeamProjectAccess(scope constructs.Construct, id *string, config *TeamProjectAccessConfig) TeamProjectAccess {
 	_init_.Initialize()
 
@@ -432,7 +442,7 @@ func NewTeamProjectAccess(scope constructs.Construct, id *string, config *TeamPr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/team_project_access tfe_team_project_access} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/team_project_access tfe_team_project_access} Resource.
 func NewTeamProjectAccess_Override(t TeamProjectAccess, scope constructs.Construct, id *string, config *TeamProjectAccessConfig) {
 	_init_.Initialize()
 
@@ -824,6 +834,19 @@ func (t *jsiiProxy_TeamProjectAccess) GetStringMapAttribute(terraformAttribute *
 	return returns
 }
 
+func (t *jsiiProxy_TeamProjectAccess) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		t,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (t *jsiiProxy_TeamProjectAccess) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := t.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -851,6 +874,17 @@ func (t *jsiiProxy_TeamProjectAccess) InterpolationForAttribute(terraformAttribu
 	return returns
 }
 
+func (t *jsiiProxy_TeamProjectAccess) MoveFromId(id *string) {
+	if err := t.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (t *jsiiProxy_TeamProjectAccess) MoveTo(moveTarget *string, index interface{}) {
 	if err := t.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -859,6 +893,17 @@ func (t *jsiiProxy_TeamProjectAccess) MoveTo(moveTarget *string, index interface
 		t,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (t *jsiiProxy_TeamProjectAccess) MoveToId(id *string) {
+	if err := t.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

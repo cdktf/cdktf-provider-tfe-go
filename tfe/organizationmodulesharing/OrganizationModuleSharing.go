@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/organization_module_sharing tfe_organization_module_sharing}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/organization_module_sharing tfe_organization_module_sharing}.
 type OrganizationModuleSharing interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -94,12 +94,22 @@ type OrganizationModuleSharing interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -344,7 +354,7 @@ func (j *jsiiProxy_OrganizationModuleSharing) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
 func NewOrganizationModuleSharing(scope constructs.Construct, id *string, config *OrganizationModuleSharingConfig) OrganizationModuleSharing {
 	_init_.Initialize()
 
@@ -362,7 +372,7 @@ func NewOrganizationModuleSharing(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/organization_module_sharing tfe_organization_module_sharing} Resource.
 func NewOrganizationModuleSharing_Override(o OrganizationModuleSharing, scope constructs.Construct, id *string, config *OrganizationModuleSharingConfig) {
 	_init_.Initialize()
 
@@ -743,6 +753,19 @@ func (o *jsiiProxy_OrganizationModuleSharing) GetStringMapAttribute(terraformAtt
 	return returns
 }
 
+func (o *jsiiProxy_OrganizationModuleSharing) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		o,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (o *jsiiProxy_OrganizationModuleSharing) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := o.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -770,6 +793,17 @@ func (o *jsiiProxy_OrganizationModuleSharing) InterpolationForAttribute(terrafor
 	return returns
 }
 
+func (o *jsiiProxy_OrganizationModuleSharing) MoveFromId(id *string) {
+	if err := o.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (o *jsiiProxy_OrganizationModuleSharing) MoveTo(moveTarget *string, index interface{}) {
 	if err := o.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -778,6 +812,17 @@ func (o *jsiiProxy_OrganizationModuleSharing) MoveTo(moveTarget *string, index i
 		o,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (o *jsiiProxy_OrganizationModuleSharing) MoveToId(id *string) {
+	if err := o.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

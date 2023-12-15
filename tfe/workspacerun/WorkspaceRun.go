@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/workspace_run tfe_workspace_run}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/workspace_run tfe_workspace_run}.
 type WorkspaceRun interface {
 	cdktf.TerraformResource
 	Apply() WorkspaceRunApplyOutputReference
@@ -95,12 +95,22 @@ type WorkspaceRun interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -368,7 +378,7 @@ func (j *jsiiProxy_WorkspaceRun) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/workspace_run tfe_workspace_run} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/workspace_run tfe_workspace_run} Resource.
 func NewWorkspaceRun(scope constructs.Construct, id *string, config *WorkspaceRunConfig) WorkspaceRun {
 	_init_.Initialize()
 
@@ -386,7 +396,7 @@ func NewWorkspaceRun(scope constructs.Construct, id *string, config *WorkspaceRu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/workspace_run tfe_workspace_run} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/workspace_run tfe_workspace_run} Resource.
 func NewWorkspaceRun_Override(w WorkspaceRun, scope constructs.Construct, id *string, config *WorkspaceRunConfig) {
 	_init_.Initialize()
 
@@ -756,6 +766,19 @@ func (w *jsiiProxy_WorkspaceRun) GetStringMapAttribute(terraformAttribute *strin
 	return returns
 }
 
+func (w *jsiiProxy_WorkspaceRun) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		w,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (w *jsiiProxy_WorkspaceRun) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := w.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -783,6 +806,17 @@ func (w *jsiiProxy_WorkspaceRun) InterpolationForAttribute(terraformAttribute *s
 	return returns
 }
 
+func (w *jsiiProxy_WorkspaceRun) MoveFromId(id *string) {
+	if err := w.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (w *jsiiProxy_WorkspaceRun) MoveTo(moveTarget *string, index interface{}) {
 	if err := w.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -791,6 +825,17 @@ func (w *jsiiProxy_WorkspaceRun) MoveTo(moveTarget *string, index interface{}) {
 		w,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (w *jsiiProxy_WorkspaceRun) MoveToId(id *string) {
+	if err := w.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		w,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 

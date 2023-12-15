@@ -13,6 +13,9 @@ import (
 
 type RegistryModuleVcsRepoOutputReference interface {
 	cdktf.ComplexObject
+	Branch() *string
+	SetBranch(val *string)
+	BranchInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -44,6 +47,9 @@ type RegistryModuleVcsRepoOutputReference interface {
 	OauthTokenId() *string
 	SetOauthTokenId(val *string)
 	OauthTokenIdInput() *string
+	Tags() interface{}
+	SetTags(val interface{})
+	TagsInput() interface{}
 	// Experimental.
 	TerraformAttribute() *string
 	// Experimental.
@@ -76,8 +82,10 @@ type RegistryModuleVcsRepoOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetBranch()
 	ResetGithubAppInstallationId()
 	ResetOauthTokenId()
+	ResetTags()
 	// Produce the Token's value at resolution time.
 	// Experimental.
 	Resolve(_context cdktf.IResolveContext) interface{}
@@ -91,6 +99,26 @@ type RegistryModuleVcsRepoOutputReference interface {
 // The jsii proxy struct for RegistryModuleVcsRepoOutputReference
 type jsiiProxy_RegistryModuleVcsRepoOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) Branch() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"branch",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) BranchInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"branchInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) ComplexObjectIndex() interface{} {
@@ -223,6 +251,26 @@ func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) OauthTokenIdInput() *st
 	return returns
 }
 
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) Tags() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) TagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) TerraformAttribute() *string {
 	var returns *string
 	_jsii_.Get(
@@ -268,6 +316,17 @@ func NewRegistryModuleVcsRepoOutputReference_Override(r RegistryModuleVcsRepoOut
 		"@cdktf/provider-tfe.registryModule.RegistryModuleVcsRepoOutputReference",
 		[]interface{}{terraformResource, terraformAttribute},
 		r,
+	)
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference)SetBranch(val *string) {
+	if err := j.validateSetBranchParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"branch",
+		val,
 	)
 }
 
@@ -344,6 +403,17 @@ func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference)SetOauthTokenId(val *str
 	_jsii_.Set(
 		j,
 		"oauthTokenId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference)SetTags(val interface{}) {
+	if err := j.validateSetTagsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tags",
 		val,
 	)
 }
@@ -556,6 +626,14 @@ func (r *jsiiProxy_RegistryModuleVcsRepoOutputReference) InterpolationForAttribu
 	return returns
 }
 
+func (r *jsiiProxy_RegistryModuleVcsRepoOutputReference) ResetBranch() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetBranch",
+		nil, // no parameters
+	)
+}
+
 func (r *jsiiProxy_RegistryModuleVcsRepoOutputReference) ResetGithubAppInstallationId() {
 	_jsii_.InvokeVoid(
 		r,
@@ -568,6 +646,14 @@ func (r *jsiiProxy_RegistryModuleVcsRepoOutputReference) ResetOauthTokenId() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetOauthTokenId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RegistryModuleVcsRepoOutputReference) ResetTags() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTags",
 		nil, // no parameters
 	)
 }

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/data-sources/organization tfe_organization}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/data-sources/organization tfe_organization}.
 type DataTfeOrganization interface {
 	cdktf.TerraformDataSource
 	AssessmentsEnforced() cdktf.IResolvable
@@ -94,6 +94,7 @@ type DataTfeOrganization interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetId()
+	ResetName()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -383,7 +384,7 @@ func (j *jsiiProxy_DataTfeOrganization) TwoFactorConformant() cdktf.IResolvable 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/data-sources/organization tfe_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/data-sources/organization tfe_organization} Data Source.
 func NewDataTfeOrganization(scope constructs.Construct, id *string, config *DataTfeOrganizationConfig) DataTfeOrganization {
 	_init_.Initialize()
 
@@ -401,7 +402,7 @@ func NewDataTfeOrganization(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/data-sources/organization tfe_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/data-sources/organization tfe_organization} Data Source.
 func NewDataTfeOrganization_Override(d DataTfeOrganization, scope constructs.Construct, id *string, config *DataTfeOrganizationConfig) {
 	_init_.Initialize()
 
@@ -769,6 +770,14 @@ func (d *jsiiProxy_DataTfeOrganization) ResetId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeOrganization) ResetName() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetName",
 		nil, // no parameters
 	)
 }

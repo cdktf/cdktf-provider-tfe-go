@@ -51,6 +51,10 @@ func (r *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateResolveParamete
 	return nil
 }
 
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateSetBranchParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateSetComplexObjectIndexParameters(val interface{}) error {
 	return nil
 }
@@ -76,6 +80,10 @@ func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateSetInternalValu
 }
 
 func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateSetOauthTokenIdParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateSetTagsParameters(val interface{}) error {
 	return nil
 }
 

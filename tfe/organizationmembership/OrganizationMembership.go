@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/organization_membership tfe_organization_membership}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/organization_membership tfe_organization_membership}.
 type OrganizationMembership interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -96,12 +96,22 @@ type OrganizationMembership interface {
 	// Experimental.
 	GetStringMapAttribute(terraformAttribute *string) *map[string]*string
 	// Experimental.
+	HasResourceMove() interface{}
+	// Experimental.
 	ImportFrom(id *string, provider cdktf.TerraformProvider)
 	// Experimental.
 	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	// Move the resource corresponding to "id" to this resource.
+	//
+	// Note that the resource being moved from must be marked as moved using it's instance function.
+	// Experimental.
+	MoveFromId(id *string)
 	// Moves this resource to the target resource given by moveTarget.
 	// Experimental.
 	MoveTo(moveTarget *string, index interface{})
+	// Moves this resource to the resource corresponding to "id".
+	// Experimental.
+	MoveToId(id *string)
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
@@ -366,7 +376,7 @@ func (j *jsiiProxy_OrganizationMembership) Username() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/organization_membership tfe_organization_membership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/organization_membership tfe_organization_membership} Resource.
 func NewOrganizationMembership(scope constructs.Construct, id *string, config *OrganizationMembershipConfig) OrganizationMembership {
 	_init_.Initialize()
 
@@ -384,7 +394,7 @@ func NewOrganizationMembership(scope constructs.Construct, id *string, config *O
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.50.0/docs/resources/organization_membership tfe_organization_membership} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/organization_membership tfe_organization_membership} Resource.
 func NewOrganizationMembership_Override(o OrganizationMembership, scope constructs.Construct, id *string, config *OrganizationMembershipConfig) {
 	_init_.Initialize()
 
@@ -765,6 +775,19 @@ func (o *jsiiProxy_OrganizationMembership) GetStringMapAttribute(terraformAttrib
 	return returns
 }
 
+func (o *jsiiProxy_OrganizationMembership) HasResourceMove() interface{} {
+	var returns interface{}
+
+	_jsii_.Invoke(
+		o,
+		"hasResourceMove",
+		nil, // no parameters
+		&returns,
+	)
+
+	return returns
+}
+
 func (o *jsiiProxy_OrganizationMembership) ImportFrom(id *string, provider cdktf.TerraformProvider) {
 	if err := o.validateImportFromParameters(id); err != nil {
 		panic(err)
@@ -792,6 +815,17 @@ func (o *jsiiProxy_OrganizationMembership) InterpolationForAttribute(terraformAt
 	return returns
 }
 
+func (o *jsiiProxy_OrganizationMembership) MoveFromId(id *string) {
+	if err := o.validateMoveFromIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveFromId",
+		[]interface{}{id},
+	)
+}
+
 func (o *jsiiProxy_OrganizationMembership) MoveTo(moveTarget *string, index interface{}) {
 	if err := o.validateMoveToParameters(moveTarget, index); err != nil {
 		panic(err)
@@ -800,6 +834,17 @@ func (o *jsiiProxy_OrganizationMembership) MoveTo(moveTarget *string, index inte
 		o,
 		"moveTo",
 		[]interface{}{moveTarget, index},
+	)
+}
+
+func (o *jsiiProxy_OrganizationMembership) MoveToId(id *string) {
+	if err := o.validateMoveToIdParameters(id); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"moveToId",
+		[]interface{}{id},
 	)
 }
 
