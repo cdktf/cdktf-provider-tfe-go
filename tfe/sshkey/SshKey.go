@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/ssh_key tfe_ssh_key}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/resources/ssh_key tfe_ssh_key}.
 type SshKey interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -377,7 +377,7 @@ func (j *jsiiProxy_SshKey) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/ssh_key tfe_ssh_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/resources/ssh_key tfe_ssh_key} Resource.
 func NewSshKey(scope constructs.Construct, id *string, config *SshKeyConfig) SshKey {
 	_init_.Initialize()
 
@@ -395,7 +395,7 @@ func NewSshKey(scope constructs.Construct, id *string, config *SshKeyConfig) Ssh
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/resources/ssh_key tfe_ssh_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/resources/ssh_key tfe_ssh_key} Resource.
 func NewSshKey_Override(s SshKey, scope constructs.Construct, id *string, config *SshKeyConfig) {
 	_init_.Initialize()
 

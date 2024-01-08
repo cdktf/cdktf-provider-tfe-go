@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/data-sources/organization tfe_organization}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/organization tfe_organization}.
 type DataTfeOrganization interface {
 	cdktf.TerraformDataSource
 	AssessmentsEnforced() cdktf.IResolvable
@@ -384,7 +384,7 @@ func (j *jsiiProxy_DataTfeOrganization) TwoFactorConformant() cdktf.IResolvable 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/data-sources/organization tfe_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/organization tfe_organization} Data Source.
 func NewDataTfeOrganization(scope constructs.Construct, id *string, config *DataTfeOrganizationConfig) DataTfeOrganization {
 	_init_.Initialize()
 
@@ -402,7 +402,7 @@ func NewDataTfeOrganization(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/data-sources/organization tfe_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/organization tfe_organization} Data Source.
 func NewDataTfeOrganization_Override(d DataTfeOrganization, scope constructs.Construct, id *string, config *DataTfeOrganizationConfig) {
 	_init_.Initialize()
 

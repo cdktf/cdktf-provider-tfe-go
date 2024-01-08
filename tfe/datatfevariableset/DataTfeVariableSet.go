@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/data-sources/variable_set tfe_variable_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/variable_set tfe_variable_set}.
 type DataTfeVariableSet interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -413,7 +413,7 @@ func (j *jsiiProxy_DataTfeVariableSet) WorkspaceIdsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/data-sources/variable_set tfe_variable_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/variable_set tfe_variable_set} Data Source.
 func NewDataTfeVariableSet(scope constructs.Construct, id *string, config *DataTfeVariableSetConfig) DataTfeVariableSet {
 	_init_.Initialize()
 
@@ -431,7 +431,7 @@ func NewDataTfeVariableSet(scope constructs.Construct, id *string, config *DataT
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.0/docs/data-sources/variable_set tfe_variable_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/variable_set tfe_variable_set} Data Source.
 func NewDataTfeVariableSet_Override(d DataTfeVariableSet, scope constructs.Construct, id *string, config *DataTfeVariableSetConfig) {
 	_init_.Initialize()
 
