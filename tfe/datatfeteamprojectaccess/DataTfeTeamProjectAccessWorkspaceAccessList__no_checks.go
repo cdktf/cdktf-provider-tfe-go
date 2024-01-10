@@ -7,6 +7,10 @@ package datatfeteamprojectaccess
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (d *jsiiProxy_DataTfeTeamProjectAccessWorkspaceAccessList) validateAllWithMapKeyParameters(mapKeyAttributeName *string) error {
+	return nil
+}
+
 func (d *jsiiProxy_DataTfeTeamProjectAccessWorkspaceAccessList) validateGetParameters(index *float64) error {
 	return nil
 }
