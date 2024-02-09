@@ -15,6 +15,7 @@ func init() {
 		reflect.TypeOf((*DataTfePolicySet)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "agentEnabled", GoGetter: "AgentEnabled"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "count", GoGetter: "Count"},
@@ -50,6 +51,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "overrideLogicalId", GoMethod: "OverrideLogicalId"},
 			_jsii_.MemberProperty{JsiiProperty: "policiesPath", GoGetter: "PoliciesPath"},
 			_jsii_.MemberProperty{JsiiProperty: "policyIds", GoGetter: "PolicyIds"},
+			_jsii_.MemberProperty{JsiiProperty: "policyToolVersion", GoGetter: "PolicyToolVersion"},
 			_jsii_.MemberProperty{JsiiProperty: "projectIds", GoGetter: "ProjectIds"},
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},

@@ -15,6 +15,7 @@ func init() {
 		reflect.TypeOf((*DataTfeOrganization)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "aggregatedCommitStatusEnabled", GoGetter: "AggregatedCommitStatusEnabled"},
 			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforced", GoGetter: "AssessmentsEnforced"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
 			_jsii_.MemberProperty{JsiiProperty: "collaboratorAuthPolicy", GoGetter: "CollaboratorAuthPolicy"},

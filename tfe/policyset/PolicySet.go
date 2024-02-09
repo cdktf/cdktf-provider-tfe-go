@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/resources/policy_set tfe_policy_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/policy_set tfe_policy_set}.
 type PolicySet interface {
 	cdktf.TerraformResource
+	AgentEnabled() interface{}
+	SetAgentEnabled(val interface{})
+	AgentEnabledInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -72,6 +75,9 @@ type PolicySet interface {
 	PolicyIds() *[]*string
 	SetPolicyIds(val *[]*string)
 	PolicyIdsInput() *[]*string
+	PolicyToolVersion() *string
+	SetPolicyToolVersion(val *string)
+	PolicyToolVersionInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -140,6 +146,7 @@ type PolicySet interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutVcsRepo(value *PolicySetVcsRepo)
+	ResetAgentEnabled()
 	ResetDescription()
 	ResetGlobal()
 	ResetId()
@@ -151,6 +158,7 @@ type PolicySet interface {
 	ResetOverrideLogicalId()
 	ResetPoliciesPath()
 	ResetPolicyIds()
+	ResetPolicyToolVersion()
 	ResetSlug()
 	ResetVcsRepo()
 	ResetWorkspaceIds()
@@ -170,6 +178,26 @@ type PolicySet interface {
 // The jsii proxy struct for PolicySet
 type jsiiProxy_PolicySet struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_PolicySet) AgentEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"agentEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PolicySet) AgentEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"agentEnabledInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_PolicySet) CdktfStack() cdktf.TerraformStack {
@@ -452,6 +480,26 @@ func (j *jsiiProxy_PolicySet) PolicyIdsInput() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_PolicySet) PolicyToolVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"policyToolVersion",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PolicySet) PolicyToolVersionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"policyToolVersionInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_PolicySet) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -573,7 +621,7 @@ func (j *jsiiProxy_PolicySet) WorkspaceIdsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/resources/policy_set tfe_policy_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/policy_set tfe_policy_set} Resource.
 func NewPolicySet(scope constructs.Construct, id *string, config *PolicySetConfig) PolicySet {
 	_init_.Initialize()
 
@@ -591,7 +639,7 @@ func NewPolicySet(scope constructs.Construct, id *string, config *PolicySetConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/resources/policy_set tfe_policy_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/policy_set tfe_policy_set} Resource.
 func NewPolicySet_Override(p PolicySet, scope constructs.Construct, id *string, config *PolicySetConfig) {
 	_init_.Initialize()
 
@@ -599,6 +647,17 @@ func NewPolicySet_Override(p PolicySet, scope constructs.Construct, id *string, 
 		"@cdktf/provider-tfe.policySet.PolicySet",
 		[]interface{}{scope, id, config},
 		p,
+	)
+}
+
+func (j *jsiiProxy_PolicySet)SetAgentEnabled(val interface{}) {
+	if err := j.validateSetAgentEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"agentEnabled",
+		val,
 	)
 }
 
@@ -746,6 +805,17 @@ func (j *jsiiProxy_PolicySet)SetPolicyIds(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"policyIds",
+		val,
+	)
+}
+
+func (j *jsiiProxy_PolicySet)SetPolicyToolVersion(val *string) {
+	if err := j.validateSetPolicyToolVersionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"policyToolVersion",
 		val,
 	)
 }
@@ -1155,6 +1225,14 @@ func (p *jsiiProxy_PolicySet) PutVcsRepo(value *PolicySetVcsRepo) {
 	)
 }
 
+func (p *jsiiProxy_PolicySet) ResetAgentEnabled() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetAgentEnabled",
+		nil, // no parameters
+	)
+}
+
 func (p *jsiiProxy_PolicySet) ResetDescription() {
 	_jsii_.InvokeVoid(
 		p,
@@ -1223,6 +1301,14 @@ func (p *jsiiProxy_PolicySet) ResetPolicyIds() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetPolicyIds",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_PolicySet) ResetPolicyToolVersion() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetPolicyToolVersion",
 		nil, // no parameters
 	)
 }

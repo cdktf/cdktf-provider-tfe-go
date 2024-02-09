@@ -12,9 +12,10 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/policy_set tfe_policy_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/data-sources/policy_set tfe_policy_set}.
 type DataTfePolicySet interface {
 	cdktf.TerraformDataSource
+	AgentEnabled() cdktf.IResolvable
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -61,6 +62,7 @@ type DataTfePolicySet interface {
 	OverridableInput() interface{}
 	PoliciesPath() *string
 	PolicyIds() *[]*string
+	PolicyToolVersion() *string
 	ProjectIds() *[]*string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
@@ -125,6 +127,16 @@ type DataTfePolicySet interface {
 // The jsii proxy struct for DataTfePolicySet
 type jsiiProxy_DataTfePolicySet struct {
 	internal.Type__cdktfTerraformDataSource
+}
+
+func (j *jsiiProxy_DataTfePolicySet) AgentEnabled() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"agentEnabled",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_DataTfePolicySet) CdktfStack() cdktf.TerraformStack {
@@ -367,6 +379,16 @@ func (j *jsiiProxy_DataTfePolicySet) PolicyIds() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfePolicySet) PolicyToolVersion() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"policyToolVersion",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfePolicySet) ProjectIds() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -448,7 +470,7 @@ func (j *jsiiProxy_DataTfePolicySet) WorkspaceIds() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/policy_set tfe_policy_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/data-sources/policy_set tfe_policy_set} Data Source.
 func NewDataTfePolicySet(scope constructs.Construct, id *string, config *DataTfePolicySetConfig) DataTfePolicySet {
 	_init_.Initialize()
 
@@ -466,7 +488,7 @@ func NewDataTfePolicySet(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/policy_set tfe_policy_set} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/data-sources/policy_set tfe_policy_set} Data Source.
 func NewDataTfePolicySet_Override(d DataTfePolicySet, scope constructs.Construct, id *string, config *DataTfePolicySetConfig) {
 	_init_.Initialize()
 

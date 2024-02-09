@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/resources/organization tfe_organization}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/organization tfe_organization}.
 type Organization interface {
 	cdktf.TerraformResource
+	AggregatedCommitStatusEnabled() interface{}
+	SetAggregatedCommitStatusEnabled(val interface{})
+	AggregatedCommitStatusEnabledInput() interface{}
 	AllowForceDeleteWorkspaces() interface{}
 	SetAllowForceDeleteWorkspaces(val interface{})
 	AllowForceDeleteWorkspacesInput() interface{}
@@ -138,6 +141,7 @@ type Organization interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetAggregatedCommitStatusEnabled()
 	ResetAllowForceDeleteWorkspaces()
 	ResetAssessmentsEnforced()
 	ResetCollaboratorAuthPolicy()
@@ -166,6 +170,26 @@ type Organization interface {
 // The jsii proxy struct for Organization
 type jsiiProxy_Organization struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Organization) AggregatedCommitStatusEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"aggregatedCommitStatusEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Organization) AggregatedCommitStatusEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"aggregatedCommitStatusEnabledInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Organization) AllowForceDeleteWorkspaces() interface{} {
@@ -559,7 +583,7 @@ func (j *jsiiProxy_Organization) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/resources/organization tfe_organization} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/organization tfe_organization} Resource.
 func NewOrganization(scope constructs.Construct, id *string, config *OrganizationConfig) Organization {
 	_init_.Initialize()
 
@@ -577,7 +601,7 @@ func NewOrganization(scope constructs.Construct, id *string, config *Organizatio
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/resources/organization tfe_organization} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/organization tfe_organization} Resource.
 func NewOrganization_Override(o Organization, scope constructs.Construct, id *string, config *OrganizationConfig) {
 	_init_.Initialize()
 
@@ -585,6 +609,17 @@ func NewOrganization_Override(o Organization, scope constructs.Construct, id *st
 		"@cdktf/provider-tfe.organization.Organization",
 		[]interface{}{scope, id, config},
 		o,
+	)
+}
+
+func (j *jsiiProxy_Organization)SetAggregatedCommitStatusEnabled(val interface{}) {
+	if err := j.validateSetAggregatedCommitStatusEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"aggregatedCommitStatusEnabled",
+		val,
 	)
 }
 
@@ -1127,6 +1162,14 @@ func (o *jsiiProxy_Organization) OverrideLogicalId(newLogicalId *string) {
 		o,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (o *jsiiProxy_Organization) ResetAggregatedCommitStatusEnabled() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetAggregatedCommitStatusEnabled",
+		nil, // no parameters
 	)
 }
 

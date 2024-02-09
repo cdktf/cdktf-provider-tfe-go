@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/organization_run_task tfe_organization_run_task}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/data-sources/organization_run_task tfe_organization_run_task}.
 type DataTfeOrganizationRunTask interface {
 	cdktf.TerraformDataSource
 	Category() *string
@@ -408,7 +408,7 @@ func (j *jsiiProxy_DataTfeOrganizationRunTask) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/organization_run_task tfe_organization_run_task} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/data-sources/organization_run_task tfe_organization_run_task} Data Source.
 func NewDataTfeOrganizationRunTask(scope constructs.Construct, id *string, config *DataTfeOrganizationRunTaskConfig) DataTfeOrganizationRunTask {
 	_init_.Initialize()
 
@@ -426,7 +426,7 @@ func NewDataTfeOrganizationRunTask(scope constructs.Construct, id *string, confi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.51.1/docs/data-sources/organization_run_task tfe_organization_run_task} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/data-sources/organization_run_task tfe_organization_run_task} Data Source.
 func NewDataTfeOrganizationRunTask_Override(d DataTfeOrganizationRunTask, scope constructs.Construct, id *string, config *DataTfeOrganizationRunTaskConfig) {
 	_init_.Initialize()
 

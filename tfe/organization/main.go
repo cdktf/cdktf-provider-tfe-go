@@ -16,6 +16,8 @@ func init() {
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addMoveTarget", GoMethod: "AddMoveTarget"},
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
+			_jsii_.MemberProperty{JsiiProperty: "aggregatedCommitStatusEnabled", GoGetter: "AggregatedCommitStatusEnabled"},
+			_jsii_.MemberProperty{JsiiProperty: "aggregatedCommitStatusEnabledInput", GoGetter: "AggregatedCommitStatusEnabledInput"},
 			_jsii_.MemberProperty{JsiiProperty: "allowForceDeleteWorkspaces", GoGetter: "AllowForceDeleteWorkspaces"},
 			_jsii_.MemberProperty{JsiiProperty: "allowForceDeleteWorkspacesInput", GoGetter: "AllowForceDeleteWorkspacesInput"},
 			_jsii_.MemberProperty{JsiiProperty: "assessmentsEnforced", GoGetter: "AssessmentsEnforced"},
@@ -62,6 +64,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
 			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
+			_jsii_.MemberMethod{JsiiMethod: "resetAggregatedCommitStatusEnabled", GoMethod: "ResetAggregatedCommitStatusEnabled"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAllowForceDeleteWorkspaces", GoMethod: "ResetAllowForceDeleteWorkspaces"},
 			_jsii_.MemberMethod{JsiiMethod: "resetAssessmentsEnforced", GoMethod: "ResetAssessmentsEnforced"},
 			_jsii_.MemberMethod{JsiiMethod: "resetCollaboratorAuthPolicy", GoMethod: "ResetCollaboratorAuthPolicy"},
