@@ -22,11 +22,11 @@ type WorkspaceSettingsConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/workspace_settings#workspace_id WorkspaceSettings#workspace_id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/workspace_settings#workspace_id WorkspaceSettings#workspace_id}.
 	WorkspaceId *string `field:"required" json:"workspaceId" yaml:"workspaceId"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/workspace_settings#agent_pool_id WorkspaceSettings#agent_pool_id}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/workspace_settings#agent_pool_id WorkspaceSettings#agent_pool_id}.
 	AgentPoolId *string `field:"optional" json:"agentPoolId" yaml:"agentPoolId"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/workspace_settings#execution_mode WorkspaceSettings#execution_mode}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/workspace_settings#execution_mode WorkspaceSettings#execution_mode}.
 	ExecutionMode *string `field:"optional" json:"executionMode" yaml:"executionMode"`
 }
 

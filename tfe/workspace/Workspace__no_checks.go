@@ -147,6 +147,10 @@ func (j *jsiiProxy_Workspace) validateSetIdParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Workspace) validateSetIgnoreAdditionalTagNamesParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

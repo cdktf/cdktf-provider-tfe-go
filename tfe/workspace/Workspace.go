@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/workspace tfe_workspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/workspace tfe_workspace}.
 type Workspace interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -73,6 +73,9 @@ type Workspace interface {
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
+	IgnoreAdditionalTagNames() interface{}
+	SetIgnoreAdditionalTagNames(val interface{})
+	IgnoreAdditionalTagNamesInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -201,6 +204,7 @@ type Workspace interface {
 	ResetForceDelete()
 	ResetGlobalRemoteState()
 	ResetId()
+	ResetIgnoreAdditionalTagNames()
 	ResetOperations()
 	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -543,6 +547,26 @@ func (j *jsiiProxy_Workspace) IdInput() *string {
 	_jsii_.Get(
 		j,
 		"idInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) IgnoreAdditionalTagNames() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ignoreAdditionalTagNames",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) IgnoreAdditionalTagNamesInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ignoreAdditionalTagNamesInput",
 		&returns,
 	)
 	return returns
@@ -979,7 +1003,7 @@ func (j *jsiiProxy_Workspace) WorkingDirectoryInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfig) Workspace {
 	_init_.Initialize()
 
@@ -997,7 +1021,7 @@ func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.52.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace_Override(w Workspace, scope constructs.Construct, id *string, config *WorkspaceConfig) {
 	_init_.Initialize()
 
@@ -1163,6 +1187,17 @@ func (j *jsiiProxy_Workspace)SetId(val *string) {
 	_jsii_.Set(
 		j,
 		"id",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Workspace)SetIgnoreAdditionalTagNames(val interface{}) {
+	if err := j.validateSetIgnoreAdditionalTagNamesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"ignoreAdditionalTagNames",
 		val,
 	)
 }
@@ -1821,6 +1856,14 @@ func (w *jsiiProxy_Workspace) ResetId() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetId",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Workspace) ResetIgnoreAdditionalTagNames() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetIgnoreAdditionalTagNames",
 		nil, // no parameters
 	)
 }
