@@ -131,6 +131,10 @@ func (j *jsiiProxy_OauthClient) validateSetOrganizationParameters(val *string) e
 	return nil
 }
 
+func (j *jsiiProxy_OauthClient) validateSetOrganizationScopedParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_OauthClient) validateSetPrivateKeyParameters(val *string) error {
 	return nil
 }

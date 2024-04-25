@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/data-sources/project tfe_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.54.0/docs/data-sources/project tfe_project}.
 type DataTfeProject interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -27,6 +27,7 @@ type DataTfeProject interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	Description() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -150,6 +151,16 @@ func (j *jsiiProxy_DataTfeProject) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeProject) Description() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"description",
 		&returns,
 	)
 	return returns
@@ -336,7 +347,7 @@ func (j *jsiiProxy_DataTfeProject) WorkspaceIdsInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/data-sources/project tfe_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.54.0/docs/data-sources/project tfe_project} Data Source.
 func NewDataTfeProject(scope constructs.Construct, id *string, config *DataTfeProjectConfig) DataTfeProject {
 	_init_.Initialize()
 
@@ -354,7 +365,7 @@ func NewDataTfeProject(scope constructs.Construct, id *string, config *DataTfePr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/data-sources/project tfe_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.54.0/docs/data-sources/project tfe_project} Data Source.
 func NewDataTfeProject_Override(d DataTfeProject, scope constructs.Construct, id *string, config *DataTfeProjectConfig) {
 	_init_.Initialize()
 

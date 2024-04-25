@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/team tfe_team}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.54.0/docs/resources/team tfe_team}.
 type Team interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -429,7 +429,7 @@ func (j *jsiiProxy_Team) VisibilityInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/team tfe_team} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.54.0/docs/resources/team tfe_team} Resource.
 func NewTeam(scope constructs.Construct, id *string, config *TeamConfig) Team {
 	_init_.Initialize()
 
@@ -447,7 +447,7 @@ func NewTeam(scope constructs.Construct, id *string, config *TeamConfig) Team {
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/team tfe_team} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.54.0/docs/resources/team tfe_team} Resource.
 func NewTeam_Override(t Team, scope constructs.Construct, id *string, config *TeamConfig) {
 	_init_.Initialize()
 

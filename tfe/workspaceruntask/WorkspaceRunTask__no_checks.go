@@ -103,10 +103,6 @@ func (j *jsiiProxy_WorkspaceRunTask) validateSetEnforcementLevelParameters(val *
 	return nil
 }
 
-func (j *jsiiProxy_WorkspaceRunTask) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_WorkspaceRunTask) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/organization_run_task tfe_organization_run_task}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.54.0/docs/resources/organization_run_task tfe_organization_run_task}.
 type OrganizationRunTask interface {
 	cdktf.TerraformResource
 	Category() *string
@@ -52,8 +52,6 @@ type OrganizationRunTask interface {
 	SetHmacKey(val *string)
 	HmacKeyInput() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -132,7 +130,6 @@ type OrganizationRunTask interface {
 	ResetDescription()
 	ResetEnabled()
 	ResetHmacKey()
-	ResetId()
 	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -325,16 +322,6 @@ func (j *jsiiProxy_OrganizationRunTask) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_OrganizationRunTask) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_OrganizationRunTask) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -476,7 +463,7 @@ func (j *jsiiProxy_OrganizationRunTask) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/organization_run_task tfe_organization_run_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.54.0/docs/resources/organization_run_task tfe_organization_run_task} Resource.
 func NewOrganizationRunTask(scope constructs.Construct, id *string, config *OrganizationRunTaskConfig) OrganizationRunTask {
 	_init_.Initialize()
 
@@ -494,7 +481,7 @@ func NewOrganizationRunTask(scope constructs.Construct, id *string, config *Orga
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.53.0/docs/resources/organization_run_task tfe_organization_run_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.54.0/docs/resources/organization_run_task tfe_organization_run_task} Resource.
 func NewOrganizationRunTask_Override(o OrganizationRunTask, scope constructs.Construct, id *string, config *OrganizationRunTaskConfig) {
 	_init_.Initialize()
 
@@ -583,17 +570,6 @@ func (j *jsiiProxy_OrganizationRunTask)SetHmacKey(val *string) {
 	_jsii_.Set(
 		j,
 		"hmacKey",
-		val,
-	)
-}
-
-func (j *jsiiProxy_OrganizationRunTask)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1042,14 +1018,6 @@ func (o *jsiiProxy_OrganizationRunTask) ResetHmacKey() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetHmacKey",
-		nil, // no parameters
-	)
-}
-
-func (o *jsiiProxy_OrganizationRunTask) ResetId() {
-	_jsii_.InvokeVoid(
-		o,
-		"resetId",
 		nil, // no parameters
 	)
 }
