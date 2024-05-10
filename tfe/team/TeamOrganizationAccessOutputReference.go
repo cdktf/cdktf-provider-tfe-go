@@ -13,6 +13,9 @@ import (
 
 type TeamOrganizationAccessOutputReference interface {
 	cdktf.ComplexObject
+	AccessSecretTeams() interface{}
+	SetAccessSecretTeams(val interface{})
+	AccessSecretTeamsInput() interface{}
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -38,6 +41,9 @@ type TeamOrganizationAccessOutputReference interface {
 	ManageModules() interface{}
 	SetManageModules(val interface{})
 	ManageModulesInput() interface{}
+	ManageOrganizationAccess() interface{}
+	SetManageOrganizationAccess(val interface{})
+	ManageOrganizationAccessInput() interface{}
 	ManagePolicies() interface{}
 	SetManagePolicies(val interface{})
 	ManagePoliciesInput() interface{}
@@ -53,6 +59,9 @@ type TeamOrganizationAccessOutputReference interface {
 	ManageRunTasks() interface{}
 	SetManageRunTasks(val interface{})
 	ManageRunTasksInput() interface{}
+	ManageTeams() interface{}
+	SetManageTeams(val interface{})
+	ManageTeamsInput() interface{}
 	ManageVcsSettings() interface{}
 	SetManageVcsSettings(val interface{})
 	ManageVcsSettingsInput() interface{}
@@ -97,13 +106,16 @@ type TeamOrganizationAccessOutputReference interface {
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
+	ResetAccessSecretTeams()
 	ResetManageMembership()
 	ResetManageModules()
+	ResetManageOrganizationAccess()
 	ResetManagePolicies()
 	ResetManagePolicyOverrides()
 	ResetManageProjects()
 	ResetManageProviders()
 	ResetManageRunTasks()
+	ResetManageTeams()
 	ResetManageVcsSettings()
 	ResetManageWorkspaces()
 	ResetReadProjects()
@@ -121,6 +133,26 @@ type TeamOrganizationAccessOutputReference interface {
 // The jsii proxy struct for TeamOrganizationAccessOutputReference
 type jsiiProxy_TeamOrganizationAccessOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) AccessSecretTeams() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"accessSecretTeams",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) AccessSecretTeamsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"accessSecretTeamsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ComplexObjectIndex() interface{} {
@@ -208,6 +240,26 @@ func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageModulesInput() i
 	_jsii_.Get(
 		j,
 		"manageModulesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageOrganizationAccess() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"manageOrganizationAccess",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageOrganizationAccessInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"manageOrganizationAccessInput",
 		&returns,
 	)
 	return returns
@@ -308,6 +360,26 @@ func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageRunTasksInput() 
 	_jsii_.Get(
 		j,
 		"manageRunTasksInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageTeams() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"manageTeams",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageTeamsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"manageTeamsInput",
 		&returns,
 	)
 	return returns
@@ -441,6 +513,17 @@ func NewTeamOrganizationAccessOutputReference_Override(t TeamOrganizationAccessO
 	)
 }
 
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetAccessSecretTeams(val interface{}) {
+	if err := j.validateSetAccessSecretTeamsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"accessSecretTeams",
+		val,
+	)
+}
+
 func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetComplexObjectIndex(val interface{}) {
 	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
 		panic(err)
@@ -496,6 +579,17 @@ func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetManageModules(val in
 	)
 }
 
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetManageOrganizationAccess(val interface{}) {
+	if err := j.validateSetManageOrganizationAccessParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"manageOrganizationAccess",
+		val,
+	)
+}
+
 func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetManagePolicies(val interface{}) {
 	if err := j.validateSetManagePoliciesParameters(val); err != nil {
 		panic(err)
@@ -547,6 +641,17 @@ func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetManageRunTasks(val i
 	_jsii_.Set(
 		j,
 		"manageRunTasks",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetManageTeams(val interface{}) {
+	if err := j.validateSetManageTeamsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"manageTeams",
 		val,
 	)
 }
@@ -803,6 +908,14 @@ func (t *jsiiProxy_TeamOrganizationAccessOutputReference) InterpolationForAttrib
 	return returns
 }
 
+func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetAccessSecretTeams() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetAccessSecretTeams",
+		nil, // no parameters
+	)
+}
+
 func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetManageMembership() {
 	_jsii_.InvokeVoid(
 		t,
@@ -815,6 +928,14 @@ func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetManageModules() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetManageModules",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetManageOrganizationAccess() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetManageOrganizationAccess",
 		nil, // no parameters
 	)
 }
@@ -855,6 +976,14 @@ func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetManageRunTasks() 
 	_jsii_.InvokeVoid(
 		t,
 		"resetManageRunTasks",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetManageTeams() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetManageTeams",
 		nil, // no parameters
 	)
 }
