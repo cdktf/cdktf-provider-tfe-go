@@ -111,6 +111,10 @@ func (j *jsiiProxy_RegistryModule) validateSetIdParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_RegistryModule) validateSetInitialVersionParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RegistryModule) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

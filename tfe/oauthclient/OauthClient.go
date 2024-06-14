@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.55.0/docs/resources/oauth_client tfe_oauth_client}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/resources/oauth_client tfe_oauth_client}.
 type OauthClient interface {
 	cdktf.TerraformResource
+	AgentPoolId() *string
+	SetAgentPoolId(val *string)
+	AgentPoolIdInput() *string
 	ApiUrl() *string
 	SetApiUrl(val *string)
 	ApiUrlInput() *string
@@ -141,6 +144,7 @@ type OauthClient interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetAgentPoolId()
 	ResetId()
 	ResetKey()
 	ResetName()
@@ -169,6 +173,26 @@ type OauthClient interface {
 // The jsii proxy struct for OauthClient
 type jsiiProxy_OauthClient struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_OauthClient) AgentPoolId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"agentPoolId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OauthClient) AgentPoolIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"agentPoolIdInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_OauthClient) ApiUrl() *string {
@@ -582,7 +606,7 @@ func (j *jsiiProxy_OauthClient) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.55.0/docs/resources/oauth_client tfe_oauth_client} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/resources/oauth_client tfe_oauth_client} Resource.
 func NewOauthClient(scope constructs.Construct, id *string, config *OauthClientConfig) OauthClient {
 	_init_.Initialize()
 
@@ -600,7 +624,7 @@ func NewOauthClient(scope constructs.Construct, id *string, config *OauthClientC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.55.0/docs/resources/oauth_client tfe_oauth_client} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/resources/oauth_client tfe_oauth_client} Resource.
 func NewOauthClient_Override(o OauthClient, scope constructs.Construct, id *string, config *OauthClientConfig) {
 	_init_.Initialize()
 
@@ -608,6 +632,17 @@ func NewOauthClient_Override(o OauthClient, scope constructs.Construct, id *stri
 		"@cdktf/provider-tfe.oauthClient.OauthClient",
 		[]interface{}{scope, id, config},
 		o,
+	)
+}
+
+func (j *jsiiProxy_OauthClient)SetAgentPoolId(val *string) {
+	if err := j.validateSetAgentPoolIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"agentPoolId",
+		val,
 	)
 }
 
@@ -1161,6 +1196,14 @@ func (o *jsiiProxy_OauthClient) OverrideLogicalId(newLogicalId *string) {
 		o,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (o *jsiiProxy_OauthClient) ResetAgentPoolId() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetAgentPoolId",
+		nil, // no parameters
 	)
 }
 

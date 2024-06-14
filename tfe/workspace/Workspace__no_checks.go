@@ -115,6 +115,10 @@ func (j *jsiiProxy_Workspace) validateSetAutoApplyRunTriggerParameters(val inter
 	return nil
 }
 
+func (j *jsiiProxy_Workspace) validateSetAutoDestroyAtParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
