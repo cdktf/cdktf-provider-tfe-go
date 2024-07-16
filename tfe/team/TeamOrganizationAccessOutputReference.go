@@ -35,6 +35,9 @@ type TeamOrganizationAccessOutputReference interface {
 	Fqn() *string
 	InternalValue() *TeamOrganizationAccess
 	SetInternalValue(val *TeamOrganizationAccess)
+	ManageAgentPools() interface{}
+	SetManageAgentPools(val interface{})
+	ManageAgentPoolsInput() interface{}
 	ManageMembership() interface{}
 	SetManageMembership(val interface{})
 	ManageMembershipInput() interface{}
@@ -107,6 +110,7 @@ type TeamOrganizationAccessOutputReference interface {
 	// Experimental.
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetAccessSecretTeams()
+	ResetManageAgentPools()
 	ResetManageMembership()
 	ResetManageModules()
 	ResetManageOrganizationAccess()
@@ -200,6 +204,26 @@ func (j *jsiiProxy_TeamOrganizationAccessOutputReference) InternalValue() *TeamO
 	_jsii_.Get(
 		j,
 		"internalValue",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageAgentPools() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"manageAgentPools",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) ManageAgentPoolsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"manageAgentPoolsInput",
 		&returns,
 	)
 	return returns
@@ -553,6 +577,17 @@ func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetInternalValue(val *T
 	_jsii_.Set(
 		j,
 		"internalValue",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference)SetManageAgentPools(val interface{}) {
+	if err := j.validateSetManageAgentPoolsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"manageAgentPools",
 		val,
 	)
 }
@@ -912,6 +947,14 @@ func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetAccessSecretTeams
 	_jsii_.InvokeVoid(
 		t,
 		"resetAccessSecretTeams",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TeamOrganizationAccessOutputReference) ResetManageAgentPools() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetManageAgentPools",
 		nil, // no parameters
 	)
 }

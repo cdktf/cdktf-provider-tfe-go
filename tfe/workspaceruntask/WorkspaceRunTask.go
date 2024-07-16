@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/resources/workspace_run_task tfe_workspace_run_task}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.0/docs/resources/workspace_run_task tfe_workspace_run_task}.
 type WorkspaceRunTask interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -62,6 +62,9 @@ type WorkspaceRunTask interface {
 	Stage() *string
 	SetStage(val *string)
 	StageInput() *string
+	Stages() *[]*string
+	SetStages(val *[]*string)
+	StagesInput() *[]*string
 	TaskId() *string
 	SetTaskId(val *string)
 	TaskIdInput() *string
@@ -121,6 +124,7 @@ type WorkspaceRunTask interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetStage()
+	ResetStages()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -319,6 +323,26 @@ func (j *jsiiProxy_WorkspaceRunTask) StageInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_WorkspaceRunTask) Stages() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"stages",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceRunTask) StagesInput() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"stagesInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_WorkspaceRunTask) TaskId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -390,7 +414,7 @@ func (j *jsiiProxy_WorkspaceRunTask) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/resources/workspace_run_task tfe_workspace_run_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.0/docs/resources/workspace_run_task tfe_workspace_run_task} Resource.
 func NewWorkspaceRunTask(scope constructs.Construct, id *string, config *WorkspaceRunTaskConfig) WorkspaceRunTask {
 	_init_.Initialize()
 
@@ -408,7 +432,7 @@ func NewWorkspaceRunTask(scope constructs.Construct, id *string, config *Workspa
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/resources/workspace_run_task tfe_workspace_run_task} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.0/docs/resources/workspace_run_task tfe_workspace_run_task} Resource.
 func NewWorkspaceRunTask_Override(w WorkspaceRunTask, scope constructs.Construct, id *string, config *WorkspaceRunTaskConfig) {
 	_init_.Initialize()
 
@@ -505,6 +529,17 @@ func (j *jsiiProxy_WorkspaceRunTask)SetStage(val *string) {
 	_jsii_.Set(
 		j,
 		"stage",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspaceRunTask)SetStages(val *[]*string) {
+	if err := j.validateSetStagesParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"stages",
 		val,
 	)
 }
@@ -896,6 +931,14 @@ func (w *jsiiProxy_WorkspaceRunTask) ResetStage() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetStage",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WorkspaceRunTask) ResetStages() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetStages",
 		nil, // no parameters
 	)
 }

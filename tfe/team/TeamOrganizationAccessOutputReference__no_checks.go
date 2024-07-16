@@ -67,6 +67,10 @@ func (j *jsiiProxy_TeamOrganizationAccessOutputReference) validateSetInternalVal
 	return nil
 }
 
+func (j *jsiiProxy_TeamOrganizationAccessOutputReference) validateSetManageAgentPoolsParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_TeamOrganizationAccessOutputReference) validateSetManageMembershipParameters(val interface{}) error {
 	return nil
 }

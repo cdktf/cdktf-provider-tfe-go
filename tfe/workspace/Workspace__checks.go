@@ -346,6 +346,14 @@ func (j *jsiiProxy_Workspace) validateSetAutoApplyRunTriggerParameters(val inter
 	return nil
 }
 
+func (j *jsiiProxy_Workspace) validateSetAutoDestroyActivityDurationParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetAutoDestroyAtParameters(val *string) error {
 	if val == nil {
 		return fmt.Errorf("parameter val is required, but nil was provided")

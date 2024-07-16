@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/resources/workspace tfe_workspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.0/docs/resources/workspace tfe_workspace}.
 type Workspace interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -30,6 +30,9 @@ type Workspace interface {
 	AutoApplyRunTrigger() interface{}
 	SetAutoApplyRunTrigger(val interface{})
 	AutoApplyRunTriggerInput() interface{}
+	AutoDestroyActivityDuration() *string
+	SetAutoDestroyActivityDuration(val *string)
+	AutoDestroyActivityDurationInput() *string
 	AutoDestroyAt() *string
 	SetAutoDestroyAt(val *string)
 	AutoDestroyAtInput() *string
@@ -201,6 +204,7 @@ type Workspace interface {
 	ResetAssessmentsEnabled()
 	ResetAutoApply()
 	ResetAutoApplyRunTrigger()
+	ResetAutoDestroyActivityDuration()
 	ResetAutoDestroyAt()
 	ResetDescription()
 	ResetExecutionMode()
@@ -341,6 +345,26 @@ func (j *jsiiProxy_Workspace) AutoApplyRunTriggerInput() interface{} {
 	_jsii_.Get(
 		j,
 		"autoApplyRunTriggerInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) AutoDestroyActivityDuration() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoDestroyActivityDuration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) AutoDestroyActivityDurationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoDestroyActivityDurationInput",
 		&returns,
 	)
 	return returns
@@ -1027,7 +1051,7 @@ func (j *jsiiProxy_Workspace) WorkingDirectoryInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.0/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfig) Workspace {
 	_init_.Initialize()
 
@@ -1045,7 +1069,7 @@ func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.0/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace_Override(w Workspace, scope constructs.Construct, id *string, config *WorkspaceConfig) {
 	_init_.Initialize()
 
@@ -1107,6 +1131,17 @@ func (j *jsiiProxy_Workspace)SetAutoApplyRunTrigger(val interface{}) {
 	_jsii_.Set(
 		j,
 		"autoApplyRunTrigger",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Workspace)SetAutoDestroyActivityDuration(val *string) {
+	if err := j.validateSetAutoDestroyActivityDurationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"autoDestroyActivityDuration",
 		val,
 	)
 }
@@ -1843,6 +1878,14 @@ func (w *jsiiProxy_Workspace) ResetAutoApplyRunTrigger() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetAutoApplyRunTrigger",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Workspace) ResetAutoDestroyActivityDuration() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetAutoDestroyActivityDuration",
 		nil, // no parameters
 	)
 }

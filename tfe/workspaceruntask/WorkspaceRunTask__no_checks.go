@@ -115,6 +115,10 @@ func (j *jsiiProxy_WorkspaceRunTask) validateSetStageParameters(val *string) err
 	return nil
 }
 
+func (j *jsiiProxy_WorkspaceRunTask) validateSetStagesParameters(val *[]*string) error {
+	return nil
+}
+
 func (j *jsiiProxy_WorkspaceRunTask) validateSetTaskIdParameters(val *string) error {
 	return nil
 }

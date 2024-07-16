@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/data-sources/workspace_run_task tfe_workspace_run_task}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.0/docs/data-sources/workspace_run_task tfe_workspace_run_task}.
 type DataTfeWorkspaceRunTask interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -50,6 +50,7 @@ type DataTfeWorkspaceRunTask interface {
 	// Experimental.
 	RawOverrides() interface{}
 	Stage() *string
+	Stages() *[]*string
 	TaskId() *string
 	SetTaskId(val *string)
 	TaskIdInput() *string
@@ -249,6 +250,16 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) Stage() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeWorkspaceRunTask) Stages() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"stages",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeWorkspaceRunTask) TaskId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -320,7 +331,7 @@ func (j *jsiiProxy_DataTfeWorkspaceRunTask) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/data-sources/workspace_run_task tfe_workspace_run_task} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.0/docs/data-sources/workspace_run_task tfe_workspace_run_task} Data Source.
 func NewDataTfeWorkspaceRunTask(scope constructs.Construct, id *string, config *DataTfeWorkspaceRunTaskConfig) DataTfeWorkspaceRunTask {
 	_init_.Initialize()
 
@@ -338,7 +349,7 @@ func NewDataTfeWorkspaceRunTask(scope constructs.Construct, id *string, config *
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.56.0/docs/data-sources/workspace_run_task tfe_workspace_run_task} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.0/docs/data-sources/workspace_run_task tfe_workspace_run_task} Data Source.
 func NewDataTfeWorkspaceRunTask_Override(d DataTfeWorkspaceRunTask, scope constructs.Construct, id *string, config *DataTfeWorkspaceRunTaskConfig) {
 	_init_.Initialize()
 
