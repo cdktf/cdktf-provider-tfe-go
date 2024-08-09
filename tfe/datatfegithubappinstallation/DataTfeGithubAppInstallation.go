@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/data-sources/github_app_installation tfe_github_app_installation}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/data-sources/github_app_installation tfe_github_app_installation}.
 type DataTfeGithubAppInstallation interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -300,7 +300,7 @@ func (j *jsiiProxy_DataTfeGithubAppInstallation) TerraformResourceType() *string
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
 func NewDataTfeGithubAppInstallation(scope constructs.Construct, id *string, config *DataTfeGithubAppInstallationConfig) DataTfeGithubAppInstallation {
 	_init_.Initialize()
 
@@ -318,7 +318,7 @@ func NewDataTfeGithubAppInstallation(scope constructs.Construct, id *string, con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/data-sources/github_app_installation tfe_github_app_installation} Data Source.
 func NewDataTfeGithubAppInstallation_Override(d DataTfeGithubAppInstallation, scope constructs.Construct, id *string, config *DataTfeGithubAppInstallationConfig) {
 	_init_.Initialize()
 

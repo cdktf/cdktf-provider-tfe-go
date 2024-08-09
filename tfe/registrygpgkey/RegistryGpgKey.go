@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/resources/registry_gpg_key tfe_registry_gpg_key}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/registry_gpg_key tfe_registry_gpg_key}.
 type RegistryGpgKey interface {
 	cdktf.TerraformResource
 	AsciiArmor() *string
@@ -366,7 +366,7 @@ func (j *jsiiProxy_RegistryGpgKey) UpdatedAt() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/resources/registry_gpg_key tfe_registry_gpg_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/registry_gpg_key tfe_registry_gpg_key} Resource.
 func NewRegistryGpgKey(scope constructs.Construct, id *string, config *RegistryGpgKeyConfig) RegistryGpgKey {
 	_init_.Initialize()
 
@@ -384,7 +384,7 @@ func NewRegistryGpgKey(scope constructs.Construct, id *string, config *RegistryG
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/resources/registry_gpg_key tfe_registry_gpg_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/registry_gpg_key tfe_registry_gpg_key} Resource.
 func NewRegistryGpgKey_Override(r RegistryGpgKey, scope constructs.Construct, id *string, config *RegistryGpgKeyConfig) {
 	_init_.Initialize()
 

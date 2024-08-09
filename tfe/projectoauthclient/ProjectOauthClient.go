@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/resources/project_oauth_client tfe_project_oauth_client}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/project_oauth_client tfe_project_oauth_client}.
 type ProjectOauthClient interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -356,7 +356,7 @@ func (j *jsiiProxy_ProjectOauthClient) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/resources/project_oauth_client tfe_project_oauth_client} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/project_oauth_client tfe_project_oauth_client} Resource.
 func NewProjectOauthClient(scope constructs.Construct, id *string, config *ProjectOauthClientConfig) ProjectOauthClient {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewProjectOauthClient(scope constructs.Construct, id *string, config *Proje
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/resources/project_oauth_client tfe_project_oauth_client} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/project_oauth_client tfe_project_oauth_client} Resource.
 func NewProjectOauthClient_Override(p ProjectOauthClient, scope constructs.Construct, id *string, config *ProjectOauthClientConfig) {
 	_init_.Initialize()
 

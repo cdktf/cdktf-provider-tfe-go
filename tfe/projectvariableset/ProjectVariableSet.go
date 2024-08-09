@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/resources/project_variable_set tfe_project_variable_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/project_variable_set tfe_project_variable_set}.
 type ProjectVariableSet interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -356,7 +356,7 @@ func (j *jsiiProxy_ProjectVariableSet) VariableSetIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/resources/project_variable_set tfe_project_variable_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/project_variable_set tfe_project_variable_set} Resource.
 func NewProjectVariableSet(scope constructs.Construct, id *string, config *ProjectVariableSetConfig) ProjectVariableSet {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewProjectVariableSet(scope constructs.Construct, id *string, config *Proje
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.57.1/docs/resources/project_variable_set tfe_project_variable_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/project_variable_set tfe_project_variable_set} Resource.
 func NewProjectVariableSet_Override(p ProjectVariableSet, scope constructs.Construct, id *string, config *ProjectVariableSetConfig) {
 	_init_.Initialize()
 
