@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/agent_token tfe_agent_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.1/docs/resources/agent_token tfe_agent_token}.
 type AgentToken interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -367,7 +367,7 @@ func (j *jsiiProxy_AgentToken) Token() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/agent_token tfe_agent_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.1/docs/resources/agent_token tfe_agent_token} Resource.
 func NewAgentToken(scope constructs.Construct, id *string, config *AgentTokenConfig) AgentToken {
 	_init_.Initialize()
 
@@ -385,7 +385,7 @@ func NewAgentToken(scope constructs.Construct, id *string, config *AgentTokenCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.0/docs/resources/agent_token tfe_agent_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.58.1/docs/resources/agent_token tfe_agent_token} Resource.
 func NewAgentToken_Override(a AgentToken, scope constructs.Construct, id *string, config *AgentTokenConfig) {
 	_init_.Initialize()
 
