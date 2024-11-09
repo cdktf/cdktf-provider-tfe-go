@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.59.0/docs/resources/organization tfe_organization}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.0/docs/resources/organization tfe_organization}.
 type Organization interface {
 	cdktf.TerraformResource
 	AggregatedCommitStatusEnabled() interface{}
@@ -92,6 +92,9 @@ type Organization interface {
 	SessionTimeoutMinutes() *float64
 	SetSessionTimeoutMinutes(val *float64)
 	SessionTimeoutMinutesInput() *float64
+	SpeculativePlanManagementEnabled() interface{}
+	SetSpeculativePlanManagementEnabled(val interface{})
+	SpeculativePlanManagementEnabledInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -154,6 +157,7 @@ type Organization interface {
 	ResetSendPassingStatusesForUntriggeredSpeculativePlans()
 	ResetSessionRememberMinutes()
 	ResetSessionTimeoutMinutes()
+	ResetSpeculativePlanManagementEnabled()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -552,6 +556,26 @@ func (j *jsiiProxy_Organization) SessionTimeoutMinutesInput() *float64 {
 	return returns
 }
 
+func (j *jsiiProxy_Organization) SpeculativePlanManagementEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"speculativePlanManagementEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Organization) SpeculativePlanManagementEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"speculativePlanManagementEnabledInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Organization) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -583,7 +607,7 @@ func (j *jsiiProxy_Organization) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.59.0/docs/resources/organization tfe_organization} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.0/docs/resources/organization tfe_organization} Resource.
 func NewOrganization(scope constructs.Construct, id *string, config *OrganizationConfig) Organization {
 	_init_.Initialize()
 
@@ -601,7 +625,7 @@ func NewOrganization(scope constructs.Construct, id *string, config *Organizatio
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.59.0/docs/resources/organization tfe_organization} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.0/docs/resources/organization tfe_organization} Resource.
 func NewOrganization_Override(o Organization, scope constructs.Construct, id *string, config *OrganizationConfig) {
 	_init_.Initialize()
 
@@ -808,6 +832,17 @@ func (j *jsiiProxy_Organization)SetSessionTimeoutMinutes(val *float64) {
 	_jsii_.Set(
 		j,
 		"sessionTimeoutMinutes",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Organization)SetSpeculativePlanManagementEnabled(val interface{}) {
+	if err := j.validateSetSpeculativePlanManagementEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"speculativePlanManagementEnabled",
 		val,
 	)
 }
@@ -1249,6 +1284,14 @@ func (o *jsiiProxy_Organization) ResetSessionTimeoutMinutes() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetSessionTimeoutMinutes",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_Organization) ResetSpeculativePlanManagementEnabled() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetSpeculativePlanManagementEnabled",
 		nil, // no parameters
 	)
 }

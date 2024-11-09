@@ -155,6 +155,10 @@ func (j *jsiiProxy_Organization) validateSetSessionTimeoutMinutesParameters(val 
 	return nil
 }
 
+func (j *jsiiProxy_Organization) validateSetSpeculativePlanManagementEnabledParameters(val interface{}) error {
+	return nil
+}
+
 func validateNewOrganizationParameters(scope constructs.Construct, id *string, config *OrganizationConfig) error {
 	return nil
 }
