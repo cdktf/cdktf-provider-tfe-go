@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.0/docs/resources/organization_token tfe_organization_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.1/docs/resources/organization_token tfe_organization_token}.
 type OrganizationToken interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -393,7 +393,7 @@ func (j *jsiiProxy_OrganizationToken) Token() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.0/docs/resources/organization_token tfe_organization_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.1/docs/resources/organization_token tfe_organization_token} Resource.
 func NewOrganizationToken(scope constructs.Construct, id *string, config *OrganizationTokenConfig) OrganizationToken {
 	_init_.Initialize()
 
@@ -411,7 +411,7 @@ func NewOrganizationToken(scope constructs.Construct, id *string, config *Organi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.0/docs/resources/organization_token tfe_organization_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.1/docs/resources/organization_token tfe_organization_token} Resource.
 func NewOrganizationToken_Override(o OrganizationToken, scope constructs.Construct, id *string, config *OrganizationTokenConfig) {
 	_init_.Initialize()
 
