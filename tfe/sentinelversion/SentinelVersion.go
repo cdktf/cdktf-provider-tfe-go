@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.1/docs/resources/sentinel_version tfe_sentinel_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.61.0/docs/resources/sentinel_version tfe_sentinel_version}.
 type SentinelVersion interface {
 	cdktf.TerraformResource
 	Beta() interface{}
@@ -499,7 +499,7 @@ func (j *jsiiProxy_SentinelVersion) VersionInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.1/docs/resources/sentinel_version tfe_sentinel_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.61.0/docs/resources/sentinel_version tfe_sentinel_version} Resource.
 func NewSentinelVersion(scope constructs.Construct, id *string, config *SentinelVersionConfig) SentinelVersion {
 	_init_.Initialize()
 
@@ -517,7 +517,7 @@ func NewSentinelVersion(scope constructs.Construct, id *string, config *Sentinel
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.60.1/docs/resources/sentinel_version tfe_sentinel_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.61.0/docs/resources/sentinel_version tfe_sentinel_version} Resource.
 func NewSentinelVersion_Override(s SentinelVersion, scope constructs.Construct, id *string, config *SentinelVersionConfig) {
 	_init_.Initialize()
 
