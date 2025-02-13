@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/team_notification_configuration tfe_team_notification_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/team_notification_configuration tfe_team_notification_configuration}.
 type TeamNotificationConfiguration interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -510,7 +510,7 @@ func (j *jsiiProxy_TeamNotificationConfiguration) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/team_notification_configuration tfe_team_notification_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/team_notification_configuration tfe_team_notification_configuration} Resource.
 func NewTeamNotificationConfiguration(scope constructs.Construct, id *string, config *TeamNotificationConfigurationConfig) TeamNotificationConfiguration {
 	_init_.Initialize()
 
@@ -528,7 +528,7 @@ func NewTeamNotificationConfiguration(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/team_notification_configuration tfe_team_notification_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/team_notification_configuration tfe_team_notification_configuration} Resource.
 func NewTeamNotificationConfiguration_Override(t TeamNotificationConfiguration, scope constructs.Construct, id *string, config *TeamNotificationConfigurationConfig) {
 	_init_.Initialize()
 

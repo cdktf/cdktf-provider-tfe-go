@@ -42,6 +42,7 @@ type DataTfeTeamProjectAccessProjectAccessOutputReference interface {
 	TerraformResource() cdktf.IInterpolatingParent
 	// Experimental.
 	SetTerraformResource(val cdktf.IInterpolatingParent)
+	VariableSets() *string
 	// Experimental.
 	ComputeFqn() *string
 	// Experimental.
@@ -166,6 +167,16 @@ func (j *jsiiProxy_DataTfeTeamProjectAccessProjectAccessOutputReference) Terrafo
 	_jsii_.Get(
 		j,
 		"terraformResource",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeTeamProjectAccessProjectAccessOutputReference) VariableSets() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"variableSets",
 		&returns,
 	)
 	return returns

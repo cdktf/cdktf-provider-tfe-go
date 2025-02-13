@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/data-sources/workspace_ids tfe_workspace_ids}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/workspace_ids tfe_workspace_ids}.
 type DataTfeWorkspaceIds interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -383,7 +383,7 @@ func (j *jsiiProxy_DataTfeWorkspaceIds) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
 func NewDataTfeWorkspaceIds(scope constructs.Construct, id *string, config *DataTfeWorkspaceIdsConfig) DataTfeWorkspaceIds {
 	_init_.Initialize()
 
@@ -401,7 +401,7 @@ func NewDataTfeWorkspaceIds(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
 func NewDataTfeWorkspaceIds_Override(d DataTfeWorkspaceIds, scope constructs.Construct, id *string, config *DataTfeWorkspaceIdsConfig) {
 	_init_.Initialize()
 

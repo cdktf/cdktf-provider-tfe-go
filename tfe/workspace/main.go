@@ -64,6 +64,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "ignoreAdditionalTagNames", GoGetter: "IgnoreAdditionalTagNames"},
 			_jsii_.MemberProperty{JsiiProperty: "ignoreAdditionalTagNamesInput", GoGetter: "IgnoreAdditionalTagNamesInput"},
 			_jsii_.MemberMethod{JsiiMethod: "importFrom", GoMethod: "ImportFrom"},
+			_jsii_.MemberProperty{JsiiProperty: "inheritsProjectAutoDestroy", GoGetter: "InheritsProjectAutoDestroy"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
 			_jsii_.MemberMethod{JsiiMethod: "moveFromId", GoMethod: "MoveFromId"},

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/workspace tfe_workspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/workspace tfe_workspace}.
 type Workspace interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -82,6 +82,7 @@ type Workspace interface {
 	IgnoreAdditionalTagNames() interface{}
 	SetIgnoreAdditionalTagNames(val interface{})
 	IgnoreAdditionalTagNamesInput() interface{}
+	InheritsProjectAutoDestroy() cdktf.IResolvable
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -620,6 +621,16 @@ func (j *jsiiProxy_Workspace) IgnoreAdditionalTagNamesInput() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Workspace) InheritsProjectAutoDestroy() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"inheritsProjectAutoDestroy",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Workspace) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -1051,7 +1062,7 @@ func (j *jsiiProxy_Workspace) WorkingDirectoryInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfig) Workspace {
 	_init_.Initialize()
 
@@ -1069,7 +1080,7 @@ func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace_Override(w Workspace, scope constructs.Construct, id *string, config *WorkspaceConfig) {
 	_init_.Initialize()
 

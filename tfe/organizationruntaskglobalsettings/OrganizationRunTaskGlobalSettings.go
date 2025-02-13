@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/organization_run_task_global_settings tfe_organization_run_task_global_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/organization_run_task_global_settings tfe_organization_run_task_global_settings}.
 type OrganizationRunTaskGlobalSettings interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -390,7 +390,7 @@ func (j *jsiiProxy_OrganizationRunTaskGlobalSettings) TerraformResourceType() *s
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/organization_run_task_global_settings tfe_organization_run_task_global_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/organization_run_task_global_settings tfe_organization_run_task_global_settings} Resource.
 func NewOrganizationRunTaskGlobalSettings(scope constructs.Construct, id *string, config *OrganizationRunTaskGlobalSettingsConfig) OrganizationRunTaskGlobalSettings {
 	_init_.Initialize()
 
@@ -408,7 +408,7 @@ func NewOrganizationRunTaskGlobalSettings(scope constructs.Construct, id *string
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/organization_run_task_global_settings tfe_organization_run_task_global_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/organization_run_task_global_settings tfe_organization_run_task_global_settings} Resource.
 func NewOrganizationRunTaskGlobalSettings_Override(o OrganizationRunTaskGlobalSettings, scope constructs.Construct, id *string, config *OrganizationRunTaskGlobalSettingsConfig) {
 	_init_.Initialize()
 

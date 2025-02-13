@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/project tfe_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/project tfe_project}.
 type Project interface {
 	cdktf.TerraformResource
+	AutoDestroyActivityDuration() *string
+	SetAutoDestroyActivityDuration(val *string)
+	AutoDestroyActivityDurationInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -116,6 +119,7 @@ type Project interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	ResetAutoDestroyActivityDuration()
 	ResetDescription()
 	ResetId()
 	ResetOrganization()
@@ -138,6 +142,26 @@ type Project interface {
 // The jsii proxy struct for Project
 type jsiiProxy_Project struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Project) AutoDestroyActivityDuration() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoDestroyActivityDuration",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Project) AutoDestroyActivityDurationInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"autoDestroyActivityDurationInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Project) CdktfStack() cdktf.TerraformStack {
@@ -381,7 +405,7 @@ func (j *jsiiProxy_Project) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/project tfe_project} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/project tfe_project} Resource.
 func NewProject(scope constructs.Construct, id *string, config *ProjectConfig) Project {
 	_init_.Initialize()
 
@@ -399,7 +423,7 @@ func NewProject(scope constructs.Construct, id *string, config *ProjectConfig) P
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.63.0/docs/resources/project tfe_project} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/project tfe_project} Resource.
 func NewProject_Override(p Project, scope constructs.Construct, id *string, config *ProjectConfig) {
 	_init_.Initialize()
 
@@ -407,6 +431,17 @@ func NewProject_Override(p Project, scope constructs.Construct, id *string, conf
 		"@cdktf/provider-tfe.project.Project",
 		[]interface{}{scope, id, config},
 		p,
+	)
+}
+
+func (j *jsiiProxy_Project)SetAutoDestroyActivityDuration(val *string) {
+	if err := j.validateSetAutoDestroyActivityDurationParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"autoDestroyActivityDuration",
+		val,
 	)
 }
 
@@ -872,6 +907,14 @@ func (p *jsiiProxy_Project) OverrideLogicalId(newLogicalId *string) {
 		p,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
+	)
+}
+
+func (p *jsiiProxy_Project) ResetAutoDestroyActivityDuration() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetAutoDestroyActivityDuration",
+		nil, // no parameters
 	)
 }
 
