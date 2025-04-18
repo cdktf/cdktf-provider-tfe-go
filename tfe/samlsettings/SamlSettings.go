@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/saml_settings tfe_saml_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/saml_settings tfe_saml_settings}.
 type SamlSettings interface {
 	cdktf.TerraformResource
 	AcsConsumerUrl() *string
@@ -74,6 +74,9 @@ type SamlSettings interface {
 	PrivateKey() *string
 	SetPrivateKey(val *string)
 	PrivateKeyInput() *string
+	PrivateKeyWo() *string
+	SetPrivateKeyWo(val *string)
+	PrivateKeyWoInput() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
@@ -167,6 +170,7 @@ type SamlSettings interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetPrivateKey()
+	ResetPrivateKeyWo()
 	ResetSignatureDigestMethod()
 	ResetSignatureSigningMethod()
 	ResetSiteAdminRole()
@@ -501,6 +505,26 @@ func (j *jsiiProxy_SamlSettings) PrivateKeyInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_SamlSettings) PrivateKeyWo() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"privateKeyWo",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SamlSettings) PrivateKeyWoInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"privateKeyWoInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_SamlSettings) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
@@ -722,7 +746,7 @@ func (j *jsiiProxy_SamlSettings) WantAssertionsSignedInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/saml_settings tfe_saml_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/saml_settings tfe_saml_settings} Resource.
 func NewSamlSettings(scope constructs.Construct, id *string, config *SamlSettingsConfig) SamlSettings {
 	_init_.Initialize()
 
@@ -740,7 +764,7 @@ func NewSamlSettings(scope constructs.Construct, id *string, config *SamlSetting
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/saml_settings tfe_saml_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/saml_settings tfe_saml_settings} Resource.
 func NewSamlSettings_Override(s SamlSettings, scope constructs.Construct, id *string, config *SamlSettingsConfig) {
 	_init_.Initialize()
 
@@ -884,6 +908,17 @@ func (j *jsiiProxy_SamlSettings)SetPrivateKey(val *string) {
 	_jsii_.Set(
 		j,
 		"privateKey",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SamlSettings)SetPrivateKeyWo(val *string) {
+	if err := j.validateSetPrivateKeyWoParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"privateKeyWo",
 		val,
 	)
 }
@@ -1408,6 +1443,14 @@ func (s *jsiiProxy_SamlSettings) ResetPrivateKey() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetPrivateKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SamlSettings) ResetPrivateKeyWo() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetPrivateKeyWo",
 		nil, // no parameters
 	)
 }

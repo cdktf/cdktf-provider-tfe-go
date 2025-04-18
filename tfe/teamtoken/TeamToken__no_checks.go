@@ -107,10 +107,6 @@ func (j *jsiiProxy_TeamToken) validateSetForceRegenerateParameters(val interface
 	return nil
 }
 
-func (j *jsiiProxy_TeamToken) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_TeamToken) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

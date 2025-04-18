@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/test_variable tfe_test_variable}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/test_variable tfe_test_variable}.
 type TestVariable interface {
 	cdktf.TerraformResource
 	Category() *string
@@ -90,6 +90,9 @@ type TestVariable interface {
 	Value() *string
 	SetValue(val *string)
 	ValueInput() *string
+	ValueWo() *string
+	SetValueWo(val *string)
+	ValueWoInput() *string
 	// Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
 	// Experimental.
 	AddMoveTarget(moveTarget *string)
@@ -140,6 +143,7 @@ type TestVariable interface {
 	ResetOverrideLogicalId()
 	ResetSensitive()
 	ResetValue()
+	ResetValueWo()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -518,8 +522,28 @@ func (j *jsiiProxy_TestVariable) ValueInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_TestVariable) ValueWo() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"valueWo",
+		&returns,
+	)
+	return returns
+}
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/test_variable tfe_test_variable} Resource.
+func (j *jsiiProxy_TestVariable) ValueWoInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"valueWoInput",
+		&returns,
+	)
+	return returns
+}
+
+
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/test_variable tfe_test_variable} Resource.
 func NewTestVariable(scope constructs.Construct, id *string, config *TestVariableConfig) TestVariable {
 	_init_.Initialize()
 
@@ -537,7 +561,7 @@ func NewTestVariable(scope constructs.Construct, id *string, config *TestVariabl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/test_variable tfe_test_variable} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/test_variable tfe_test_variable} Resource.
 func NewTestVariable_Override(t TestVariable, scope constructs.Construct, id *string, config *TestVariableConfig) {
 	_init_.Initialize()
 
@@ -711,6 +735,17 @@ func (j *jsiiProxy_TestVariable)SetValue(val *string) {
 	_jsii_.Set(
 		j,
 		"value",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TestVariable)SetValueWo(val *string) {
+	if err := j.validateSetValueWoParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"valueWo",
 		val,
 	)
 }
@@ -1104,6 +1139,14 @@ func (t *jsiiProxy_TestVariable) ResetValue() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetValue",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TestVariable) ResetValueWo() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetValueWo",
 		nil, // no parameters
 	)
 }

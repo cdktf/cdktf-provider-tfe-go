@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/outputs tfe_outputs}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/outputs tfe_outputs}.
 type DataTfeOutputs interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -58,9 +58,7 @@ type DataTfeOutputs interface {
 	TerraformMetaArguments() *map[string]interface{}
 	// Experimental.
 	TerraformResourceType() *string
-	Values() *map[string]interface{}
-	SetValues(val *map[string]interface{})
-	ValuesInput() *map[string]interface{}
+	Values() cdktf.AnyMap
 	Workspace() *string
 	SetWorkspace(val *string)
 	WorkspaceInput() *string
@@ -93,7 +91,6 @@ type DataTfeOutputs interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetValues()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Adds this resource to the terraform JSON output.
@@ -293,21 +290,11 @@ func (j *jsiiProxy_DataTfeOutputs) TerraformResourceType() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeOutputs) Values() *map[string]interface{} {
-	var returns *map[string]interface{}
+func (j *jsiiProxy_DataTfeOutputs) Values() cdktf.AnyMap {
+	var returns cdktf.AnyMap
 	_jsii_.Get(
 		j,
 		"values",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataTfeOutputs) ValuesInput() *map[string]interface{} {
-	var returns *map[string]interface{}
-	_jsii_.Get(
-		j,
-		"valuesInput",
 		&returns,
 	)
 	return returns
@@ -334,7 +321,7 @@ func (j *jsiiProxy_DataTfeOutputs) WorkspaceInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/outputs tfe_outputs} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/outputs tfe_outputs} Data Source.
 func NewDataTfeOutputs(scope constructs.Construct, id *string, config *DataTfeOutputsConfig) DataTfeOutputs {
 	_init_.Initialize()
 
@@ -352,7 +339,7 @@ func NewDataTfeOutputs(scope constructs.Construct, id *string, config *DataTfeOu
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/outputs tfe_outputs} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/outputs tfe_outputs} Data Source.
 func NewDataTfeOutputs_Override(d DataTfeOutputs, scope constructs.Construct, id *string, config *DataTfeOutputsConfig) {
 	_init_.Initialize()
 
@@ -416,17 +403,6 @@ func (j *jsiiProxy_DataTfeOutputs)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataTfeOutputs)SetValues(val *map[string]interface{}) {
-	if err := j.validateSetValuesParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"values",
 		val,
 	)
 }
@@ -739,14 +715,6 @@ func (d *jsiiProxy_DataTfeOutputs) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DataTfeOutputs) ResetValues() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetValues",
 		nil, // no parameters
 	)
 }

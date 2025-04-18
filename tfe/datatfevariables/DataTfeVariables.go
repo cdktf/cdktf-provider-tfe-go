@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/variables tfe_variables}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/variables tfe_variables}.
 type DataTfeVariables interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -37,8 +37,6 @@ type DataTfeVariables interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -90,7 +88,6 @@ type DataTfeVariables interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -200,16 +197,6 @@ func (j *jsiiProxy_DataTfeVariables) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataTfeVariables) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -346,7 +333,7 @@ func (j *jsiiProxy_DataTfeVariables) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/variables tfe_variables} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/variables tfe_variables} Data Source.
 func NewDataTfeVariables(scope constructs.Construct, id *string, config *DataTfeVariablesConfig) DataTfeVariables {
 	_init_.Initialize()
 
@@ -364,7 +351,7 @@ func NewDataTfeVariables(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/variables tfe_variables} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/variables tfe_variables} Data Source.
 func NewDataTfeVariables_Override(d DataTfeVariables, scope constructs.Construct, id *string, config *DataTfeVariablesConfig) {
 	_init_.Initialize()
 
@@ -398,17 +385,6 @@ func (j *jsiiProxy_DataTfeVariables)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataTfeVariables)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -736,14 +712,6 @@ func (d *jsiiProxy_DataTfeVariables) OverrideLogicalId(newLogicalId *string) {
 		d,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
-	)
-}
-
-func (d *jsiiProxy_DataTfeVariables) ResetId() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetId",
-		nil, // no parameters
 	)
 }
 

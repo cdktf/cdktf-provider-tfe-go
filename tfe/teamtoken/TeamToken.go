@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/team_token tfe_team_token}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/team_token tfe_team_token}.
 type TeamToken interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -46,8 +46,6 @@ type TeamToken interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -119,7 +117,6 @@ type TeamToken interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetExpiredAt()
 	ResetForceRegenerate()
-	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -271,16 +268,6 @@ func (j *jsiiProxy_TeamToken) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_TeamToken) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_TeamToken) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -392,7 +379,7 @@ func (j *jsiiProxy_TeamToken) Token() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/team_token tfe_team_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/team_token tfe_team_token} Resource.
 func NewTeamToken(scope constructs.Construct, id *string, config *TeamTokenConfig) TeamToken {
 	_init_.Initialize()
 
@@ -410,7 +397,7 @@ func NewTeamToken(scope constructs.Construct, id *string, config *TeamTokenConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/team_token tfe_team_token} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/team_token tfe_team_token} Resource.
 func NewTeamToken_Override(t TeamToken, scope constructs.Construct, id *string, config *TeamTokenConfig) {
 	_init_.Initialize()
 
@@ -477,17 +464,6 @@ func (j *jsiiProxy_TeamToken)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_TeamToken)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -898,14 +874,6 @@ func (t *jsiiProxy_TeamToken) ResetForceRegenerate() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetForceRegenerate",
-		nil, // no parameters
-	)
-}
-
-func (t *jsiiProxy_TeamToken) ResetId() {
-	_jsii_.InvokeVoid(
-		t,
-		"resetId",
 		nil, // no parameters
 	)
 }

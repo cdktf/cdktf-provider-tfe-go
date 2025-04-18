@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/project tfe_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/project tfe_project}.
 type Project interface {
 	cdktf.TerraformResource
 	AutoDestroyActivityDuration() *string
@@ -46,8 +46,9 @@ type Project interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
+	IgnoreAdditionalTags() interface{}
+	SetIgnoreAdditionalTags(val interface{})
+	IgnoreAdditionalTagsInput() interface{}
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -70,6 +71,9 @@ type Project interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
+	Tags() *map[string]*string
+	SetTags(val *map[string]*string)
+	TagsInput() *map[string]*string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -121,11 +125,12 @@ type Project interface {
 	OverrideLogicalId(newLogicalId *string)
 	ResetAutoDestroyActivityDuration()
 	ResetDescription()
-	ResetId()
+	ResetIgnoreAdditionalTags()
 	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -274,11 +279,21 @@ func (j *jsiiProxy_Project) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_Project) IdInput() *string {
-	var returns *string
+func (j *jsiiProxy_Project) IgnoreAdditionalTags() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
-		"idInput",
+		"ignoreAdditionalTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Project) IgnoreAdditionalTagsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"ignoreAdditionalTagsInput",
 		&returns,
 	)
 	return returns
@@ -374,6 +389,26 @@ func (j *jsiiProxy_Project) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_Project) Tags() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Project) TagsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Project) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -405,7 +440,7 @@ func (j *jsiiProxy_Project) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/project tfe_project} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/project tfe_project} Resource.
 func NewProject(scope constructs.Construct, id *string, config *ProjectConfig) Project {
 	_init_.Initialize()
 
@@ -423,7 +458,7 @@ func NewProject(scope constructs.Construct, id *string, config *ProjectConfig) P
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/project tfe_project} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/project tfe_project} Resource.
 func NewProject_Override(p Project, scope constructs.Construct, id *string, config *ProjectConfig) {
 	_init_.Initialize()
 
@@ -494,13 +529,13 @@ func (j *jsiiProxy_Project)SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_Project)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
+func (j *jsiiProxy_Project)SetIgnoreAdditionalTags(val interface{}) {
+	if err := j.validateSetIgnoreAdditionalTagsParameters(val); err != nil {
 		panic(err)
 	}
 	_jsii_.Set(
 		j,
-		"id",
+		"ignoreAdditionalTags",
 		val,
 	)
 }
@@ -553,6 +588,17 @@ func (j *jsiiProxy_Project)SetProvisioners(val *[]interface{}) {
 	_jsii_.Set(
 		j,
 		"provisioners",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Project)SetTags(val *map[string]*string) {
+	if err := j.validateSetTagsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tags",
 		val,
 	)
 }
@@ -926,10 +972,10 @@ func (p *jsiiProxy_Project) ResetDescription() {
 	)
 }
 
-func (p *jsiiProxy_Project) ResetId() {
+func (p *jsiiProxy_Project) ResetIgnoreAdditionalTags() {
 	_jsii_.InvokeVoid(
 		p,
-		"resetId",
+		"resetIgnoreAdditionalTags",
 		nil, // no parameters
 	)
 }
@@ -946,6 +992,14 @@ func (p *jsiiProxy_Project) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		p,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (p *jsiiProxy_Project) ResetTags() {
+	_jsii_.InvokeVoid(
+		p,
+		"resetTags",
 		nil, // no parameters
 	)
 }

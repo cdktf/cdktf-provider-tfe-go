@@ -135,6 +135,10 @@ func (j *jsiiProxy_TeamNotificationConfiguration) validateSetTokenParameters(val
 	return nil
 }
 
+func (j *jsiiProxy_TeamNotificationConfiguration) validateSetTokenWoParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_TeamNotificationConfiguration) validateSetTriggersParameters(val *[]*string) error {
 	return nil
 }

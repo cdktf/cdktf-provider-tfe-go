@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/workspace_variable_set tfe_workspace_variable_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/workspace_variable_set tfe_workspace_variable_set}.
 type WorkspaceVariableSet interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -356,7 +356,7 @@ func (j *jsiiProxy_WorkspaceVariableSet) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/workspace_variable_set tfe_workspace_variable_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/workspace_variable_set tfe_workspace_variable_set} Resource.
 func NewWorkspaceVariableSet(scope constructs.Construct, id *string, config *WorkspaceVariableSetConfig) WorkspaceVariableSet {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewWorkspaceVariableSet(scope constructs.Construct, id *string, config *Wor
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/workspace_variable_set tfe_workspace_variable_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/workspace_variable_set tfe_workspace_variable_set} Resource.
 func NewWorkspaceVariableSet_Override(w WorkspaceVariableSet, scope constructs.Construct, id *string, config *WorkspaceVariableSetConfig) {
 	_init_.Initialize()
 

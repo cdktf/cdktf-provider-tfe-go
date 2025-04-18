@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/organization_default_settings tfe_organization_default_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/organization_default_settings tfe_organization_default_settings}.
 type OrganizationDefaultSettings interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -45,9 +45,6 @@ type OrganizationDefaultSettings interface {
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
-	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -117,7 +114,6 @@ type OrganizationDefaultSettings interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetDefaultAgentPoolId()
-	ResetId()
 	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -260,26 +256,6 @@ func (j *jsiiProxy_OrganizationDefaultSettings) FriendlyUniqueId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_OrganizationDefaultSettings) Id() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_OrganizationDefaultSettings) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_OrganizationDefaultSettings) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -381,7 +357,7 @@ func (j *jsiiProxy_OrganizationDefaultSettings) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/organization_default_settings tfe_organization_default_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/organization_default_settings tfe_organization_default_settings} Resource.
 func NewOrganizationDefaultSettings(scope constructs.Construct, id *string, config *OrganizationDefaultSettingsConfig) OrganizationDefaultSettings {
 	_init_.Initialize()
 
@@ -399,7 +375,7 @@ func NewOrganizationDefaultSettings(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/organization_default_settings tfe_organization_default_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/organization_default_settings tfe_organization_default_settings} Resource.
 func NewOrganizationDefaultSettings_Override(o OrganizationDefaultSettings, scope constructs.Construct, id *string, config *OrganizationDefaultSettingsConfig) {
 	_init_.Initialize()
 
@@ -466,17 +442,6 @@ func (j *jsiiProxy_OrganizationDefaultSettings)SetForEach(val cdktf.ITerraformIt
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_OrganizationDefaultSettings)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -879,14 +844,6 @@ func (o *jsiiProxy_OrganizationDefaultSettings) ResetDefaultAgentPoolId() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetDefaultAgentPoolId",
-		nil, // no parameters
-	)
-}
-
-func (o *jsiiProxy_OrganizationDefaultSettings) ResetId() {
-	_jsii_.InvokeVoid(
-		o,
-		"resetId",
 		nil, // no parameters
 	)
 }

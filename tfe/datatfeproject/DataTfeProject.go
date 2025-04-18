@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/project tfe_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/project tfe_project}.
 type DataTfeProject interface {
 	cdktf.TerraformDataSource
 	AutoDestroyActivityDuration() *string
@@ -29,6 +29,7 @@ type DataTfeProject interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
+	EffectiveTags() cdktf.StringMap
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -38,8 +39,6 @@ type DataTfeProject interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -65,11 +64,7 @@ type DataTfeProject interface {
 	// Experimental.
 	TerraformResourceType() *string
 	WorkspaceIds() *[]*string
-	SetWorkspaceIds(val *[]*string)
-	WorkspaceIdsInput() *[]*string
 	WorkspaceNames() *[]*string
-	SetWorkspaceNames(val *[]*string)
-	WorkspaceNamesInput() *[]*string
 	// Experimental.
 	AddOverride(path *string, value interface{})
 	// Experimental.
@@ -95,13 +90,10 @@ type DataTfeProject interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
 	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
-	ResetWorkspaceIds()
-	ResetWorkspaceNames()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Adds this resource to the terraform JSON output.
@@ -181,6 +173,16 @@ func (j *jsiiProxy_DataTfeProject) Description() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeProject) EffectiveTags() cdktf.StringMap {
+	var returns cdktf.StringMap
+	_jsii_.Get(
+		j,
+		"effectiveTags",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeProject) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
@@ -216,16 +218,6 @@ func (j *jsiiProxy_DataTfeProject) Id() *string {
 	_jsii_.Get(
 		j,
 		"id",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataTfeProject) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
 		&returns,
 	)
 	return returns
@@ -351,16 +343,6 @@ func (j *jsiiProxy_DataTfeProject) WorkspaceIds() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeProject) WorkspaceIdsInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"workspaceIdsInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_DataTfeProject) WorkspaceNames() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -371,18 +353,8 @@ func (j *jsiiProxy_DataTfeProject) WorkspaceNames() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_DataTfeProject) WorkspaceNamesInput() *[]*string {
-	var returns *[]*string
-	_jsii_.Get(
-		j,
-		"workspaceNamesInput",
-		&returns,
-	)
-	return returns
-}
 
-
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/project tfe_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/project tfe_project} Data Source.
 func NewDataTfeProject(scope constructs.Construct, id *string, config *DataTfeProjectConfig) DataTfeProject {
 	_init_.Initialize()
 
@@ -400,7 +372,7 @@ func NewDataTfeProject(scope constructs.Construct, id *string, config *DataTfePr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/project tfe_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/project tfe_project} Data Source.
 func NewDataTfeProject_Override(d DataTfeProject, scope constructs.Construct, id *string, config *DataTfeProjectConfig) {
 	_init_.Initialize()
 
@@ -434,17 +406,6 @@ func (j *jsiiProxy_DataTfeProject)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataTfeProject)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -486,28 +447,6 @@ func (j *jsiiProxy_DataTfeProject)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataTfeProject)SetWorkspaceIds(val *[]*string) {
-	if err := j.validateSetWorkspaceIdsParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"workspaceIds",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataTfeProject)SetWorkspaceNames(val *[]*string) {
-	if err := j.validateSetWorkspaceNamesParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"workspaceNames",
 		val,
 	)
 }
@@ -797,14 +736,6 @@ func (d *jsiiProxy_DataTfeProject) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (d *jsiiProxy_DataTfeProject) ResetId() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetId",
-		nil, // no parameters
-	)
-}
-
 func (d *jsiiProxy_DataTfeProject) ResetOrganization() {
 	_jsii_.InvokeVoid(
 		d,
@@ -817,22 +748,6 @@ func (d *jsiiProxy_DataTfeProject) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DataTfeProject) ResetWorkspaceIds() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetWorkspaceIds",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DataTfeProject) ResetWorkspaceNames() {
-	_jsii_.InvokeVoid(
-		d,
-		"resetWorkspaceNames",
 		nil, // no parameters
 	)
 }

@@ -99,10 +99,6 @@ func (j *jsiiProxy_PolicySetParameter) validateSetCountParameters(val interface{
 	return nil
 }
 
-func (j *jsiiProxy_PolicySetParameter) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_PolicySetParameter) validateSetKeyParameters(val *string) error {
 	return nil
 }
@@ -124,6 +120,10 @@ func (j *jsiiProxy_PolicySetParameter) validateSetSensitiveParameters(val interf
 }
 
 func (j *jsiiProxy_PolicySetParameter) validateSetValueParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_PolicySetParameter) validateSetValueWoParameters(val *string) error {
 	return nil
 }
 

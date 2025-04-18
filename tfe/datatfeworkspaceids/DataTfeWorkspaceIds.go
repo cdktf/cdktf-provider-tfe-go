@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/workspace_ids tfe_workspace_ids}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/workspace_ids tfe_workspace_ids}.
 type DataTfeWorkspaceIds interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -61,6 +61,8 @@ type DataTfeWorkspaceIds interface {
 	SetProvider(val cdktf.TerraformProvider)
 	// Experimental.
 	RawOverrides() interface{}
+	TagFilters() DataTfeWorkspaceIdsTagFiltersOutputReference
+	TagFiltersInput() *DataTfeWorkspaceIdsTagFilters
 	TagNames() *[]*string
 	SetTagNames(val *[]*string)
 	TagNamesInput() *[]*string
@@ -95,6 +97,7 @@ type DataTfeWorkspaceIds interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutTagFilters(value *DataTfeWorkspaceIdsTagFilters)
 	ResetExcludeTags()
 	ResetId()
 	ResetNames()
@@ -102,6 +105,7 @@ type DataTfeWorkspaceIds interface {
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetTagFilters()
 	ResetTagNames()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
@@ -332,6 +336,26 @@ func (j *jsiiProxy_DataTfeWorkspaceIds) RawOverrides() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeWorkspaceIds) TagFilters() DataTfeWorkspaceIdsTagFiltersOutputReference {
+	var returns DataTfeWorkspaceIdsTagFiltersOutputReference
+	_jsii_.Get(
+		j,
+		"tagFilters",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspaceIds) TagFiltersInput() *DataTfeWorkspaceIdsTagFilters {
+	var returns *DataTfeWorkspaceIdsTagFilters
+	_jsii_.Get(
+		j,
+		"tagFiltersInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeWorkspaceIds) TagNames() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -383,7 +407,7 @@ func (j *jsiiProxy_DataTfeWorkspaceIds) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
 func NewDataTfeWorkspaceIds(scope constructs.Construct, id *string, config *DataTfeWorkspaceIdsConfig) DataTfeWorkspaceIds {
 	_init_.Initialize()
 
@@ -401,7 +425,7 @@ func NewDataTfeWorkspaceIds(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/workspace_ids tfe_workspace_ids} Data Source.
 func NewDataTfeWorkspaceIds_Override(d DataTfeWorkspaceIds, scope constructs.Construct, id *string, config *DataTfeWorkspaceIdsConfig) {
 	_init_.Initialize()
 
@@ -798,6 +822,17 @@ func (d *jsiiProxy_DataTfeWorkspaceIds) OverrideLogicalId(newLogicalId *string) 
 	)
 }
 
+func (d *jsiiProxy_DataTfeWorkspaceIds) PutTagFilters(value *DataTfeWorkspaceIdsTagFilters) {
+	if err := d.validatePutTagFiltersParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		d,
+		"putTagFilters",
+		[]interface{}{value},
+	)
+}
+
 func (d *jsiiProxy_DataTfeWorkspaceIds) ResetExcludeTags() {
 	_jsii_.InvokeVoid(
 		d,
@@ -834,6 +869,14 @@ func (d *jsiiProxy_DataTfeWorkspaceIds) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		d,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (d *jsiiProxy_DataTfeWorkspaceIds) ResetTagFilters() {
+	_jsii_.InvokeVoid(
+		d,
+		"resetTagFilters",
 		nil, // no parameters
 	)
 }

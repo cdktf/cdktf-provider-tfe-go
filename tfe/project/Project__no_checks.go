@@ -107,7 +107,7 @@ func (j *jsiiProxy_Project) validateSetDescriptionParameters(val *string) error 
 	return nil
 }
 
-func (j *jsiiProxy_Project) validateSetIdParameters(val *string) error {
+func (j *jsiiProxy_Project) validateSetIgnoreAdditionalTagsParameters(val interface{}) error {
 	return nil
 }
 
@@ -124,6 +124,10 @@ func (j *jsiiProxy_Project) validateSetOrganizationParameters(val *string) error
 }
 
 func (j *jsiiProxy_Project) validateSetProvisionersParameters(val *[]interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_Project) validateSetTagsParameters(val *map[string]*string) error {
 	return nil
 }
 

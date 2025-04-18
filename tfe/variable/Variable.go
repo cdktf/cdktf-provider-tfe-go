@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/variable tfe_variable}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/variable tfe_variable}.
 type Variable interface {
 	cdktf.TerraformResource
 	Category() *string
@@ -81,6 +81,9 @@ type Variable interface {
 	Value() *string
 	SetValue(val *string)
 	ValueInput() *string
+	ValueWo() *string
+	SetValueWo(val *string)
+	ValueWoInput() *string
 	VariableSetId() *string
 	SetVariableSetId(val *string)
 	VariableSetIdInput() *string
@@ -137,6 +140,7 @@ type Variable interface {
 	ResetOverrideLogicalId()
 	ResetSensitive()
 	ResetValue()
+	ResetValueWo()
 	ResetVariableSetId()
 	ResetWorkspaceId()
 	SynthesizeAttributes() *map[string]interface{}
@@ -457,6 +461,26 @@ func (j *jsiiProxy_Variable) ValueInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_Variable) ValueWo() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"valueWo",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Variable) ValueWoInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"valueWoInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Variable) VariableSetId() *string {
 	var returns *string
 	_jsii_.Get(
@@ -498,7 +522,7 @@ func (j *jsiiProxy_Variable) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/variable tfe_variable} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/variable tfe_variable} Resource.
 func NewVariable(scope constructs.Construct, id *string, config *VariableConfig) Variable {
 	_init_.Initialize()
 
@@ -516,7 +540,7 @@ func NewVariable(scope constructs.Construct, id *string, config *VariableConfig)
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/variable tfe_variable} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/variable tfe_variable} Resource.
 func NewVariable_Override(v Variable, scope constructs.Construct, id *string, config *VariableConfig) {
 	_init_.Initialize()
 
@@ -657,6 +681,17 @@ func (j *jsiiProxy_Variable)SetValue(val *string) {
 	_jsii_.Set(
 		j,
 		"value",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Variable)SetValueWo(val *string) {
+	if err := j.validateSetValueWoParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"valueWo",
 		val,
 	)
 }
@@ -1072,6 +1107,14 @@ func (v *jsiiProxy_Variable) ResetValue() {
 	_jsii_.InvokeVoid(
 		v,
 		"resetValue",
+		nil, // no parameters
+	)
+}
+
+func (v *jsiiProxy_Variable) ResetValueWo() {
+	_jsii_.InvokeVoid(
+		v,
+		"resetValueWo",
 		nil, // no parameters
 	)
 }

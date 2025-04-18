@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/ssh_key tfe_ssh_key}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/ssh_key tfe_ssh_key}.
 type SshKey interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -40,11 +40,12 @@ type SshKey interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	Key() *string
 	SetKey(val *string)
 	KeyInput() *string
+	KeyWo() *string
+	SetKeyWo(val *string)
+	KeyWoInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -116,7 +117,8 @@ type SshKey interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetId()
+	ResetKey()
+	ResetKeyWo()
 	ResetOrganization()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -229,16 +231,6 @@ func (j *jsiiProxy_SshKey) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_SshKey) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_SshKey) Key() *string {
 	var returns *string
 	_jsii_.Get(
@@ -254,6 +246,26 @@ func (j *jsiiProxy_SshKey) KeyInput() *string {
 	_jsii_.Get(
 		j,
 		"keyInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SshKey) KeyWo() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"keyWo",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SshKey) KeyWoInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"keyWoInput",
 		&returns,
 	)
 	return returns
@@ -380,7 +392,7 @@ func (j *jsiiProxy_SshKey) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/ssh_key tfe_ssh_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/ssh_key tfe_ssh_key} Resource.
 func NewSshKey(scope constructs.Construct, id *string, config *SshKeyConfig) SshKey {
 	_init_.Initialize()
 
@@ -398,7 +410,7 @@ func NewSshKey(scope constructs.Construct, id *string, config *SshKeyConfig) Ssh
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/ssh_key tfe_ssh_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/ssh_key tfe_ssh_key} Resource.
 func NewSshKey_Override(s SshKey, scope constructs.Construct, id *string, config *SshKeyConfig) {
 	_init_.Initialize()
 
@@ -447,17 +459,6 @@ func (j *jsiiProxy_SshKey)SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_SshKey)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
-		val,
-	)
-}
-
 func (j *jsiiProxy_SshKey)SetKey(val *string) {
 	if err := j.validateSetKeyParameters(val); err != nil {
 		panic(err)
@@ -465,6 +466,17 @@ func (j *jsiiProxy_SshKey)SetKey(val *string) {
 	_jsii_.Set(
 		j,
 		"key",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SshKey)SetKeyWo(val *string) {
+	if err := j.validateSetKeyWoParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"keyWo",
 		val,
 	)
 }
@@ -874,10 +886,18 @@ func (s *jsiiProxy_SshKey) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (s *jsiiProxy_SshKey) ResetId() {
+func (s *jsiiProxy_SshKey) ResetKey() {
 	_jsii_.InvokeVoid(
 		s,
-		"resetId",
+		"resetKey",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_SshKey) ResetKeyWo() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetKeyWo",
 		nil, // no parameters
 	)
 }

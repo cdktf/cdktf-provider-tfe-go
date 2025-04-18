@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/team_notification_configuration tfe_team_notification_configuration}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/team_notification_configuration tfe_team_notification_configuration}.
 type TeamNotificationConfiguration interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -83,6 +83,9 @@ type TeamNotificationConfiguration interface {
 	Token() *string
 	SetToken(val *string)
 	TokenInput() *string
+	TokenWo() *string
+	SetTokenWo(val *string)
+	TokenWoInput() *string
 	Triggers() *[]*string
 	SetTriggers(val *[]*string)
 	TriggersInput() *[]*string
@@ -139,6 +142,7 @@ type TeamNotificationConfiguration interface {
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetToken()
+	ResetTokenWo()
 	ResetTriggers()
 	ResetUrl()
 	SynthesizeAttributes() *map[string]interface{}
@@ -469,6 +473,26 @@ func (j *jsiiProxy_TeamNotificationConfiguration) TokenInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_TeamNotificationConfiguration) TokenWo() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tokenWo",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TeamNotificationConfiguration) TokenWoInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tokenWoInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_TeamNotificationConfiguration) Triggers() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -510,7 +534,7 @@ func (j *jsiiProxy_TeamNotificationConfiguration) UrlInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/team_notification_configuration tfe_team_notification_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/team_notification_configuration tfe_team_notification_configuration} Resource.
 func NewTeamNotificationConfiguration(scope constructs.Construct, id *string, config *TeamNotificationConfigurationConfig) TeamNotificationConfiguration {
 	_init_.Initialize()
 
@@ -528,7 +552,7 @@ func NewTeamNotificationConfiguration(scope constructs.Construct, id *string, co
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.64.0/docs/resources/team_notification_configuration tfe_team_notification_configuration} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/team_notification_configuration tfe_team_notification_configuration} Resource.
 func NewTeamNotificationConfiguration_Override(t TeamNotificationConfiguration, scope constructs.Construct, id *string, config *TeamNotificationConfigurationConfig) {
 	_init_.Initialize()
 
@@ -680,6 +704,17 @@ func (j *jsiiProxy_TeamNotificationConfiguration)SetToken(val *string) {
 	_jsii_.Set(
 		j,
 		"token",
+		val,
+	)
+}
+
+func (j *jsiiProxy_TeamNotificationConfiguration)SetTokenWo(val *string) {
+	if err := j.validateSetTokenWoParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tokenWo",
 		val,
 	)
 }
@@ -1095,6 +1130,14 @@ func (t *jsiiProxy_TeamNotificationConfiguration) ResetToken() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetToken",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TeamNotificationConfiguration) ResetTokenWo() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetTokenWo",
 		nil, // no parameters
 	)
 }
