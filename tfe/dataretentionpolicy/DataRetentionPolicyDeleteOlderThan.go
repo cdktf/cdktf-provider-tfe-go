@@ -7,7 +7,7 @@ package dataretentionpolicy
 type DataRetentionPolicyDeleteOlderThan struct {
 	// Number of days.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/data_retention_policy#days DataRetentionPolicy#days}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/data_retention_policy#days DataRetentionPolicy#days}
 	Days *float64 `field:"optional" json:"days" yaml:"days"`
 }
 

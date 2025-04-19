@@ -24,7 +24,7 @@ type DataTfeProjectsConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the organization. If omitted, organization must be defined in the provider config.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/projects#organization DataTfeProjects#organization}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/data-sources/projects#organization DataTfeProjects#organization}
 	Organization *string `field:"optional" json:"organization" yaml:"organization"`
 }
 

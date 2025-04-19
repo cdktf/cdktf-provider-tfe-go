@@ -83,6 +83,10 @@ func (j *jsiiProxy_DataTfeOutputs) validateSetOrganizationParameters(val *string
 	return nil
 }
 
+func (j *jsiiProxy_DataTfeOutputs) validateSetValuesParameters(val *map[string]interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTfeOutputs) validateSetWorkspaceParameters(val *string) error {
 	return nil
 }

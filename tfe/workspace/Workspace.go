@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/workspace tfe_workspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/workspace tfe_workspace}.
 type Workspace interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -1121,7 +1121,7 @@ func (j *jsiiProxy_Workspace) WorkingDirectoryInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfig) Workspace {
 	_init_.Initialize()
 
@@ -1139,7 +1139,7 @@ func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace_Override(w Workspace, scope constructs.Construct, id *string, config *WorkspaceConfig) {
 	_init_.Initialize()
 

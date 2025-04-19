@@ -22,13 +22,15 @@ type DataTfeOutputsConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Name of the workspace.
+	// The workspace to fetch the remote state from.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/outputs#workspace DataTfeOutputs#workspace}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/data-sources/outputs#workspace DataTfeOutputs#workspace}
 	Workspace *string `field:"required" json:"workspace" yaml:"workspace"`
-	// Name of the organization.
+	// The organization to fetch the remote state from.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.0/docs/data-sources/outputs#organization DataTfeOutputs#organization}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/data-sources/outputs#organization DataTfeOutputs#organization}
 	Organization *string `field:"optional" json:"organization" yaml:"organization"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/data-sources/outputs#values DataTfeOutputs#values}.
+	Values *map[string]interface{} `field:"optional" json:"values" yaml:"values"`
 }
 
