@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/project_policy_set tfe_project_policy_set}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.2/docs/resources/project_policy_set tfe_project_policy_set}.
 type ProjectPolicySet interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -356,7 +356,7 @@ func (j *jsiiProxy_ProjectPolicySet) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/project_policy_set tfe_project_policy_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.2/docs/resources/project_policy_set tfe_project_policy_set} Resource.
 func NewProjectPolicySet(scope constructs.Construct, id *string, config *ProjectPolicySetConfig) ProjectPolicySet {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewProjectPolicySet(scope constructs.Construct, id *string, config *Project
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/project_policy_set tfe_project_policy_set} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.2/docs/resources/project_policy_set tfe_project_policy_set} Resource.
 func NewProjectPolicySet_Override(p ProjectPolicySet, scope constructs.Construct, id *string, config *ProjectPolicySetConfig) {
 	_init_.Initialize()
 

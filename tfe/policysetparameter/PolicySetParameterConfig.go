@@ -24,23 +24,23 @@ type PolicySetParameterConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the parameter.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/policy_set_parameter#key PolicySetParameter#key}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.2/docs/resources/policy_set_parameter#key PolicySetParameter#key}
 	Key *string `field:"required" json:"key" yaml:"key"`
 	// The ID of the policy set that owns the parameter.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/policy_set_parameter#policy_set_id PolicySetParameter#policy_set_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.2/docs/resources/policy_set_parameter#policy_set_id PolicySetParameter#policy_set_id}
 	PolicySetId *string `field:"required" json:"policySetId" yaml:"policySetId"`
 	// Whether the value is sensitive. If true then the parameter is written once and not visible thereafter.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/policy_set_parameter#sensitive PolicySetParameter#sensitive}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.2/docs/resources/policy_set_parameter#sensitive PolicySetParameter#sensitive}
 	Sensitive interface{} `field:"optional" json:"sensitive" yaml:"sensitive"`
 	// Value of the parameter.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/policy_set_parameter#value PolicySetParameter#value}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.2/docs/resources/policy_set_parameter#value PolicySetParameter#value}
 	Value *string `field:"optional" json:"value" yaml:"value"`
 	// Value of the parameter in write-only mode.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.1/docs/resources/policy_set_parameter#value_wo PolicySetParameter#value_wo}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.65.2/docs/resources/policy_set_parameter#value_wo PolicySetParameter#value_wo}
 	ValueWo *string `field:"optional" json:"valueWo" yaml:"valueWo"`
 }
 
