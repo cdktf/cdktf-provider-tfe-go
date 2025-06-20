@@ -116,6 +116,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "oauthTokenIdInput", GoGetter: "OauthTokenIdInput"},
 			_jsii_.MemberMethod{JsiiMethod: "resetBranch", GoMethod: "ResetBranch"},
 			_jsii_.MemberMethod{JsiiMethod: "resetGithubAppInstallationId", GoMethod: "ResetGithubAppInstallationId"},
+			_jsii_.MemberMethod{JsiiMethod: "resetIdentifier", GoMethod: "ResetIdentifier"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOauthTokenId", GoMethod: "ResetOauthTokenId"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},

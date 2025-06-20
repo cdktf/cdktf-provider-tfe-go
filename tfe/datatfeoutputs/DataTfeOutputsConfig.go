@@ -24,11 +24,11 @@ type DataTfeOutputsConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the workspace.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.66.0/docs/data-sources/outputs#workspace DataTfeOutputs#workspace}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.0/docs/data-sources/outputs#workspace DataTfeOutputs#workspace}
 	Workspace *string `field:"required" json:"workspace" yaml:"workspace"`
 	// Name of the organization.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.66.0/docs/data-sources/outputs#organization DataTfeOutputs#organization}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.0/docs/data-sources/outputs#organization DataTfeOutputs#organization}
 	Organization *string `field:"optional" json:"organization" yaml:"organization"`
 }
 

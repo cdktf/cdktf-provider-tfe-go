@@ -78,6 +78,7 @@ type StackVcsRepoOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetBranch()
 	ResetGithubAppInstallationId()
+	ResetIdentifier()
 	ResetOauthTokenId()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -569,6 +570,14 @@ func (s *jsiiProxy_StackVcsRepoOutputReference) ResetGithubAppInstallationId() {
 	_jsii_.InvokeVoid(
 		s,
 		"resetGithubAppInstallationId",
+		nil, // no parameters
+	)
+}
+
+func (s *jsiiProxy_StackVcsRepoOutputReference) ResetIdentifier() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetIdentifier",
 		nil, // no parameters
 	)
 }
