@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.0/docs/data-sources/registry_module tfe_registry_module}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/data-sources/registry_module tfe_registry_module}.
 type DataTfeRegistryModule interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -542,7 +542,7 @@ func (j *jsiiProxy_DataTfeRegistryModule) VersionStatusesInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.0/docs/data-sources/registry_module tfe_registry_module} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/data-sources/registry_module tfe_registry_module} Data Source.
 func NewDataTfeRegistryModule(scope constructs.Construct, id *string, config *DataTfeRegistryModuleConfig) DataTfeRegistryModule {
 	_init_.Initialize()
 
@@ -560,7 +560,7 @@ func NewDataTfeRegistryModule(scope constructs.Construct, id *string, config *Da
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.0/docs/data-sources/registry_module tfe_registry_module} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/data-sources/registry_module tfe_registry_module} Data Source.
 func NewDataTfeRegistryModule_Override(d DataTfeRegistryModule, scope constructs.Construct, id *string, config *DataTfeRegistryModuleConfig) {
 	_init_.Initialize()
 

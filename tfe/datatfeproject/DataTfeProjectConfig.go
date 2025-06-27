@@ -24,11 +24,11 @@ type DataTfeProjectConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The name of the project.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.0/docs/data-sources/project#name DataTfeProject#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/data-sources/project#name DataTfeProject#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// The name of the organization that the project belongs to.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.0/docs/data-sources/project#organization DataTfeProject#organization}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/data-sources/project#organization DataTfeProject#organization}
 	Organization *string `field:"optional" json:"organization" yaml:"organization"`
 }
 
