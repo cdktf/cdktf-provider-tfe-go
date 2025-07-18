@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/resources/admin_organization_settings tfe_admin_organization_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/admin_organization_settings tfe_admin_organization_settings}.
 type AdminOrganizationSettings interface {
 	cdktf.TerraformResource
 	AccessBetaTools() interface{}
@@ -441,7 +441,7 @@ func (j *jsiiProxy_AdminOrganizationSettings) WorkspaceLimitInput() *float64 {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/resources/admin_organization_settings tfe_admin_organization_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/admin_organization_settings tfe_admin_organization_settings} Resource.
 func NewAdminOrganizationSettings(scope constructs.Construct, id *string, config *AdminOrganizationSettingsConfig) AdminOrganizationSettings {
 	_init_.Initialize()
 
@@ -459,7 +459,7 @@ func NewAdminOrganizationSettings(scope constructs.Construct, id *string, config
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/resources/admin_organization_settings tfe_admin_organization_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/admin_organization_settings tfe_admin_organization_settings} Resource.
 func NewAdminOrganizationSettings_Override(a AdminOrganizationSettings, scope constructs.Construct, id *string, config *AdminOrganizationSettingsConfig) {
 	_init_.Initialize()
 

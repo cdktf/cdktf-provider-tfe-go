@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/resources/policy_set_parameter tfe_policy_set_parameter}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/policy_set_parameter tfe_policy_set_parameter}.
 type PolicySetParameter interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -415,7 +415,7 @@ func (j *jsiiProxy_PolicySetParameter) ValueWoInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
 func NewPolicySetParameter(scope constructs.Construct, id *string, config *PolicySetParameterConfig) PolicySetParameter {
 	_init_.Initialize()
 
@@ -433,7 +433,7 @@ func NewPolicySetParameter(scope constructs.Construct, id *string, config *Polic
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/policy_set_parameter tfe_policy_set_parameter} Resource.
 func NewPolicySetParameter_Override(p PolicySetParameter, scope constructs.Construct, id *string, config *PolicySetParameterConfig) {
 	_init_.Initialize()
 

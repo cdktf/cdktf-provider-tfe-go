@@ -95,11 +95,27 @@ func (j *jsiiProxy_WorkspaceSettings) validateSetAgentPoolIdParameters(val *stri
 	return nil
 }
 
+func (j *jsiiProxy_WorkspaceSettings) validateSetAssessmentsEnabledParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_WorkspaceSettings) validateSetAutoApplyParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_WorkspaceSettings) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }
 
 func (j *jsiiProxy_WorkspaceSettings) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
+func (j *jsiiProxy_WorkspaceSettings) validateSetDescriptionParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_WorkspaceSettings) validateSetEffectiveTagsParameters(val *map[string]*string) error {
 	return nil
 }
 
@@ -120,6 +136,10 @@ func (j *jsiiProxy_WorkspaceSettings) validateSetProvisionersParameters(val *[]i
 }
 
 func (j *jsiiProxy_WorkspaceSettings) validateSetRemoteStateConsumerIdsParameters(val *[]*string) error {
+	return nil
+}
+
+func (j *jsiiProxy_WorkspaceSettings) validateSetTagsParameters(val *map[string]*string) error {
 	return nil
 }
 

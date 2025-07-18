@@ -12,12 +12,18 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/resources/workspace_settings tfe_workspace_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/workspace_settings tfe_workspace_settings}.
 type WorkspaceSettings interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
 	SetAgentPoolId(val *string)
 	AgentPoolIdInput() *string
+	AssessmentsEnabled() interface{}
+	SetAssessmentsEnabled(val interface{})
+	AssessmentsEnabledInput() interface{}
+	AutoApply() interface{}
+	SetAutoApply(val interface{})
+	AutoApplyInput() interface{}
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -34,6 +40,12 @@ type WorkspaceSettings interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	Description() *string
+	SetDescription(val *string)
+	DescriptionInput() *string
+	EffectiveTags() *map[string]*string
+	SetEffectiveTags(val *map[string]*string)
+	EffectiveTagsInput() *map[string]*string
 	ExecutionMode() *string
 	SetExecutionMode(val *string)
 	ExecutionModeInput() *string
@@ -69,6 +81,9 @@ type WorkspaceSettings interface {
 	RemoteStateConsumerIds() *[]*string
 	SetRemoteStateConsumerIds(val *[]*string)
 	RemoteStateConsumerIdsInput() *[]*string
+	Tags() *map[string]*string
+	SetTags(val *map[string]*string)
+	TagsInput() *map[string]*string
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -122,12 +137,17 @@ type WorkspaceSettings interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	ResetAgentPoolId()
+	ResetAssessmentsEnabled()
+	ResetAutoApply()
+	ResetDescription()
+	ResetEffectiveTags()
 	ResetExecutionMode()
 	ResetGlobalRemoteState()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
 	ResetRemoteStateConsumerIds()
+	ResetTags()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -161,6 +181,46 @@ func (j *jsiiProxy_WorkspaceSettings) AgentPoolIdInput() *string {
 	_jsii_.Get(
 		j,
 		"agentPoolIdInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceSettings) AssessmentsEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"assessmentsEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceSettings) AssessmentsEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"assessmentsEnabledInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceSettings) AutoApply() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"autoApply",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceSettings) AutoApplyInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"autoApplyInput",
 		&returns,
 	)
 	return returns
@@ -211,6 +271,46 @@ func (j *jsiiProxy_WorkspaceSettings) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceSettings) Description() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"description",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceSettings) DescriptionInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"descriptionInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceSettings) EffectiveTags() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"effectiveTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceSettings) EffectiveTagsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"effectiveTagsInput",
 		&returns,
 	)
 	return returns
@@ -376,6 +476,26 @@ func (j *jsiiProxy_WorkspaceSettings) RemoteStateConsumerIdsInput() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_WorkspaceSettings) Tags() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"tags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_WorkspaceSettings) TagsInput() *map[string]*string {
+	var returns *map[string]*string
+	_jsii_.Get(
+		j,
+		"tagsInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_WorkspaceSettings) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
@@ -427,7 +547,7 @@ func (j *jsiiProxy_WorkspaceSettings) WorkspaceIdInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/resources/workspace_settings tfe_workspace_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/workspace_settings tfe_workspace_settings} Resource.
 func NewWorkspaceSettings(scope constructs.Construct, id *string, config *WorkspaceSettingsConfig) WorkspaceSettings {
 	_init_.Initialize()
 
@@ -445,7 +565,7 @@ func NewWorkspaceSettings(scope constructs.Construct, id *string, config *Worksp
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.67.1/docs/resources/workspace_settings tfe_workspace_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/workspace_settings tfe_workspace_settings} Resource.
 func NewWorkspaceSettings_Override(w WorkspaceSettings, scope constructs.Construct, id *string, config *WorkspaceSettingsConfig) {
 	_init_.Initialize()
 
@@ -463,6 +583,28 @@ func (j *jsiiProxy_WorkspaceSettings)SetAgentPoolId(val *string) {
 	_jsii_.Set(
 		j,
 		"agentPoolId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspaceSettings)SetAssessmentsEnabled(val interface{}) {
+	if err := j.validateSetAssessmentsEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"assessmentsEnabled",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspaceSettings)SetAutoApply(val interface{}) {
+	if err := j.validateSetAutoApplyParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"autoApply",
 		val,
 	)
 }
@@ -493,6 +635,28 @@ func (j *jsiiProxy_WorkspaceSettings)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspaceSettings)SetDescription(val *string) {
+	if err := j.validateSetDescriptionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"description",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspaceSettings)SetEffectiveTags(val *map[string]*string) {
+	if err := j.validateSetEffectiveTagsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"effectiveTags",
 		val,
 	)
 }
@@ -564,6 +728,17 @@ func (j *jsiiProxy_WorkspaceSettings)SetRemoteStateConsumerIds(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"remoteStateConsumerIds",
+		val,
+	)
+}
+
+func (j *jsiiProxy_WorkspaceSettings)SetTags(val *map[string]*string) {
+	if err := j.validateSetTagsParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tags",
 		val,
 	)
 }
@@ -940,6 +1115,38 @@ func (w *jsiiProxy_WorkspaceSettings) ResetAgentPoolId() {
 	)
 }
 
+func (w *jsiiProxy_WorkspaceSettings) ResetAssessmentsEnabled() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetAssessmentsEnabled",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WorkspaceSettings) ResetAutoApply() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetAutoApply",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WorkspaceSettings) ResetDescription() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetDescription",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WorkspaceSettings) ResetEffectiveTags() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetEffectiveTags",
+		nil, // no parameters
+	)
+}
+
 func (w *jsiiProxy_WorkspaceSettings) ResetExecutionMode() {
 	_jsii_.InvokeVoid(
 		w,
@@ -968,6 +1175,14 @@ func (w *jsiiProxy_WorkspaceSettings) ResetRemoteStateConsumerIds() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetRemoteStateConsumerIds",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_WorkspaceSettings) ResetTags() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetTags",
 		nil, // no parameters
 	)
 }
