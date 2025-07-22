@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/data-sources/project tfe_project}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/data-sources/project tfe_project}.
 type DataTfeProject interface {
 	cdktf.TerraformDataSource
 	AutoDestroyActivityDuration() *string
@@ -354,7 +354,7 @@ func (j *jsiiProxy_DataTfeProject) WorkspaceNames() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/data-sources/project tfe_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/data-sources/project tfe_project} Data Source.
 func NewDataTfeProject(scope constructs.Construct, id *string, config *DataTfeProjectConfig) DataTfeProject {
 	_init_.Initialize()
 
@@ -372,7 +372,7 @@ func NewDataTfeProject(scope constructs.Construct, id *string, config *DataTfePr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/data-sources/project tfe_project} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/data-sources/project tfe_project} Data Source.
 func NewDataTfeProject_Override(d DataTfeProject, scope constructs.Construct, id *string, config *DataTfeProjectConfig) {
 	_init_.Initialize()
 

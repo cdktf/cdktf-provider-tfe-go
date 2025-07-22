@@ -24,19 +24,19 @@ type TeamTokenConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// ID of the team.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/team_token#team_id TeamToken#team_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/team_token#team_id TeamToken#team_id}
 	TeamId *string `field:"required" json:"teamId" yaml:"teamId"`
 	// The description of the token, which must be unique per team.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/team_token#description TeamToken#description}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/team_token#description TeamToken#description}
 	Description *string `field:"optional" json:"description" yaml:"description"`
 	// The token's expiration date.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/team_token#expired_at TeamToken#expired_at}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/team_token#expired_at TeamToken#expired_at}
 	ExpiredAt *string `field:"optional" json:"expiredAt" yaml:"expiredAt"`
 	// When set to true will force the audit trail token to be recreated.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/team_token#force_regenerate TeamToken#force_regenerate}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/team_token#force_regenerate TeamToken#force_regenerate}
 	ForceRegenerate interface{} `field:"optional" json:"forceRegenerate" yaml:"forceRegenerate"`
 }
 

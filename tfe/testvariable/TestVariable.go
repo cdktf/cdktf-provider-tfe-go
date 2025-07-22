@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/test_variable tfe_test_variable}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/test_variable tfe_test_variable}.
 type TestVariable interface {
 	cdktf.TerraformResource
 	Category() *string
@@ -543,7 +543,7 @@ func (j *jsiiProxy_TestVariable) ValueWoInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/test_variable tfe_test_variable} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/test_variable tfe_test_variable} Resource.
 func NewTestVariable(scope constructs.Construct, id *string, config *TestVariableConfig) TestVariable {
 	_init_.Initialize()
 
@@ -561,7 +561,7 @@ func NewTestVariable(scope constructs.Construct, id *string, config *TestVariabl
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.0/docs/resources/test_variable tfe_test_variable} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/test_variable tfe_test_variable} Resource.
 func NewTestVariable_Override(t TestVariable, scope constructs.Construct, id *string, config *TestVariableConfig) {
 	_init_.Initialize()
 
