@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/stack tfe_stack}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/stack tfe_stack}.
 type Stack interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -424,7 +424,7 @@ func (j *jsiiProxy_Stack) VcsRepoInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/stack tfe_stack} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/stack tfe_stack} Resource.
 func NewStack(scope constructs.Construct, id *string, config *StackConfig) Stack {
 	_init_.Initialize()
 
@@ -442,7 +442,7 @@ func NewStack(scope constructs.Construct, id *string, config *StackConfig) Stack
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/stack tfe_stack} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/stack tfe_stack} Resource.
 func NewStack_Override(s Stack, scope constructs.Construct, id *string, config *StackConfig) {
 	_init_.Initialize()
 

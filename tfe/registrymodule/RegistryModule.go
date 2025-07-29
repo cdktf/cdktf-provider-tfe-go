@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/registry_module tfe_registry_module}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/registry_module tfe_registry_module}.
 type RegistryModule interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -537,7 +537,7 @@ func (j *jsiiProxy_RegistryModule) VcsRepoInput() *RegistryModuleVcsRepo {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/registry_module tfe_registry_module} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/registry_module tfe_registry_module} Resource.
 func NewRegistryModule(scope constructs.Construct, id *string, config *RegistryModuleConfig) RegistryModule {
 	_init_.Initialize()
 
@@ -555,7 +555,7 @@ func NewRegistryModule(scope constructs.Construct, id *string, config *RegistryM
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.1/docs/resources/registry_module tfe_registry_module} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/registry_module tfe_registry_module} Resource.
 func NewRegistryModule_Override(r RegistryModule, scope constructs.Construct, id *string, config *RegistryModuleConfig) {
 	_init_.Initialize()
 
