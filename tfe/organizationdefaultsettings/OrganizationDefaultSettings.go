@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/organization_default_settings tfe_organization_default_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/organization_default_settings tfe_organization_default_settings}.
 type OrganizationDefaultSettings interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -357,7 +357,7 @@ func (j *jsiiProxy_OrganizationDefaultSettings) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/organization_default_settings tfe_organization_default_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/organization_default_settings tfe_organization_default_settings} Resource.
 func NewOrganizationDefaultSettings(scope constructs.Construct, id *string, config *OrganizationDefaultSettingsConfig) OrganizationDefaultSettings {
 	_init_.Initialize()
 
@@ -375,7 +375,7 @@ func NewOrganizationDefaultSettings(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/organization_default_settings tfe_organization_default_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/organization_default_settings tfe_organization_default_settings} Resource.
 func NewOrganizationDefaultSettings_Override(o OrganizationDefaultSettings, scope constructs.Construct, id *string, config *OrganizationDefaultSettingsConfig) {
 	_init_.Initialize()
 

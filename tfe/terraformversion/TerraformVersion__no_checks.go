@@ -75,6 +75,10 @@ func (t *jsiiProxy_TerraformVersion) validateOverrideLogicalIdParameters(newLogi
 	return nil
 }
 
+func (t *jsiiProxy_TerraformVersion) validatePutArchsParameters(value interface{}) error {
+	return nil
+}
+
 func validateTerraformVersion_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -112,10 +116,6 @@ func (j *jsiiProxy_TerraformVersion) validateSetDeprecatedReasonParameters(val *
 }
 
 func (j *jsiiProxy_TerraformVersion) validateSetEnabledParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_TerraformVersion) validateSetIdParameters(val *string) error {
 	return nil
 }
 

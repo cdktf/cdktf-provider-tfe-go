@@ -270,6 +270,8 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "repositoryHttpUrl", GoGetter: "RepositoryHttpUrl"},
 			_jsii_.MemberMethod{JsiiMethod: "resolve", GoMethod: "Resolve"},
 			_jsii_.MemberProperty{JsiiProperty: "serviceProvider", GoGetter: "ServiceProvider"},
+			_jsii_.MemberProperty{JsiiProperty: "sourceDirectory", GoGetter: "SourceDirectory"},
+			_jsii_.MemberProperty{JsiiProperty: "tagPrefix", GoGetter: "TagPrefix"},
 			_jsii_.MemberProperty{JsiiProperty: "tags", GoGetter: "Tags"},
 			_jsii_.MemberProperty{JsiiProperty: "tagsRegex", GoGetter: "TagsRegex"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformAttribute", GoGetter: "TerraformAttribute"},

@@ -75,6 +75,10 @@ func (o *jsiiProxy_OpaVersion) validateOverrideLogicalIdParameters(newLogicalId 
 	return nil
 }
 
+func (o *jsiiProxy_OpaVersion) validatePutArchsParameters(value interface{}) error {
+	return nil
+}
+
 func validateOpaVersion_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -112,10 +116,6 @@ func (j *jsiiProxy_OpaVersion) validateSetDeprecatedReasonParameters(val *string
 }
 
 func (j *jsiiProxy_OpaVersion) validateSetEnabledParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_OpaVersion) validateSetIdParameters(val *string) error {
 	return nil
 }
 

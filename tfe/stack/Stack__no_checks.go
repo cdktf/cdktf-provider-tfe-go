@@ -95,6 +95,10 @@ func validateStack_IsTerraformResourceParameters(x interface{}) error {
 	return nil
 }
 
+func (j *jsiiProxy_Stack) validateSetAgentPoolIdParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_Stack) validateSetConnectionParameters(val interface{}) error {
 	return nil
 }

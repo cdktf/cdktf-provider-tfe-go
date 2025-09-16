@@ -12,9 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/stack tfe_stack}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/stack tfe_stack}.
 type Stack interface {
 	cdktf.TerraformResource
+	AgentPoolId() *string
+	SetAgentPoolId(val *string)
+	AgentPoolIdInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
@@ -120,6 +123,7 @@ type Stack interface {
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
 	PutVcsRepo(value *StackVcsRepo)
+	ResetAgentPoolId()
 	ResetDescription()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -141,6 +145,26 @@ type Stack interface {
 // The jsii proxy struct for Stack
 type jsiiProxy_Stack struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_Stack) AgentPoolId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"agentPoolId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Stack) AgentPoolIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"agentPoolIdInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_Stack) CdktfStack() cdktf.TerraformStack {
@@ -424,7 +448,7 @@ func (j *jsiiProxy_Stack) VcsRepoInput() interface{} {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/stack tfe_stack} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/stack tfe_stack} Resource.
 func NewStack(scope constructs.Construct, id *string, config *StackConfig) Stack {
 	_init_.Initialize()
 
@@ -442,7 +466,7 @@ func NewStack(scope constructs.Construct, id *string, config *StackConfig) Stack
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/stack tfe_stack} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/stack tfe_stack} Resource.
 func NewStack_Override(s Stack, scope constructs.Construct, id *string, config *StackConfig) {
 	_init_.Initialize()
 
@@ -450,6 +474,17 @@ func NewStack_Override(s Stack, scope constructs.Construct, id *string, config *
 		"@cdktf/provider-tfe.stack.Stack",
 		[]interface{}{scope, id, config},
 		s,
+	)
+}
+
+func (j *jsiiProxy_Stack)SetAgentPoolId(val *string) {
+	if err := j.validateSetAgentPoolIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"agentPoolId",
+		val,
 	)
 }
 
@@ -915,6 +950,14 @@ func (s *jsiiProxy_Stack) PutVcsRepo(value *StackVcsRepo) {
 		s,
 		"putVcsRepo",
 		[]interface{}{value},
+	)
+}
+
+func (s *jsiiProxy_Stack) ResetAgentPoolId() {
+	_jsii_.InvokeVoid(
+		s,
+		"resetAgentPoolId",
+		nil, // no parameters
 	)
 }
 

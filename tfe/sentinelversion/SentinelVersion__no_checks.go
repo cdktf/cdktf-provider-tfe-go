@@ -75,6 +75,10 @@ func (s *jsiiProxy_SentinelVersion) validateOverrideLogicalIdParameters(newLogic
 	return nil
 }
 
+func (s *jsiiProxy_SentinelVersion) validatePutArchsParameters(value interface{}) error {
+	return nil
+}
+
 func validateSentinelVersion_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
@@ -112,10 +116,6 @@ func (j *jsiiProxy_SentinelVersion) validateSetDeprecatedReasonParameters(val *s
 }
 
 func (j *jsiiProxy_SentinelVersion) validateSetEnabledParameters(val interface{}) error {
-	return nil
-}
-
-func (j *jsiiProxy_SentinelVersion) validateSetIdParameters(val *string) error {
 	return nil
 }
 

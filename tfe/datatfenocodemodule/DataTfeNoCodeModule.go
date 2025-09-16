@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/data-sources/no_code_module tfe_no_code_module}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/data-sources/no_code_module tfe_no_code_module}.
 type DataTfeNoCodeModule interface {
 	cdktf.TerraformDataSource
 	// Experimental.
@@ -319,7 +319,7 @@ func (j *jsiiProxy_DataTfeNoCodeModule) VersionPin() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/data-sources/no_code_module tfe_no_code_module} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/data-sources/no_code_module tfe_no_code_module} Data Source.
 func NewDataTfeNoCodeModule(scope constructs.Construct, id *string, config *DataTfeNoCodeModuleConfig) DataTfeNoCodeModule {
 	_init_.Initialize()
 
@@ -337,7 +337,7 @@ func NewDataTfeNoCodeModule(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/data-sources/no_code_module tfe_no_code_module} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/data-sources/no_code_module tfe_no_code_module} Data Source.
 func NewDataTfeNoCodeModule_Override(d DataTfeNoCodeModule, scope constructs.Construct, id *string, config *DataTfeNoCodeModuleConfig) {
 	_init_.Initialize()
 

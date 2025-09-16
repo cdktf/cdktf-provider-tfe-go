@@ -12,9 +12,11 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/terraform_version tfe_terraform_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/terraform_version tfe_terraform_version}.
 type TerraformVersion interface {
 	cdktf.TerraformResource
+	Archs() TerraformVersionArchsList
+	ArchsInput() interface{}
 	Beta() interface{}
 	SetBeta(val interface{})
 	BetaInput() interface{}
@@ -52,8 +54,6 @@ type TerraformVersion interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -131,15 +131,18 @@ type TerraformVersion interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutArchs(value interface{})
+	ResetArchs()
 	ResetBeta()
 	ResetDeprecated()
 	ResetDeprecatedReason()
 	ResetEnabled()
-	ResetId()
 	ResetOfficial()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSha()
+	ResetUrl()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -156,6 +159,26 @@ type TerraformVersion interface {
 // The jsii proxy struct for TerraformVersion
 type jsiiProxy_TerraformVersion struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_TerraformVersion) Archs() TerraformVersionArchsList {
+	var returns TerraformVersionArchsList
+	_jsii_.Get(
+		j,
+		"archs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_TerraformVersion) ArchsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"archsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_TerraformVersion) Beta() interface{} {
@@ -328,16 +351,6 @@ func (j *jsiiProxy_TerraformVersion) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_TerraformVersion) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_TerraformVersion) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -499,7 +512,7 @@ func (j *jsiiProxy_TerraformVersion) VersionInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/terraform_version tfe_terraform_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/terraform_version tfe_terraform_version} Resource.
 func NewTerraformVersion(scope constructs.Construct, id *string, config *TerraformVersionConfig) TerraformVersion {
 	_init_.Initialize()
 
@@ -517,7 +530,7 @@ func NewTerraformVersion(scope constructs.Construct, id *string, config *Terrafo
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/terraform_version tfe_terraform_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/terraform_version tfe_terraform_version} Resource.
 func NewTerraformVersion_Override(t TerraformVersion, scope constructs.Construct, id *string, config *TerraformVersionConfig) {
 	_init_.Initialize()
 
@@ -606,17 +619,6 @@ func (j *jsiiProxy_TerraformVersion)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_TerraformVersion)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1048,6 +1050,25 @@ func (t *jsiiProxy_TerraformVersion) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (t *jsiiProxy_TerraformVersion) PutArchs(value interface{}) {
+	if err := t.validatePutArchsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		t,
+		"putArchs",
+		[]interface{}{value},
+	)
+}
+
+func (t *jsiiProxy_TerraformVersion) ResetArchs() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetArchs",
+		nil, // no parameters
+	)
+}
+
 func (t *jsiiProxy_TerraformVersion) ResetBeta() {
 	_jsii_.InvokeVoid(
 		t,
@@ -1080,14 +1101,6 @@ func (t *jsiiProxy_TerraformVersion) ResetEnabled() {
 	)
 }
 
-func (t *jsiiProxy_TerraformVersion) ResetId() {
-	_jsii_.InvokeVoid(
-		t,
-		"resetId",
-		nil, // no parameters
-	)
-}
-
 func (t *jsiiProxy_TerraformVersion) ResetOfficial() {
 	_jsii_.InvokeVoid(
 		t,
@@ -1100,6 +1113,22 @@ func (t *jsiiProxy_TerraformVersion) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		t,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TerraformVersion) ResetSha() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetSha",
+		nil, // no parameters
+	)
+}
+
+func (t *jsiiProxy_TerraformVersion) ResetUrl() {
+	_jsii_.InvokeVoid(
+		t,
+		"resetUrl",
 		nil, // no parameters
 	)
 }

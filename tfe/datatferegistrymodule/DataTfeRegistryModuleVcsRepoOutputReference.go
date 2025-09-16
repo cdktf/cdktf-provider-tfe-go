@@ -40,6 +40,8 @@ type DataTfeRegistryModuleVcsRepoOutputReference interface {
 	OauthTokenId() *string
 	RepositoryHttpUrl() *string
 	ServiceProvider() *string
+	SourceDirectory() *string
+	TagPrefix() *string
 	Tags() cdktf.IResolvable
 	TagsRegex() *string
 	// Experimental.
@@ -215,6 +217,26 @@ func (j *jsiiProxy_DataTfeRegistryModuleVcsRepoOutputReference) ServiceProvider(
 	_jsii_.Get(
 		j,
 		"serviceProvider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeRegistryModuleVcsRepoOutputReference) SourceDirectory() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceDirectory",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeRegistryModuleVcsRepoOutputReference) TagPrefix() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tagPrefix",
 		&returns,
 	)
 	return returns

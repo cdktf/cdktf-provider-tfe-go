@@ -12,9 +12,11 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/opa_version tfe_opa_version}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/opa_version tfe_opa_version}.
 type OpaVersion interface {
 	cdktf.TerraformResource
+	Archs() OpaVersionArchsList
+	ArchsInput() interface{}
 	Beta() interface{}
 	SetBeta(val interface{})
 	BetaInput() interface{}
@@ -52,8 +54,6 @@ type OpaVersion interface {
 	// Experimental.
 	FriendlyUniqueId() *string
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -131,15 +131,18 @@ type OpaVersion interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
+	PutArchs(value interface{})
+	ResetArchs()
 	ResetBeta()
 	ResetDeprecated()
 	ResetDeprecatedReason()
 	ResetEnabled()
-	ResetId()
 	ResetOfficial()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetSha()
+	ResetUrl()
 	SynthesizeAttributes() *map[string]interface{}
 	SynthesizeHclAttributes() *map[string]interface{}
 	// Experimental.
@@ -156,6 +159,26 @@ type OpaVersion interface {
 // The jsii proxy struct for OpaVersion
 type jsiiProxy_OpaVersion struct {
 	internal.Type__cdktfTerraformResource
+}
+
+func (j *jsiiProxy_OpaVersion) Archs() OpaVersionArchsList {
+	var returns OpaVersionArchsList
+	_jsii_.Get(
+		j,
+		"archs",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_OpaVersion) ArchsInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"archsInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_OpaVersion) Beta() interface{} {
@@ -328,16 +351,6 @@ func (j *jsiiProxy_OpaVersion) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_OpaVersion) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_OpaVersion) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -499,7 +512,7 @@ func (j *jsiiProxy_OpaVersion) VersionInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/opa_version tfe_opa_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/opa_version tfe_opa_version} Resource.
 func NewOpaVersion(scope constructs.Construct, id *string, config *OpaVersionConfig) OpaVersion {
 	_init_.Initialize()
 
@@ -517,7 +530,7 @@ func NewOpaVersion(scope constructs.Construct, id *string, config *OpaVersionCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.68.2/docs/resources/opa_version tfe_opa_version} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/opa_version tfe_opa_version} Resource.
 func NewOpaVersion_Override(o OpaVersion, scope constructs.Construct, id *string, config *OpaVersionConfig) {
 	_init_.Initialize()
 
@@ -606,17 +619,6 @@ func (j *jsiiProxy_OpaVersion)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
-		val,
-	)
-}
-
-func (j *jsiiProxy_OpaVersion)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
 		val,
 	)
 }
@@ -1048,6 +1050,25 @@ func (o *jsiiProxy_OpaVersion) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
+func (o *jsiiProxy_OpaVersion) PutArchs(value interface{}) {
+	if err := o.validatePutArchsParameters(value); err != nil {
+		panic(err)
+	}
+	_jsii_.InvokeVoid(
+		o,
+		"putArchs",
+		[]interface{}{value},
+	)
+}
+
+func (o *jsiiProxy_OpaVersion) ResetArchs() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetArchs",
+		nil, // no parameters
+	)
+}
+
 func (o *jsiiProxy_OpaVersion) ResetBeta() {
 	_jsii_.InvokeVoid(
 		o,
@@ -1080,14 +1101,6 @@ func (o *jsiiProxy_OpaVersion) ResetEnabled() {
 	)
 }
 
-func (o *jsiiProxy_OpaVersion) ResetId() {
-	_jsii_.InvokeVoid(
-		o,
-		"resetId",
-		nil, // no parameters
-	)
-}
-
 func (o *jsiiProxy_OpaVersion) ResetOfficial() {
 	_jsii_.InvokeVoid(
 		o,
@@ -1100,6 +1113,22 @@ func (o *jsiiProxy_OpaVersion) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetOverrideLogicalId",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OpaVersion) ResetSha() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetSha",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_OpaVersion) ResetUrl() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetUrl",
 		nil, // no parameters
 	)
 }

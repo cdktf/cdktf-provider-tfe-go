@@ -83,6 +83,14 @@ func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateSetOauthTokenId
 	return nil
 }
 
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateSetSourceDirectoryParameters(val *string) error {
+	return nil
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateSetTagPrefixParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) validateSetTagsParameters(val interface{}) error {
 	return nil
 }

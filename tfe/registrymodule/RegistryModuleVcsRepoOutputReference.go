@@ -47,6 +47,12 @@ type RegistryModuleVcsRepoOutputReference interface {
 	OauthTokenId() *string
 	SetOauthTokenId(val *string)
 	OauthTokenIdInput() *string
+	SourceDirectory() *string
+	SetSourceDirectory(val *string)
+	SourceDirectoryInput() *string
+	TagPrefix() *string
+	SetTagPrefix(val *string)
+	TagPrefixInput() *string
 	Tags() interface{}
 	SetTags(val interface{})
 	TagsInput() interface{}
@@ -85,6 +91,8 @@ type RegistryModuleVcsRepoOutputReference interface {
 	ResetBranch()
 	ResetGithubAppInstallationId()
 	ResetOauthTokenId()
+	ResetSourceDirectory()
+	ResetTagPrefix()
 	ResetTags()
 	// Produce the Token's value at resolution time.
 	// Experimental.
@@ -251,6 +259,46 @@ func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) OauthTokenIdInput() *st
 	return returns
 }
 
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) SourceDirectory() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceDirectory",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) SourceDirectoryInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"sourceDirectoryInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) TagPrefix() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tagPrefix",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) TagPrefixInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"tagPrefixInput",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference) Tags() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -403,6 +451,28 @@ func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference)SetOauthTokenId(val *str
 	_jsii_.Set(
 		j,
 		"oauthTokenId",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference)SetSourceDirectory(val *string) {
+	if err := j.validateSetSourceDirectoryParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"sourceDirectory",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RegistryModuleVcsRepoOutputReference)SetTagPrefix(val *string) {
+	if err := j.validateSetTagPrefixParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"tagPrefix",
 		val,
 	)
 }
@@ -646,6 +716,22 @@ func (r *jsiiProxy_RegistryModuleVcsRepoOutputReference) ResetOauthTokenId() {
 	_jsii_.InvokeVoid(
 		r,
 		"resetOauthTokenId",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RegistryModuleVcsRepoOutputReference) ResetSourceDirectory() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetSourceDirectory",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RegistryModuleVcsRepoOutputReference) ResetTagPrefix() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetTagPrefix",
 		nil, // no parameters
 	)
 }
