@@ -24,23 +24,23 @@ type StackConfig struct {
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Name of the Stack.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/stack#name Stack#name}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/stack#name Stack#name}
 	Name *string `field:"required" json:"name" yaml:"name"`
 	// ID of the project that the Stack belongs to.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/stack#project_id Stack#project_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/stack#project_id Stack#project_id}
 	ProjectId *string `field:"required" json:"projectId" yaml:"projectId"`
 	// The ID of an agent pool to assign to the stack.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/stack#agent_pool_id Stack#agent_pool_id}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/stack#agent_pool_id Stack#agent_pool_id}
 	AgentPoolId *string `field:"optional" json:"agentPoolId" yaml:"agentPoolId"`
 	// Description of the Stack.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/stack#description Stack#description}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/stack#description Stack#description}
 	Description *string `field:"optional" json:"description" yaml:"description"`
 	// vcs_repo block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/stack#vcs_repo Stack#vcs_repo}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/stack#vcs_repo Stack#vcs_repo}
 	VcsRepo *StackVcsRepo `field:"optional" json:"vcsRepo" yaml:"vcsRepo"`
 }
 

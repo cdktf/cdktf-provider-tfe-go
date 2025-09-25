@@ -1,0 +1,35 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
+package agentpoolexcludedworkspaces
+
+import (
+	"github.com/hashicorp/terraform-cdk-go/cdktf"
+)
+
+type AgentPoolExcludedWorkspacesConfig struct {
+	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
+	Count interface{} `field:"optional" json:"count" yaml:"count"`
+	// Experimental.
+	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
+	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
+	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
+	// Experimental.
+	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/agent_pool_excluded_workspaces#agent_pool_id AgentPoolExcludedWorkspaces#agent_pool_id}.
+	AgentPoolId *string `field:"required" json:"agentPoolId" yaml:"agentPoolId"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/agent_pool_excluded_workspaces#excluded_workspace_ids AgentPoolExcludedWorkspaces#excluded_workspace_ids}.
+	ExcludedWorkspaceIds *[]*string `field:"required" json:"excludedWorkspaceIds" yaml:"excludedWorkspaceIds"`
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/agent_pool_excluded_workspaces#id AgentPoolExcludedWorkspaces#id}.
+	//
+	// Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+	// If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+	Id *string `field:"optional" json:"id" yaml:"id"`
+}
+

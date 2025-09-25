@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/registry_provider tfe_registry_provider}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/registry_provider tfe_registry_provider}.
 type RegistryProvider interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -414,7 +414,7 @@ func (j *jsiiProxy_RegistryProvider) UpdatedAt() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/registry_provider tfe_registry_provider} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/registry_provider tfe_registry_provider} Resource.
 func NewRegistryProvider(scope constructs.Construct, id *string, config *RegistryProviderConfig) RegistryProvider {
 	_init_.Initialize()
 
@@ -432,7 +432,7 @@ func NewRegistryProvider(scope constructs.Construct, id *string, config *Registr
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/registry_provider tfe_registry_provider} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/registry_provider tfe_registry_provider} Resource.
 func NewRegistryProvider_Override(r RegistryProvider, scope constructs.Construct, id *string, config *RegistryProviderConfig) {
 	_init_.Initialize()
 

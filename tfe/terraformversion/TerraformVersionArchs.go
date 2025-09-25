@@ -5,13 +5,13 @@ package terraformversion
 
 
 type TerraformVersionArchs struct {
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/terraform_version#arch TerraformVersion#arch}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/terraform_version#arch TerraformVersion#arch}.
 	Arch *string `field:"required" json:"arch" yaml:"arch"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/terraform_version#os TerraformVersion#os}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/terraform_version#os TerraformVersion#os}.
 	Os *string `field:"required" json:"os" yaml:"os"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/terraform_version#sha TerraformVersion#sha}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/terraform_version#sha TerraformVersion#sha}.
 	Sha *string `field:"required" json:"sha" yaml:"sha"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/resources/terraform_version#url TerraformVersion#url}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/terraform_version#url TerraformVersion#url}.
 	Url *string `field:"required" json:"url" yaml:"url"`
 }
 

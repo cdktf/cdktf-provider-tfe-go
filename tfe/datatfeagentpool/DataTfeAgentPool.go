@@ -12,9 +12,10 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/data-sources/agent_pool tfe_agent_pool}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/data-sources/agent_pool tfe_agent_pool}.
 type DataTfeAgentPool interface {
 	cdktf.TerraformDataSource
+	AllowedProjectIds() *[]*string
 	AllowedWorkspaceIds() *[]*string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
@@ -28,6 +29,7 @@ type DataTfeAgentPool interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	ExcludedWorkspaceIds() *[]*string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -113,6 +115,16 @@ type jsiiProxy_DataTfeAgentPool struct {
 	internal.Type__cdktfTerraformDataSource
 }
 
+func (j *jsiiProxy_DataTfeAgentPool) AllowedProjectIds() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"allowedProjectIds",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeAgentPool) AllowedWorkspaceIds() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -158,6 +170,16 @@ func (j *jsiiProxy_DataTfeAgentPool) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeAgentPool) ExcludedWorkspaceIds() *[]*string {
+	var returns *[]*string
+	_jsii_.Get(
+		j,
+		"excludedWorkspaceIds",
 		&returns,
 	)
 	return returns
@@ -334,7 +356,7 @@ func (j *jsiiProxy_DataTfeAgentPool) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
 func NewDataTfeAgentPool(scope constructs.Construct, id *string, config *DataTfeAgentPoolConfig) DataTfeAgentPool {
 	_init_.Initialize()
 
@@ -352,7 +374,7 @@ func NewDataTfeAgentPool(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.69.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/data-sources/agent_pool tfe_agent_pool} Data Source.
 func NewDataTfeAgentPool_Override(d DataTfeAgentPool, scope constructs.Construct, id *string, config *DataTfeAgentPoolConfig) {
 	_init_.Initialize()
 
