@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/agent_pool_excluded_workspaces tfe_agent_pool_excluded_workspaces}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/agent_pool_excluded_workspaces tfe_agent_pool_excluded_workspaces}.
 type AgentPoolExcludedWorkspaces interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -356,7 +356,7 @@ func (j *jsiiProxy_AgentPoolExcludedWorkspaces) TerraformResourceType() *string 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/agent_pool_excluded_workspaces tfe_agent_pool_excluded_workspaces} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/agent_pool_excluded_workspaces tfe_agent_pool_excluded_workspaces} Resource.
 func NewAgentPoolExcludedWorkspaces(scope constructs.Construct, id *string, config *AgentPoolExcludedWorkspacesConfig) AgentPoolExcludedWorkspaces {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewAgentPoolExcludedWorkspaces(scope constructs.Construct, id *string, conf
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/agent_pool_excluded_workspaces tfe_agent_pool_excluded_workspaces} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/agent_pool_excluded_workspaces tfe_agent_pool_excluded_workspaces} Resource.
 func NewAgentPoolExcludedWorkspaces_Override(a AgentPoolExcludedWorkspaces, scope constructs.Construct, id *string, config *AgentPoolExcludedWorkspacesConfig) {
 	_init_.Initialize()
 

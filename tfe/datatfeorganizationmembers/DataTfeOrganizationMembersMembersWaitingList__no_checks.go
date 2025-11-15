@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataTfeOrganizationMembersMembersWaitingList) validateGetPara
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeOrganizationMembersMembersWaitingList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataTfeOrganizationMembersMembersWaitingList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

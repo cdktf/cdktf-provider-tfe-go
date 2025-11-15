@@ -151,6 +151,10 @@ func (j *jsiiProxy_Workspace) validateSetGlobalRemoteStateParameters(val interfa
 	return nil
 }
 
+func (j *jsiiProxy_Workspace) validateSetHyokEnabledParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Workspace) validateSetIdParameters(val *string) error {
 	return nil
 }

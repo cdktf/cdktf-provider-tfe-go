@@ -123,6 +123,10 @@ func (j *jsiiProxy_Organization) validateSetEmailParameters(val *string) error {
 	return nil
 }
 
+func (j *jsiiProxy_Organization) validateSetEnforceHyokParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Organization) validateSetIdParameters(val *string) error {
 	return nil
 }

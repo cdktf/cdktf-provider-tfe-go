@@ -12,10 +12,12 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/data-sources/workspace tfe_workspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/data-sources/workspace tfe_workspace}.
 type DataTfeWorkspace interface {
 	cdktf.TerraformDataSource
+	Actions() cdktf.BooleanMap
 	AllowDestroyPlan() cdktf.IResolvable
+	ApplyDurationAverage() *float64
 	AssessmentsEnabled() cdktf.IResolvable
 	AutoApply() cdktf.IResolvable
 	AutoApplyRunTrigger() cdktf.IResolvable
@@ -29,12 +31,14 @@ type DataTfeWorkspace interface {
 	Count() interface{}
 	// Experimental.
 	SetCount(val interface{})
+	CreatedAt() *string
 	// Experimental.
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Description() *string
 	EffectiveTags() cdktf.StringMap
+	Environment() *string
 	ExecutionMode() *string
 	FileTriggersEnabled() cdktf.IResolvable
 	// Experimental.
@@ -47,6 +51,7 @@ type DataTfeWorkspace interface {
 	FriendlyUniqueId() *string
 	GlobalRemoteState() cdktf.IResolvable
 	HtmlUrl() *string
+	HyokEnabled() cdktf.IResolvable
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -55,6 +60,7 @@ type DataTfeWorkspace interface {
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
+	Locked() cdktf.IResolvable
 	Name() *string
 	SetName(val *string)
 	NameInput() *string
@@ -64,6 +70,8 @@ type DataTfeWorkspace interface {
 	Organization() *string
 	SetOrganization(val *string)
 	OrganizationInput() *string
+	Permissions() cdktf.BooleanMap
+	PlanDurationAverage() *float64
 	PolicyCheckFailures() *float64
 	ProjectId() *string
 	// Experimental.
@@ -77,6 +85,8 @@ type DataTfeWorkspace interface {
 	ResourceCount() *float64
 	RunFailures() *float64
 	RunsCount() *float64
+	SettingOverwrites() cdktf.BooleanMap
+	Source() *string
 	SourceName() *string
 	SourceUrl() *string
 	SpeculativeEnabled() cdktf.IResolvable
@@ -94,6 +104,7 @@ type DataTfeWorkspace interface {
 	TerraformVersion() *string
 	TriggerPatterns() *[]*string
 	TriggerPrefixes() *[]*string
+	UpdatedAt() *string
 	VcsRepo() DataTfeWorkspaceVcsRepoList
 	WorkingDirectory() *string
 	// Experimental.
@@ -146,11 +157,31 @@ type jsiiProxy_DataTfeWorkspace struct {
 	internal.Type__cdktfTerraformDataSource
 }
 
+func (j *jsiiProxy_DataTfeWorkspace) Actions() cdktf.BooleanMap {
+	var returns cdktf.BooleanMap
+	_jsii_.Get(
+		j,
+		"actions",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeWorkspace) AllowDestroyPlan() cdktf.IResolvable {
 	var returns cdktf.IResolvable
 	_jsii_.Get(
 		j,
 		"allowDestroyPlan",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) ApplyDurationAverage() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"applyDurationAverage",
 		&returns,
 	)
 	return returns
@@ -236,6 +267,16 @@ func (j *jsiiProxy_DataTfeWorkspace) Count() interface{} {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeWorkspace) CreatedAt() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"createdAt",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeWorkspace) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
@@ -261,6 +302,16 @@ func (j *jsiiProxy_DataTfeWorkspace) EffectiveTags() cdktf.StringMap {
 	_jsii_.Get(
 		j,
 		"effectiveTags",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) Environment() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"environment",
 		&returns,
 	)
 	return returns
@@ -336,6 +387,16 @@ func (j *jsiiProxy_DataTfeWorkspace) HtmlUrl() *string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeWorkspace) HyokEnabled() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"hyokEnabled",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeWorkspace) Id() *string {
 	var returns *string
 	_jsii_.Get(
@@ -371,6 +432,16 @@ func (j *jsiiProxy_DataTfeWorkspace) Lifecycle() *cdktf.TerraformResourceLifecyc
 	_jsii_.Get(
 		j,
 		"lifecycle",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) Locked() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"locked",
 		&returns,
 	)
 	return returns
@@ -431,6 +502,26 @@ func (j *jsiiProxy_DataTfeWorkspace) OrganizationInput() *string {
 	_jsii_.Get(
 		j,
 		"organizationInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) Permissions() cdktf.BooleanMap {
+	var returns cdktf.BooleanMap
+	_jsii_.Get(
+		j,
+		"permissions",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) PlanDurationAverage() *float64 {
+	var returns *float64
+	_jsii_.Get(
+		j,
+		"planDurationAverage",
 		&returns,
 	)
 	return returns
@@ -521,6 +612,26 @@ func (j *jsiiProxy_DataTfeWorkspace) RunsCount() *float64 {
 	_jsii_.Get(
 		j,
 		"runsCount",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) SettingOverwrites() cdktf.BooleanMap {
+	var returns cdktf.BooleanMap
+	_jsii_.Get(
+		j,
+		"settingOverwrites",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeWorkspace) Source() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"source",
 		&returns,
 	)
 	return returns
@@ -656,6 +767,16 @@ func (j *jsiiProxy_DataTfeWorkspace) TriggerPrefixes() *[]*string {
 	return returns
 }
 
+func (j *jsiiProxy_DataTfeWorkspace) UpdatedAt() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"updatedAt",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_DataTfeWorkspace) VcsRepo() DataTfeWorkspaceVcsRepoList {
 	var returns DataTfeWorkspaceVcsRepoList
 	_jsii_.Get(
@@ -677,7 +798,7 @@ func (j *jsiiProxy_DataTfeWorkspace) WorkingDirectory() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/data-sources/workspace tfe_workspace} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/data-sources/workspace tfe_workspace} Data Source.
 func NewDataTfeWorkspace(scope constructs.Construct, id *string, config *DataTfeWorkspaceConfig) DataTfeWorkspace {
 	_init_.Initialize()
 
@@ -695,7 +816,7 @@ func NewDataTfeWorkspace(scope constructs.Construct, id *string, config *DataTfe
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/data-sources/workspace tfe_workspace} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/data-sources/workspace tfe_workspace} Data Source.
 func NewDataTfeWorkspace_Override(d DataTfeWorkspace, scope constructs.Construct, id *string, config *DataTfeWorkspaceConfig) {
 	_init_.Initialize()
 

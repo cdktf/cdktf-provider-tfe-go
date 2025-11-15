@@ -15,7 +15,7 @@ func (s *jsiiProxy_SentinelVersionArchsList) validateGetParameters(index *float6
 	return nil
 }
 
-func (s *jsiiProxy_SentinelVersionArchsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SentinelVersionArchsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

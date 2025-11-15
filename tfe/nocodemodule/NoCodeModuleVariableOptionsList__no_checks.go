@@ -15,7 +15,7 @@ func (n *jsiiProxy_NoCodeModuleVariableOptionsList) validateGetParameters(index 
 	return nil
 }
 
-func (n *jsiiProxy_NoCodeModuleVariableOptionsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (n *jsiiProxy_NoCodeModuleVariableOptionsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

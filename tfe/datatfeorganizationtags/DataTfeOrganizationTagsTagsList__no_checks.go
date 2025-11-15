@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataTfeOrganizationTagsTagsList) validateGetParameters(index 
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeOrganizationTagsTagsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataTfeOrganizationTagsTagsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

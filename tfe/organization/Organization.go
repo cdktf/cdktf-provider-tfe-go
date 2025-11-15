@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/organization tfe_organization}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/organization tfe_organization}.
 type Organization interface {
 	cdktf.TerraformResource
 	AggregatedCommitStatusEnabled() interface{}
@@ -50,6 +50,9 @@ type Organization interface {
 	Email() *string
 	SetEmail(val *string)
 	EmailInput() *string
+	EnforceHyok() interface{}
+	SetEnforceHyok(val interface{})
+	EnforceHyokInput() interface{}
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
 	// Experimental.
@@ -149,6 +152,7 @@ type Organization interface {
 	ResetAssessmentsEnforced()
 	ResetCollaboratorAuthPolicy()
 	ResetCostEstimationEnabled()
+	ResetEnforceHyok()
 	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
@@ -351,6 +355,26 @@ func (j *jsiiProxy_Organization) EmailInput() *string {
 	_jsii_.Get(
 		j,
 		"emailInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Organization) EnforceHyok() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enforceHyok",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Organization) EnforceHyokInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"enforceHyokInput",
 		&returns,
 	)
 	return returns
@@ -607,7 +631,7 @@ func (j *jsiiProxy_Organization) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/organization tfe_organization} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/organization tfe_organization} Resource.
 func NewOrganization(scope constructs.Construct, id *string, config *OrganizationConfig) Organization {
 	_init_.Initialize()
 
@@ -625,7 +649,7 @@ func NewOrganization(scope constructs.Construct, id *string, config *Organizatio
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/organization tfe_organization} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/organization tfe_organization} Resource.
 func NewOrganization_Override(o Organization, scope constructs.Construct, id *string, config *OrganizationConfig) {
 	_init_.Initialize()
 
@@ -728,6 +752,17 @@ func (j *jsiiProxy_Organization)SetEmail(val *string) {
 	_jsii_.Set(
 		j,
 		"email",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Organization)SetEnforceHyok(val interface{}) {
+	if err := j.validateSetEnforceHyokParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"enforceHyok",
 		val,
 	)
 }
@@ -1236,6 +1271,14 @@ func (o *jsiiProxy_Organization) ResetCostEstimationEnabled() {
 	_jsii_.InvokeVoid(
 		o,
 		"resetCostEstimationEnabled",
+		nil, // no parameters
+	)
+}
+
+func (o *jsiiProxy_Organization) ResetEnforceHyok() {
+	_jsii_.InvokeVoid(
+		o,
+		"resetEnforceHyok",
 		nil, // no parameters
 	)
 }

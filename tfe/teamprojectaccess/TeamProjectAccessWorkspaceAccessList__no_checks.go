@@ -15,7 +15,7 @@ func (t *jsiiProxy_TeamProjectAccessWorkspaceAccessList) validateGetParameters(i
 	return nil
 }
 
-func (t *jsiiProxy_TeamProjectAccessWorkspaceAccessList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TeamProjectAccessWorkspaceAccessList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

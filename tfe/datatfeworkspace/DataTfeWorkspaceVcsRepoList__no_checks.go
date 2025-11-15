@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataTfeWorkspaceVcsRepoList) validateGetParameters(index *flo
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeWorkspaceVcsRepoList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataTfeWorkspaceVcsRepoList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/project_settings tfe_project_settings}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/project_settings tfe_project_settings}.
 type ProjectSettings interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -379,7 +379,7 @@ func (j *jsiiProxy_ProjectSettings) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/project_settings tfe_project_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/project_settings tfe_project_settings} Resource.
 func NewProjectSettings(scope constructs.Construct, id *string, config *ProjectSettingsConfig) ProjectSettings {
 	_init_.Initialize()
 
@@ -397,7 +397,7 @@ func NewProjectSettings(scope constructs.Construct, id *string, config *ProjectS
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/project_settings tfe_project_settings} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/project_settings tfe_project_settings} Resource.
 func NewProjectSettings_Override(p ProjectSettings, scope constructs.Construct, id *string, config *ProjectSettingsConfig) {
 	_init_.Initialize()
 

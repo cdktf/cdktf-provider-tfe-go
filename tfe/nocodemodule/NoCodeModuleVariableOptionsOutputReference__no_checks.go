@@ -43,11 +43,11 @@ func (n *jsiiProxy_NoCodeModuleVariableOptionsOutputReference) validateGetString
 	return nil
 }
 
-func (n *jsiiProxy_NoCodeModuleVariableOptionsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (n *jsiiProxy_NoCodeModuleVariableOptionsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (n *jsiiProxy_NoCodeModuleVariableOptionsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (n *jsiiProxy_NoCodeModuleVariableOptionsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

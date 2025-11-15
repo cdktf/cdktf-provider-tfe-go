@@ -15,7 +15,7 @@ func (w *jsiiProxy_WorkspaceSettingsOverwritesList) validateGetParameters(index 
 	return nil
 }
 
-func (w *jsiiProxy_WorkspaceSettingsOverwritesList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (w *jsiiProxy_WorkspaceSettingsOverwritesList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

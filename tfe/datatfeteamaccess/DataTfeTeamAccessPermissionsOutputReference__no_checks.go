@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataTfeTeamAccessPermissionsOutputReference) validateGetStrin
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeTeamAccessPermissionsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataTfeTeamAccessPermissionsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeTeamAccessPermissionsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataTfeTeamAccessPermissionsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

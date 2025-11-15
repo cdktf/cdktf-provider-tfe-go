@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/workspace tfe_workspace}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/workspace tfe_workspace}.
 type Workspace interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -77,6 +77,9 @@ type Workspace interface {
 	SetGlobalRemoteState(val interface{})
 	GlobalRemoteStateInput() interface{}
 	HtmlUrl() *string
+	HyokEnabled() interface{}
+	SetHyokEnabled(val interface{})
+	HyokEnabledInput() interface{}
 	Id() *string
 	SetId(val *string)
 	IdInput() *string
@@ -219,6 +222,7 @@ type Workspace interface {
 	ResetFileTriggersEnabled()
 	ResetForceDelete()
 	ResetGlobalRemoteState()
+	ResetHyokEnabled()
 	ResetId()
 	ResetIgnoreAdditionalTagNames()
 	ResetIgnoreAdditionalTags()
@@ -595,6 +599,26 @@ func (j *jsiiProxy_Workspace) HtmlUrl() *string {
 	_jsii_.Get(
 		j,
 		"htmlUrl",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) HyokEnabled() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"hyokEnabled",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Workspace) HyokEnabledInput() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"hyokEnabledInput",
 		&returns,
 	)
 	return returns
@@ -1121,7 +1145,7 @@ func (j *jsiiProxy_Workspace) WorkingDirectoryInput() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfig) Workspace {
 	_init_.Initialize()
 
@@ -1139,7 +1163,7 @@ func NewWorkspace(scope constructs.Construct, id *string, config *WorkspaceConfi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/workspace tfe_workspace} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/workspace tfe_workspace} Resource.
 func NewWorkspace_Override(w Workspace, scope constructs.Construct, id *string, config *WorkspaceConfig) {
 	_init_.Initialize()
 
@@ -1316,6 +1340,17 @@ func (j *jsiiProxy_Workspace)SetGlobalRemoteState(val interface{}) {
 	_jsii_.Set(
 		j,
 		"globalRemoteState",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Workspace)SetHyokEnabled(val interface{}) {
+	if err := j.validateSetHyokEnabledParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"hyokEnabled",
 		val,
 	)
 }
@@ -2026,6 +2061,14 @@ func (w *jsiiProxy_Workspace) ResetGlobalRemoteState() {
 	_jsii_.InvokeVoid(
 		w,
 		"resetGlobalRemoteState",
+		nil, // no parameters
+	)
+}
+
+func (w *jsiiProxy_Workspace) ResetHyokEnabled() {
+	_jsii_.InvokeVoid(
+		w,
+		"resetHyokEnabled",
 		nil, // no parameters
 	)
 }

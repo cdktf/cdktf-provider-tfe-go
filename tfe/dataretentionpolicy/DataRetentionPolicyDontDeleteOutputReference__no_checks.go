@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataRetentionPolicyDontDeleteOutputReference) validateGetStri
 	return nil
 }
 
-func (d *jsiiProxy_DataRetentionPolicyDontDeleteOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataRetentionPolicyDontDeleteOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataRetentionPolicyDontDeleteOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataRetentionPolicyDontDeleteOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

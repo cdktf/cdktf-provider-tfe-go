@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataTfeRegistryModulePermissionsList) validateGetParameters(i
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeRegistryModulePermissionsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataTfeRegistryModulePermissionsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/agent_pool_allowed_projects tfe_agent_pool_allowed_projects}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/agent_pool_allowed_projects tfe_agent_pool_allowed_projects}.
 type AgentPoolAllowedProjects interface {
 	cdktf.TerraformResource
 	AgentPoolId() *string
@@ -356,7 +356,7 @@ func (j *jsiiProxy_AgentPoolAllowedProjects) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/agent_pool_allowed_projects tfe_agent_pool_allowed_projects} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/agent_pool_allowed_projects tfe_agent_pool_allowed_projects} Resource.
 func NewAgentPoolAllowedProjects(scope constructs.Construct, id *string, config *AgentPoolAllowedProjectsConfig) AgentPoolAllowedProjects {
 	_init_.Initialize()
 
@@ -374,7 +374,7 @@ func NewAgentPoolAllowedProjects(scope constructs.Construct, id *string, config 
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/agent_pool_allowed_projects tfe_agent_pool_allowed_projects} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/agent_pool_allowed_projects tfe_agent_pool_allowed_projects} Resource.
 func NewAgentPoolAllowedProjects_Override(a AgentPoolAllowedProjects, scope constructs.Construct, id *string, config *AgentPoolAllowedProjectsConfig) {
 	_init_.Initialize()
 

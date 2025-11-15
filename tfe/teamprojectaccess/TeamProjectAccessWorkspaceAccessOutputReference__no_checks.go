@@ -43,11 +43,11 @@ func (t *jsiiProxy_TeamProjectAccessWorkspaceAccessOutputReference) validateGetS
 	return nil
 }
 
-func (t *jsiiProxy_TeamProjectAccessWorkspaceAccessOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (t *jsiiProxy_TeamProjectAccessWorkspaceAccessOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (t *jsiiProxy_TeamProjectAccessWorkspaceAccessOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TeamProjectAccessWorkspaceAccessOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

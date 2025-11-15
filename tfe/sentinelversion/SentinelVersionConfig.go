@@ -22,23 +22,23 @@ type SentinelVersionConfig struct {
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
 	// Experimental.
 	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/sentinel_version#version SentinelVersion#version}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/sentinel_version#version SentinelVersion#version}.
 	Version *string `field:"required" json:"version" yaml:"version"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/sentinel_version#archs SentinelVersion#archs}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/sentinel_version#archs SentinelVersion#archs}.
 	Archs interface{} `field:"optional" json:"archs" yaml:"archs"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/sentinel_version#beta SentinelVersion#beta}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/sentinel_version#beta SentinelVersion#beta}.
 	Beta interface{} `field:"optional" json:"beta" yaml:"beta"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/sentinel_version#deprecated SentinelVersion#deprecated}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/sentinel_version#deprecated SentinelVersion#deprecated}.
 	Deprecated interface{} `field:"optional" json:"deprecated" yaml:"deprecated"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/sentinel_version#deprecated_reason SentinelVersion#deprecated_reason}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/sentinel_version#deprecated_reason SentinelVersion#deprecated_reason}.
 	DeprecatedReason *string `field:"optional" json:"deprecatedReason" yaml:"deprecatedReason"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/sentinel_version#enabled SentinelVersion#enabled}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/sentinel_version#enabled SentinelVersion#enabled}.
 	Enabled interface{} `field:"optional" json:"enabled" yaml:"enabled"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/sentinel_version#official SentinelVersion#official}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/sentinel_version#official SentinelVersion#official}.
 	Official interface{} `field:"optional" json:"official" yaml:"official"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/sentinel_version#sha SentinelVersion#sha}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/sentinel_version#sha SentinelVersion#sha}.
 	Sha *string `field:"optional" json:"sha" yaml:"sha"`
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/resources/sentinel_version#url SentinelVersion#url}.
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/resources/sentinel_version#url SentinelVersion#url}.
 	Url *string `field:"optional" json:"url" yaml:"url"`
 }
 

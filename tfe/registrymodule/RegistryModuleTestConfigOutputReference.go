@@ -13,6 +13,12 @@ import (
 
 type RegistryModuleTestConfigOutputReference interface {
 	cdktf.ComplexObject
+	AgentExecutionMode() *string
+	SetAgentExecutionMode(val *string)
+	AgentExecutionModeInput() *string
+	AgentPoolId() *string
+	SetAgentPoolId(val *string)
+	AgentPoolIdInput() *string
 	// the index of the complex object in a list.
 	// Experimental.
 	ComplexObjectIndex() interface{}
@@ -66,11 +72,13 @@ type RegistryModuleTestConfigOutputReference interface {
 	// Experimental.
 	InterpolationAsList() cdktf.IResolvable
 	// Experimental.
-	InterpolationForAttribute(property *string) cdktf.IResolvable
+	InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable
+	ResetAgentExecutionMode()
+	ResetAgentPoolId()
 	ResetTestsEnabled()
 	// Produce the Token's value at resolution time.
 	// Experimental.
-	Resolve(_context cdktf.IResolveContext) interface{}
+	Resolve(context cdktf.IResolveContext) interface{}
 	// Return a string representation of this resolvable object.
 	//
 	// Returns a reversible string representation.
@@ -81,6 +89,46 @@ type RegistryModuleTestConfigOutputReference interface {
 // The jsii proxy struct for RegistryModuleTestConfigOutputReference
 type jsiiProxy_RegistryModuleTestConfigOutputReference struct {
 	internal.Type__cdktfComplexObject
+}
+
+func (j *jsiiProxy_RegistryModuleTestConfigOutputReference) AgentExecutionMode() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"agentExecutionMode",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryModuleTestConfigOutputReference) AgentExecutionModeInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"agentExecutionModeInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryModuleTestConfigOutputReference) AgentPoolId() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"agentPoolId",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_RegistryModuleTestConfigOutputReference) AgentPoolIdInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"agentPoolIdInput",
+		&returns,
+	)
+	return returns
 }
 
 func (j *jsiiProxy_RegistryModuleTestConfigOutputReference) ComplexObjectIndex() interface{} {
@@ -198,6 +246,28 @@ func NewRegistryModuleTestConfigOutputReference_Override(r RegistryModuleTestCon
 		"@cdktf/provider-tfe.registryModule.RegistryModuleTestConfigOutputReference",
 		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		r,
+	)
+}
+
+func (j *jsiiProxy_RegistryModuleTestConfigOutputReference)SetAgentExecutionMode(val *string) {
+	if err := j.validateSetAgentExecutionModeParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"agentExecutionMode",
+		val,
+	)
+}
+
+func (j *jsiiProxy_RegistryModuleTestConfigOutputReference)SetAgentPoolId(val *string) {
+	if err := j.validateSetAgentPoolIdParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"agentPoolId",
+		val,
 	)
 }
 
@@ -437,8 +507,8 @@ func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) InterpolationAsList(
 	return returns
 }
 
-func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
-	if err := r.validateInterpolationForAttributeParameters(property); err != nil {
+func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := r.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
@@ -446,11 +516,27 @@ func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) InterpolationForAttr
 	_jsii_.Invoke(
 		r,
 		"interpolationForAttribute",
-		[]interface{}{property},
+		[]interface{}{terraformAttribute},
 		&returns,
 	)
 
 	return returns
+}
+
+func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) ResetAgentExecutionMode() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAgentExecutionMode",
+		nil, // no parameters
+	)
+}
+
+func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) ResetAgentPoolId() {
+	_jsii_.InvokeVoid(
+		r,
+		"resetAgentPoolId",
+		nil, // no parameters
+	)
 }
 
 func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) ResetTestsEnabled() {
@@ -461,8 +547,8 @@ func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) ResetTestsEnabled() 
 	)
 }
 
-func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
-	if err := r.validateResolveParameters(_context); err != nil {
+func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) Resolve(context cdktf.IResolveContext) interface{} {
+	if err := r.validateResolveParameters(context); err != nil {
 		panic(err)
 	}
 	var returns interface{}
@@ -470,7 +556,7 @@ func (r *jsiiProxy_RegistryModuleTestConfigOutputReference) Resolve(_context cdk
 	_jsii_.Invoke(
 		r,
 		"resolve",
-		[]interface{}{_context},
+		[]interface{}{context},
 		&returns,
 	)
 

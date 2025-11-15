@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataTfeRegistryModulePermissionsOutputReference) validateGetS
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeRegistryModulePermissionsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataTfeRegistryModulePermissionsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeRegistryModulePermissionsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataTfeRegistryModulePermissionsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

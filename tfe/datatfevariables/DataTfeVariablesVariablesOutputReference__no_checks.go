@@ -43,11 +43,11 @@ func (d *jsiiProxy_DataTfeVariablesVariablesOutputReference) validateGetStringMa
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeVariablesVariablesOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (d *jsiiProxy_DataTfeVariablesVariablesOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeVariablesVariablesOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataTfeVariablesVariablesOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (t *jsiiProxy_TerraformVersionArchsList) validateGetParameters(index *float
 	return nil
 }
 
-func (t *jsiiProxy_TerraformVersionArchsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (t *jsiiProxy_TerraformVersionArchsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

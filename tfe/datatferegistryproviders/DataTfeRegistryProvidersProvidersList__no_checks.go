@@ -15,7 +15,7 @@ func (d *jsiiProxy_DataTfeRegistryProvidersProvidersList) validateGetParameters(
 	return nil
 }
 
-func (d *jsiiProxy_DataTfeRegistryProvidersProvidersList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (d *jsiiProxy_DataTfeRegistryProvidersProvidersList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -15,7 +15,7 @@ func (o *jsiiProxy_OpaVersionArchsList) validateGetParameters(index *float64) er
 	return nil
 }
 
-func (o *jsiiProxy_OpaVersionArchsList) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (o *jsiiProxy_OpaVersionArchsList) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

@@ -43,11 +43,11 @@ func (s *jsiiProxy_SentinelVersionArchsOutputReference) validateGetStringMapAttr
 	return nil
 }
 
-func (s *jsiiProxy_SentinelVersionArchsOutputReference) validateInterpolationForAttributeParameters(property *string) error {
+func (s *jsiiProxy_SentinelVersionArchsOutputReference) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
 	return nil
 }
 
-func (s *jsiiProxy_SentinelVersionArchsOutputReference) validateResolveParameters(_context cdktf.IResolveContext) error {
+func (s *jsiiProxy_SentinelVersionArchsOutputReference) validateResolveParameters(context cdktf.IResolveContext) error {
 	return nil
 }
 

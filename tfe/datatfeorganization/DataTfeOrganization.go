@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/data-sources/organization tfe_organization}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/data-sources/organization tfe_organization}.
 type DataTfeOrganization interface {
 	cdktf.TerraformDataSource
 	AggregatedCommitStatusEnabled() cdktf.IResolvable
@@ -33,6 +33,7 @@ type DataTfeOrganization interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	Email() *string
+	EnforceHyok() cdktf.IResolvable
 	ExternalId() *string
 	// Experimental.
 	ForEach() cdktf.ITerraformIterator
@@ -214,6 +215,16 @@ func (j *jsiiProxy_DataTfeOrganization) Email() *string {
 	_jsii_.Get(
 		j,
 		"email",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTfeOrganization) EnforceHyok() cdktf.IResolvable {
+	var returns cdktf.IResolvable
+	_jsii_.Get(
+		j,
+		"enforceHyok",
 		&returns,
 	)
 	return returns
@@ -410,7 +421,7 @@ func (j *jsiiProxy_DataTfeOrganization) TwoFactorConformant() cdktf.IResolvable 
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/data-sources/organization tfe_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/data-sources/organization tfe_organization} Data Source.
 func NewDataTfeOrganization(scope constructs.Construct, id *string, config *DataTfeOrganizationConfig) DataTfeOrganization {
 	_init_.Initialize()
 
@@ -428,7 +439,7 @@ func NewDataTfeOrganization(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.70.0/docs/data-sources/organization tfe_organization} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tfe/0.71.0/docs/data-sources/organization tfe_organization} Data Source.
 func NewDataTfeOrganization_Override(d DataTfeOrganization, scope constructs.Construct, id *string, config *DataTfeOrganizationConfig) {
 	_init_.Initialize()
 
